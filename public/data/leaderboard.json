@@ -1,0 +1,953 @@
+{
+  "observed_at": "2026-10-31T08:22:50.113069+00:00",
+  "source": "npu-fly experiment manager · /api/leaderboard",
+  "source_sha256": "3a99854d4b56c7982048f8ace7f6c960743d101e7b6ba62d014a09badfaad82f",
+  "suite_size": 20,
+  "faster_threshold": 1.1,
+  "rows": [
+    {
+      "model": "openai/gpt-6-astra",
+      "display_name": "gpt-6-astra",
+      "agents": [
+        "opencode"
+      ],
+      "enabled": true,
+      "scored": 20,
+      "running": 0,
+      "pending": 0,
+      "failed": 0,
+      "faster_count": 14,
+      "faster_rate_percent": 70.0,
+      "median_speedup": 1.207173325899792,
+      "rank": 1,
+      "tasks": [
+        {
+          "task": "infer-deepseekv4flash-284b",
+          "status": "completed",
+          "reward": 2.1076352778462413
+        },
+        {
+          "task": "infer-glm5p2-744b",
+          "status": "completed",
+          "reward": 4.670769164679855
+        },
+        {
+          "task": "infer-glm5p3-744b",
+          "status": "completed",
+          "reward": 2.0171938921654315
+        },
+        {
+          "task": "infer-glm5p3flash-320b",
+          "status": "completed",
+          "reward": 0.9879449562151713
+        },
+        {
+          "task": "infer-inkling-975b",
+          "status": "completed",
+          "reward": 1.9866394131987692
+        },
+        {
+          "task": "infer-kimik3-2p8t",
+          "status": "completed",
+          "reward": 1.1523050546101092
+        },
+        {
+          "task": "infer-lingbotworld2p0-14b",
+          "status": "completed",
+          "reward": 1.0366251818663637
+        },
+        {
+          "task": "infer-llada2p1mini-16b",
+          "status": "completed",
+          "reward": 3.2610247159985146
+        },
+        {
+          "task": "infer-minimaxh3-64b",
+          "status": "completed",
+          "reward": 1.2085809677750774
+        },
+        {
+          "task": "infer-museglimmer-30b",
+          "status": "completed",
+          "reward": 1.1011173281737525
+        },
+        {
+          "task": "infer-nemotron3ultra-550a55b",
+          "status": "completed",
+          "reward": 2.0561476177590907
+        },
+        {
+          "task": "infer-pi0p5libero-3p3b",
+          "status": "completed",
+          "reward": 2.6142058774799604
+        },
+        {
+          "task": "infer-qwen3p8-27b",
+          "status": "completed",
+          "reward": 1.967146853539179
+        },
+        {
+          "task": "infer-qwen3ttsbase-1p7b",
+          "status": "completed",
+          "reward": 1.1105871123627695
+        },
+        {
+          "task": "infer-qwen3vl-32b",
+          "status": "completed",
+          "reward": 1.205765684024507
+        },
+        {
+          "task": "infer-wan2p2ti2v-5b",
+          "status": "completed",
+          "reward": 0.9999363373733333
+        },
+        {
+          "task": "train-qwen3-30a3b-grpo",
+          "status": "completed",
+          "reward": 0.818522108483354
+        },
+        {
+          "task": "train-qwen3-30a3b-sft",
+          "status": "completed",
+          "reward": 1.2091575102970922
+        },
+        {
+          "task": "train-qwen3-8b-opd",
+          "status": "completed",
+          "reward": 1.0658383439792352
+        },
+        {
+          "task": "train-qwen3vl-4b-grpo",
+          "status": "completed",
+          "reward": 1.0559806545540051
+        }
+      ]
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "display_name": "deepseek-v4-flash",
+      "agents": [
+        "opencode"
+      ],
+      "enabled": true,
+      "scored": 20,
+      "running": 0,
+      "pending": 0,
+      "failed": 0,
+      "faster_count": 12,
+      "faster_rate_percent": 60.0,
+      "median_speedup": 1.2845553723546193,
+      "rank": 2,
+      "tasks": [
+        {
+          "task": "infer-deepseekv4flash-284b",
+          "status": "completed",
+          "reward": 2.206989193022648
+        },
+        {
+          "task": "infer-glm5p2-744b",
+          "status": "completed",
+          "reward": 5.871018321627253
+        },
+        {
+          "task": "infer-glm5p3-744b",
+          "status": "completed",
+          "reward": 2.313297050621972
+        },
+        {
+          "task": "infer-glm5p3flash-320b",
+          "status": "completed",
+          "reward": 7.605936540429888
+        },
+        {
+          "task": "infer-inkling-975b",
+          "status": "completed",
+          "reward": 1.865994911266541
+        },
+        {
+          "task": "infer-kimik3-2p8t",
+          "status": "completed",
+          "reward": 1.082222081110829
+        },
+        {
+          "task": "infer-lingbotworld2p0-14b",
+          "status": "completed",
+          "reward": 1.0002121877522911
+        },
+        {
+          "task": "infer-llada2p1mini-16b",
+          "status": "completed",
+          "reward": 2.129603425353956
+        },
+        {
+          "task": "infer-minimaxh3-64b",
+          "status": "completed",
+          "reward": 1.3211571954310868
+        },
+        {
+          "task": "infer-museglimmer-30b",
+          "status": "completed",
+          "reward": 1.0754530611770585
+        },
+        {
+          "task": "infer-nemotron3ultra-550a55b",
+          "status": "completed",
+          "reward": 4.888620610702912
+        },
+        {
+          "task": "infer-pi0p5libero-3p3b",
+          "status": "completed",
+          "reward": 2.417827718481613
+        },
+        {
+          "task": "infer-qwen3p8-27b",
+          "status": "completed",
+          "reward": 1.6272724722611116
+        },
+        {
+          "task": "infer-qwen3ttsbase-1p7b",
+          "status": "completed",
+          "reward": 0.9859431753748333
+        },
+        {
+          "task": "infer-qwen3vl-32b",
+          "status": "completed",
+          "reward": 1.1051835846490385
+        },
+        {
+          "task": "infer-wan2p2ti2v-5b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "train-qwen3-30a3b-grpo",
+          "status": "completed",
+          "reward": 0.8009601173962246
+        },
+        {
+          "task": "train-qwen3-30a3b-sft",
+          "status": "completed",
+          "reward": 1.0180902825047158
+        },
+        {
+          "task": "train-qwen3-8b-opd",
+          "status": "completed",
+          "reward": 1.2479535492781517
+        },
+        {
+          "task": "train-qwen3vl-4b-grpo",
+          "status": "completed",
+          "reward": 0.0
+        }
+      ]
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "display_name": "claude-opus-5-5",
+      "agents": [
+        "opencode"
+      ],
+      "enabled": true,
+      "scored": 15,
+      "running": 0,
+      "pending": 1,
+      "failed": 4,
+      "faster_count": 11,
+      "faster_rate_percent": 55.0,
+      "median_speedup": 1.1297015262972219,
+      "rank": 3,
+      "tasks": [
+        {
+          "task": "infer-deepseekv4flash-284b",
+          "status": "failed",
+          "reward": null
+        },
+        {
+          "task": "infer-glm5p2-744b",
+          "status": "completed",
+          "reward": 0.9317610670790645
+        },
+        {
+          "task": "infer-glm5p3-744b",
+          "status": "completed",
+          "reward": 2.217610580254077
+        },
+        {
+          "task": "infer-glm5p3flash-320b",
+          "status": "failed",
+          "reward": null
+        },
+        {
+          "task": "infer-inkling-975b",
+          "status": "completed",
+          "reward": 1.1523213354199269
+        },
+        {
+          "task": "infer-kimik3-2p8t",
+          "status": "pending",
+          "reward": null
+        },
+        {
+          "task": "infer-lingbotworld2p0-14b",
+          "status": "completed",
+          "reward": 1.0004273820421814
+        },
+        {
+          "task": "infer-llada2p1mini-16b",
+          "status": "completed",
+          "reward": 2.7143571906442823
+        },
+        {
+          "task": "infer-minimaxh3-64b",
+          "status": "completed",
+          "reward": 0.8650324971631449
+        },
+        {
+          "task": "infer-museglimmer-30b",
+          "status": "completed",
+          "reward": 1.1238706153729947
+        },
+        {
+          "task": "infer-nemotron3ultra-550a55b",
+          "status": "completed",
+          "reward": 4.743146764356931
+        },
+        {
+          "task": "infer-pi0p5libero-3p3b",
+          "status": "completed",
+          "reward": 1.9620290798476645
+        },
+        {
+          "task": "infer-qwen3p8-27b",
+          "status": "completed",
+          "reward": 1.285977676283155
+        },
+        {
+          "task": "infer-qwen3ttsbase-1p7b",
+          "status": "completed",
+          "reward": 1.1972781005438766
+        },
+        {
+          "task": "infer-qwen3vl-32b",
+          "status": "completed",
+          "reward": 1.135532437221449
+        },
+        {
+          "task": "infer-wan2p2ti2v-5b",
+          "status": "completed",
+          "reward": 1.2959858461304543
+        },
+        {
+          "task": "train-qwen3-30a3b-grpo",
+          "status": "completed",
+          "reward": 0.9881529764580889
+        },
+        {
+          "task": "train-qwen3-30a3b-sft",
+          "status": "completed",
+          "reward": 1.1992909819588615
+        },
+        {
+          "task": "train-qwen3-8b-opd",
+          "status": "failed",
+          "reward": null
+        },
+        {
+          "task": "train-qwen3vl-4b-grpo",
+          "status": "failed",
+          "reward": null
+        }
+      ]
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "display_name": "glm-5.3",
+      "agents": [
+        "opencode"
+      ],
+      "enabled": true,
+      "scored": 19,
+      "running": 1,
+      "pending": 0,
+      "failed": 0,
+      "faster_count": 10,
+      "faster_rate_percent": 50.0,
+      "median_speedup": 1.1139966548579363,
+      "rank": 4,
+      "tasks": [
+        {
+          "task": "infer-deepseekv4flash-284b",
+          "status": "completed",
+          "reward": 2.150621367599913
+        },
+        {
+          "task": "infer-glm5p2-744b",
+          "status": "completed",
+          "reward": 0.8308954614773288
+        },
+        {
+          "task": "infer-glm5p3-744b",
+          "status": "completed",
+          "reward": 2.01176127836576
+        },
+        {
+          "task": "infer-glm5p3flash-320b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "infer-inkling-975b",
+          "status": "completed",
+          "reward": 1.776117019577784
+        },
+        {
+          "task": "infer-kimik3-2p8t",
+          "status": "completed",
+          "reward": 1.187780458894251
+        },
+        {
+          "task": "infer-lingbotworld2p0-14b",
+          "status": "completed",
+          "reward": 1.0010737926631934
+        },
+        {
+          "task": "infer-llada2p1mini-16b",
+          "status": "completed",
+          "reward": 2.2076215913731376
+        },
+        {
+          "task": "infer-minimaxh3-64b",
+          "status": "completed",
+          "reward": 0.8992443014403337
+        },
+        {
+          "task": "infer-museglimmer-30b",
+          "status": "completed",
+          "reward": 1.0670280697473085
+        },
+        {
+          "task": "infer-nemotron3ultra-550a55b",
+          "status": "completed",
+          "reward": 5.017421892887622
+        },
+        {
+          "task": "infer-pi0p5libero-3p3b",
+          "status": "completed",
+          "reward": 3.64556795096556
+        },
+        {
+          "task": "infer-qwen3p8-27b",
+          "status": "completed",
+          "reward": 1.9463863578986023
+        },
+        {
+          "task": "infer-qwen3ttsbase-1p7b",
+          "status": "running",
+          "reward": null
+        },
+        {
+          "task": "infer-qwen3vl-32b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "infer-wan2p2ti2v-5b",
+          "status": "completed",
+          "reward": 1.0471931635968899
+        },
+        {
+          "task": "train-qwen3-30a3b-grpo",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "train-qwen3-30a3b-sft",
+          "status": "completed",
+          "reward": 1.8869577864692264
+        },
+        {
+          "task": "train-qwen3-8b-opd",
+          "status": "completed",
+          "reward": 1.00126536929848
+        },
+        {
+          "task": "train-qwen3vl-4b-grpo",
+          "status": "completed",
+          "reward": 1.1609652399685642
+        }
+      ]
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "display_name": "qwen3.8-max",
+      "agents": [
+        "opencode"
+      ],
+      "enabled": true,
+      "scored": 20,
+      "running": 0,
+      "pending": 0,
+      "failed": 0,
+      "faster_count": 10,
+      "faster_rate_percent": 50.0,
+      "median_speedup": 1.0954462779089178,
+      "rank": 5,
+      "tasks": [
+        {
+          "task": "infer-deepseekv4flash-284b",
+          "status": "completed",
+          "reward": 1.5511074583173377
+        },
+        {
+          "task": "infer-glm5p2-744b",
+          "status": "completed",
+          "reward": 4.980862168954186
+        },
+        {
+          "task": "infer-glm5p3-744b",
+          "status": "completed",
+          "reward": 1.5961357198641726
+        },
+        {
+          "task": "infer-glm5p3flash-320b",
+          "status": "completed",
+          "reward": 6.335892186966905
+        },
+        {
+          "task": "infer-inkling-975b",
+          "status": "completed",
+          "reward": 1.976738739314192
+        },
+        {
+          "task": "infer-kimik3-2p8t",
+          "status": "completed",
+          "reward": 1.0876195919058504
+        },
+        {
+          "task": "infer-lingbotworld2p0-14b",
+          "status": "completed",
+          "reward": 0.9933651494071718
+        },
+        {
+          "task": "infer-llada2p1mini-16b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "infer-minimaxh3-64b",
+          "status": "completed",
+          "reward": 1.0629299711274756
+        },
+        {
+          "task": "infer-museglimmer-30b",
+          "status": "completed",
+          "reward": 1.1032729639119851
+        },
+        {
+          "task": "infer-nemotron3ultra-550a55b",
+          "status": "completed",
+          "reward": 1.1192057115500698
+        },
+        {
+          "task": "infer-pi0p5libero-3p3b",
+          "status": "completed",
+          "reward": 2.2032400160776047
+        },
+        {
+          "task": "infer-qwen3p8-27b",
+          "status": "completed",
+          "reward": 1.2051568448942849
+        },
+        {
+          "task": "infer-qwen3ttsbase-1p7b",
+          "status": "completed",
+          "reward": 0.9888729896356673
+        },
+        {
+          "task": "infer-qwen3vl-32b",
+          "status": "completed",
+          "reward": 0.999858410875589
+        },
+        {
+          "task": "infer-wan2p2ti2v-5b",
+          "status": "completed",
+          "reward": 1.251358431353812
+        },
+        {
+          "task": "train-qwen3-30a3b-grpo",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "train-qwen3-30a3b-sft",
+          "status": "completed",
+          "reward": 1.0607596139897606
+        },
+        {
+          "task": "train-qwen3-8b-opd",
+          "status": "completed",
+          "reward": 1.0069389440629353
+        },
+        {
+          "task": "train-qwen3vl-4b-grpo",
+          "status": "completed",
+          "reward": 1.0021812968783903
+        }
+      ]
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "display_name": "seed-evolving-auto",
+      "agents": [
+        "opencode"
+      ],
+      "enabled": true,
+      "scored": 20,
+      "running": 0,
+      "pending": 0,
+      "failed": 0,
+      "faster_count": 10,
+      "faster_rate_percent": 50.0,
+      "median_speedup": 1.0933237760218744,
+      "rank": 6,
+      "tasks": [
+        {
+          "task": "infer-deepseekv4flash-284b",
+          "status": "completed",
+          "reward": 2.2303717142357393
+        },
+        {
+          "task": "infer-glm5p2-744b",
+          "status": "completed",
+          "reward": 6.778615460618167
+        },
+        {
+          "task": "infer-glm5p3-744b",
+          "status": "completed",
+          "reward": 2.2692142907856114
+        },
+        {
+          "task": "infer-glm5p3flash-320b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "infer-inkling-975b",
+          "status": "completed",
+          "reward": 1.7186372201462745
+        },
+        {
+          "task": "infer-kimik3-2p8t",
+          "status": "completed",
+          "reward": 1.3538967911269157
+        },
+        {
+          "task": "infer-lingbotworld2p0-14b",
+          "status": "completed",
+          "reward": 1.0022881076171164
+        },
+        {
+          "task": "infer-llada2p1mini-16b",
+          "status": "completed",
+          "reward": 1.1058686021938788
+        },
+        {
+          "task": "infer-minimaxh3-64b",
+          "status": "completed",
+          "reward": 1.079096046490572
+        },
+        {
+          "task": "infer-museglimmer-30b",
+          "status": "completed",
+          "reward": 1.0749185099966883
+        },
+        {
+          "task": "infer-nemotron3ultra-550a55b",
+          "status": "completed",
+          "reward": 3.5106467123202134
+        },
+        {
+          "task": "infer-pi0p5libero-3p3b",
+          "status": "completed",
+          "reward": 1.0807789498498699
+        },
+        {
+          "task": "infer-qwen3p8-27b",
+          "status": "completed",
+          "reward": 1.6252757313095612
+        },
+        {
+          "task": "infer-qwen3ttsbase-1p7b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "infer-qwen3vl-32b",
+          "status": "completed",
+          "reward": 1.0288509004716855
+        },
+        {
+          "task": "infer-wan2p2ti2v-5b",
+          "status": "completed",
+          "reward": 1.242361494271831
+        },
+        {
+          "task": "train-qwen3-30a3b-grpo",
+          "status": "completed",
+          "reward": 0.8135337223463467
+        },
+        {
+          "task": "train-qwen3-30a3b-sft",
+          "status": "completed",
+          "reward": 1.0065904820925091
+        },
+        {
+          "task": "train-qwen3-8b-opd",
+          "status": "completed",
+          "reward": 1.2872775605975635
+        },
+        {
+          "task": "train-qwen3vl-4b-grpo",
+          "status": "completed",
+          "reward": 0.9965919425430976
+        }
+      ]
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "display_name": "claude-opus-5",
+      "agents": [
+        "opencode"
+      ],
+      "enabled": true,
+      "scored": 19,
+      "running": 0,
+      "pending": 0,
+      "failed": 1,
+      "faster_count": 7,
+      "faster_rate_percent": 35.0,
+      "median_speedup": 1.0355021905534003,
+      "rank": 7,
+      "tasks": [
+        {
+          "task": "infer-deepseekv4flash-284b",
+          "status": "completed",
+          "reward": 1.8939201621556838
+        },
+        {
+          "task": "infer-glm5p2-744b",
+          "status": "completed",
+          "reward": 0.9818287260777112
+        },
+        {
+          "task": "infer-glm5p3-744b",
+          "status": "completed",
+          "reward": 1.663564764150135
+        },
+        {
+          "task": "infer-glm5p3flash-320b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "infer-inkling-975b",
+          "status": "completed",
+          "reward": 1.1513951433468537
+        },
+        {
+          "task": "infer-kimik3-2p8t",
+          "status": "completed",
+          "reward": 1.2978367623401914
+        },
+        {
+          "task": "infer-lingbotworld2p0-14b",
+          "status": "completed",
+          "reward": 0.9994392899622571
+        },
+        {
+          "task": "infer-llada2p1mini-16b",
+          "status": "completed",
+          "reward": 1.0944832911619502
+        },
+        {
+          "task": "infer-minimaxh3-64b",
+          "status": "completed",
+          "reward": 1.0541818599194315
+        },
+        {
+          "task": "infer-museglimmer-30b",
+          "status": "completed",
+          "reward": 1.0877942210369131
+        },
+        {
+          "task": "infer-nemotron3ultra-550a55b",
+          "status": "completed",
+          "reward": 4.902785005099598
+        },
+        {
+          "task": "infer-pi0p5libero-3p3b",
+          "status": "completed",
+          "reward": 2.498981719707461
+        },
+        {
+          "task": "infer-qwen3p8-27b",
+          "status": "completed",
+          "reward": 1.2852024409711862
+        },
+        {
+          "task": "infer-qwen3ttsbase-1p7b",
+          "status": "completed",
+          "reward": 1.0168225211873694
+        },
+        {
+          "task": "infer-qwen3vl-32b",
+          "status": "completed",
+          "reward": 0.9628057725582683
+        },
+        {
+          "task": "infer-wan2p2ti2v-5b",
+          "status": "completed",
+          "reward": 1.0070355020630368
+        },
+        {
+          "task": "train-qwen3-30a3b-grpo",
+          "status": "completed",
+          "reward": 0.8361097968860244
+        },
+        {
+          "task": "train-qwen3-30a3b-sft",
+          "status": "completed",
+          "reward": 1.000221056715275
+        },
+        {
+          "task": "train-qwen3-8b-opd",
+          "status": "completed",
+          "reward": 0.9917531961821814
+        },
+        {
+          "task": "train-qwen3vl-4b-grpo",
+          "status": "failed",
+          "reward": null
+        }
+      ]
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "display_name": "kimi-k3",
+      "agents": [
+        "opencode"
+      ],
+      "enabled": true,
+      "scored": 20,
+      "running": 0,
+      "pending": 0,
+      "failed": 0,
+      "faster_count": 6,
+      "faster_rate_percent": 30.0,
+      "median_speedup": 1.0430881252207165,
+      "rank": 8,
+      "tasks": [
+        {
+          "task": "infer-deepseekv4flash-284b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "infer-glm5p2-744b",
+          "status": "completed",
+          "reward": 4.37777348196834
+        },
+        {
+          "task": "infer-glm5p3-744b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "infer-glm5p3flash-320b",
+          "status": "completed",
+          "reward": 5.452519049243717
+        },
+        {
+          "task": "infer-inkling-975b",
+          "status": "completed",
+          "reward": 1.7725639551595285
+        },
+        {
+          "task": "infer-kimik3-2p8t",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "infer-lingbotworld2p0-14b",
+          "status": "completed",
+          "reward": 0.9985706503551692
+        },
+        {
+          "task": "infer-llada2p1mini-16b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "infer-minimaxh3-64b",
+          "status": "completed",
+          "reward": 1.0496877978768766
+        },
+        {
+          "task": "infer-museglimmer-30b",
+          "status": "completed",
+          "reward": 1.087846514087167
+        },
+        {
+          "task": "infer-nemotron3ultra-550a55b",
+          "status": "completed",
+          "reward": 3.4144620444185416
+        },
+        {
+          "task": "infer-pi0p5libero-3p3b",
+          "status": "completed",
+          "reward": 3.315463828818812
+        },
+        {
+          "task": "infer-qwen3p8-27b",
+          "status": "completed",
+          "reward": 1.2236706881998476
+        },
+        {
+          "task": "infer-qwen3ttsbase-1p7b",
+          "status": "completed",
+          "reward": 1.0364884525645561
+        },
+        {
+          "task": "infer-qwen3vl-32b",
+          "status": "completed",
+          "reward": 1.0876403345468446
+        },
+        {
+          "task": "infer-wan2p2ti2v-5b",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "train-qwen3-30a3b-grpo",
+          "status": "completed",
+          "reward": 0.7008044537574531
+        },
+        {
+          "task": "train-qwen3-30a3b-sft",
+          "status": "completed",
+          "reward": 0.0
+        },
+        {
+          "task": "train-qwen3-8b-opd",
+          "status": "completed",
+          "reward": 1.0102304078852613
+        },
+        {
+          "task": "train-qwen3vl-4b-grpo",
+          "status": "completed",
+          "reward": 1.051463427335373
+        }
+      ]
+    }
+  ]
+}
