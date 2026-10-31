@@ -21,8 +21,6 @@ jobs:
           cache: npm
       - uses: actions/configure-pages@v5
         id: pages
-        with:
-          enablement: true
       - run: npm ci
       - run: npm run build
         env:

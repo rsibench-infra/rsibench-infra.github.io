@@ -119,3 +119,5 @@ export default nextConfig;
 - 后续确认：用户提供公开 GitHub 地址 `https://github.com/wyifei26/rsibench-infra-page`，已更新所有页面代码入口及默认配置；未推送或部署。
 
 - 用户更正：`wyifei26/rsibench-infra-page` 是网页部署仓库，不是 benchmark 源码入口。已恢复源码入口占位，配置向该仓库推送及 GitHub Pages 自动部署。
+
+- 部署代码已推送至 `wyifei26/rsibench-infra-page` 的 main 分支，仓库子路径 `/rsibench-infra-page` 构建通过。首次 Pages 启用需要管理权限；当前 SSH 可推送但不能配置 Pages，连接器无法访问此仓库。网页上线需另行确认，不以推送成功代替部署成功。
