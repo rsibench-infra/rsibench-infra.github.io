@@ -1,0 +1,12 @@
+{
+  "as_of": "2026-11-02 Asia/Shanghai",
+  "normalization": "throughput divided by the release-defined H20 Oracle baseline",
+  "gap_score": "(throughput - oracle) / (sol - oracle)",
+  "rows": [
+    {"task":"Qwen3.8-27B","oracle":1.0,"sol":2.756183,"oracle_throughput":108.9275,"sol_throughput":300.224167,"unit":"tokens/s"},
+    {"task":"Muse-Glimmer-30B","oracle":1.0,"sol":1.488092,"oracle_throughput":47.8075,"sol_throughput":71.141944,"unit":"tokens/s"},
+    {"task":"Qwen3-VL-32B","oracle":1.0,"sol":2.841275,"oracle_throughput":106.079385,"sol_throughput":301.400723,"unit":"tokens/s"},
+    {"task":"LLaDA2.1-mini-16B","oracle":1.0,"sol":1.730720,"oracle_throughput":92.709178,"sol_throughput":160.453611,"unit":"tokens/s"},
+    {"task":"Wan2.2-TI2V-5B","oracle":1.0,"sol":1.540390,"oracle_throughput":6.628043,"sol_throughput":10.209773,"unit":"videos/hour"}
+  ]
+}
