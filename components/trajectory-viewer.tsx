@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Bubble } from '@ant-design/x';
 import { Alert, Collapse, ConfigProvider, Pagination, Spin } from 'antd';
-import { Bot, User, X, Download, Search } from 'lucide-react';
+import { Bot, User, X, Search } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { loadOriginalText, loadTrajectory, rawText, type Step, type TraceEntry, type TraceManifest, type Trajectory } from '@/lib/trajectory';
@@ -83,9 +83,9 @@ export default function TrajectoryViewer({ focus, onClose }: { focus: TraceFocus
       <ConfigProvider theme={{ token: { colorPrimary: '#5579cc', fontFamily: 'Inter, sans-serif', borderRadius: 6 } }}>
         {loading && <div className="trace-empty" role="status"><Spin/><p>Loading original trajectory…</p></div>}
         {error && <div className="trace-empty"><Alert type="error" title="Unable to load trajectory" description={error}/><button className="button" onClick={() => setRetry(n => n + 1)}>Retry</button></div>}
-        {!loading && !error && entry && !trace && <div className="trace-empty"><Alert type="info" title="Trajectory unavailable" description={entry.reason}/>{entry.log_file && <div className="trace-fallback"><p>The original Agent log is available below. It is not an ATIF conversation.</p><a className="text-link" href={`${base}/data/trajectories/${entry.log_file}`} download><Download size={15}/> Original agent log (.gz)</a><Collapse size="small" destroyOnHidden items={[{ key: 'log', label: 'Read original Agent log', children: <pre>{log}</pre> }]}/></div>}</div>}
+        {!loading && !error && entry && !trace && <div className="trace-empty"><Alert type="info" title="Trajectory unavailable" description={entry.reason}/>{entry.log_file && <div className="trace-fallback"><p>The original Agent log is available below. It is not an ATIF conversation.</p><Collapse size="small" destroyOnHidden items={[{ key: 'log', label: 'Read original Agent log', children: <pre>{log}</pre> }]}/></div>}</div>}
         {trace && <>
-          <div className="trace-toolbar"><label className="search"><Search size={15}/><input aria-label="Search trajectory" placeholder="Search messages and tools…" value={query} onChange={e => { setQuery(e.target.value); setPage(1); }}/></label><span>{filtered.length} / {trace.steps.length} steps</span><a className="text-link" href={`${base}/data/trajectories/${entry!.file}`} download><Download size={15}/> Original JSON (.gz)</a></div>
+          <div className="trace-toolbar"><label className="search"><Search size={15}/><input aria-label="Search trajectory" placeholder="Search messages and tools…" value={query} onChange={e => { setQuery(e.target.value); setPage(1); }}/></label><span>{filtered.length} / {trace.steps.length} steps</span></div>
           {(entry?.live || entry?.collection_warning) && <Alert type="warning" title={entry.live ? 'Snapshot of an ongoing run; this trajectory may be incomplete.' : 'The source reports collection issues; this trajectory may be incomplete.'}/>}
           <div className="trace-messages" key={`${page}-${query}`}>
             {shown.length ? <Bubble.List autoScroll={false} items={shown.map(({ step, index }) => ({

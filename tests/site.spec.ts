@@ -29,8 +29,9 @@ test('renders the exact snapshot and interactive task explorer', async ({ page }
   await page.getByRole('button', { name: 'Close trajectory' }).click();
   await page.getByRole('textbox', { name: 'Search tasks' }).fill('not-a-real-task');
   await expect(page.getByText('No results match your selection.', { exact: false })).toBeVisible();
-  const downloadHref = await page.getByRole('link', { name: 'Download results' }).getAttribute('href');
-  const response = await page.request.get(downloadHref!);
+  await expect(page.locator('a[download]')).toHaveCount(0);
+  await expect(page.getByRole('link', { name: /download/i })).toHaveCount(0);
+  const response = await page.request.get('./data/lite-set.json');
   expect(response.ok()).toBeTruthy();
   expect(await response.json()).toEqual(liteSet);
   expect(errors).toEqual([]);
@@ -66,7 +67,7 @@ test('benchmark order, model identities, selected result and publication data ag
   await page.keyboard.press('Escape');
   const icon = await page.locator('link[rel="icon"]').getAttribute('href');
   expect((await page.request.get(icon!)).ok()).toBeTruthy();
-  const full = await page.request.get((await page.getByRole('link', { name: 'Download Infra results' }).getAttribute('href'))!);
+  const full = await page.request.get('./data/leaderboard.json');
   expect(await full.json()).toEqual(snapshot);
 });
 

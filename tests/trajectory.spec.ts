@@ -33,7 +33,7 @@ test('all published cells bind to the score snapshot and intact original ATIF ar
   }
 });
 
-test('real trajectory uses library bubbles, complete steps, tools, search, paging and raw download', async ({ page }) => {
+test('real trajectory uses library bubbles, complete steps, tools, search, paging and intact source data', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', e => errors.push(e.message));
   const requests: string[] = [];
@@ -56,8 +56,9 @@ test('real trajectory uses library bubbles, complete steps, tools, search, pagin
   await expect(dialog.locator('.trace-step-label').last()).toContainText(`Step ${lastStep.step_id}`);
   await dialog.getByRole('textbox', { name: 'Search trajectory' }).fill('no-such-trajectory-content-123');
   await expect(dialog.getByText('No steps match your search.')).toBeVisible();
-  const href = await dialog.getByRole('link', { name: 'Original JSON (.gz)' }).getAttribute('href');
-  const response = await page.request.get(href!);
+  await expect(dialog.locator('a[download]')).toHaveCount(0);
+  await expect(dialog.getByRole('link', { name: /Original JSON|Original agent log|download/i })).toHaveCount(0);
+  const response = await page.request.get(`./data/trajectories/${first.file}`);
   expect(response.ok()).toBeTruthy();
   expect(JSON.parse(gunzipSync(await response.body()).toString())).toEqual(original);
   await page.keyboard.press('Escape');
@@ -66,7 +67,7 @@ test('real trajectory uses library bubbles, complete steps, tools, search, pagin
   expect(errors).toEqual([]);
 });
 
-test('missing artifacts are explicit and download failures can be retried', async ({ page }) => {
+test('missing artifacts are explicit and loading failures can be retried', async ({ page }) => {
   await page.goto('./');
   for (const entry of manifest.entries.filter(e => !e.available)) {
     const row = snapshot.rows.find(r => r.model === entry.model)!;
@@ -76,7 +77,7 @@ test('missing artifacts are explicit and download failures can be retried', asyn
     if (entry.log_file) {
       await page.getByRole('button', { name: 'Read original Agent log', exact: true }).click();
       await expect(page.getByRole('dialog').locator('pre')).toContainText('Cannot connect to API');
-      await expect(page.getByRole('link', { name: 'Original agent log (.gz)' })).toBeVisible();
+      await expect(page.getByRole('link', { name: 'Original agent log (.gz)' })).toHaveCount(0);
     }
     await page.keyboard.press('Escape');
   }

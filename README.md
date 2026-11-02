@@ -17,13 +17,13 @@ npm run dev
 npm run data:refresh
 ```
 
-脚本只读 `http://127.0.0.1:10952/api/leaderboard`，验证完整 20 题、有效分数、Faster Rate 和 Median Speedup 后，导出 `data/leaderboard.json` 与可下载的 `public/data/leaderboard.json`。仅公开允许字段，移除内部路径、实验 ID、计费说明及错误信息。保存源响应 SHA-256、来源和 UTC 观测时间。失败时不会覆盖已有快照。刷新后重新构建部署，网页不会请求本机 API。
+脚本只读 `http://127.0.0.1:10952/api/leaderboard`，验证完整 20 题、有效分数、Faster Rate 和 Median Speedup 后，导出 `data/leaderboard.json` 与静态数据文件 `public/data/leaderboard.json`。仅公开允许字段，移除内部路径、实验 ID、计费说明及错误信息。保存源响应 SHA-256、来源和 UTC 观测时间。失败时不会覆盖已有快照。刷新后重新构建部署，网页不会请求本机 API。
 
 Faster Rate 为全 20 题中 reward > 1.10 的比例；Median Speedup 按全 20 题计算，缺失以 0 参与聚合。单题视图中缺失始终显示 `—`，不冒充零分。未完成模型标为 Provisional。
 
 ## 原始 Agent trajectory
 
-矩阵中的 140 个单元格均可打开轨迹查看器。消息采用 [Ant Design X Bubble](https://x.ant.design/components/bubble/)，工具参数、输出与 reasoning 采用 Ant Design Collapse，弹窗使用 Radix Dialog。支持全文搜索、每页 20 步、原始步骤与顶层元数据查看，以及原始 JSON gzip 下载；不截断或改写源文件。Markdown 禁止嵌入 HTML 和远程图片。
+矩阵中的 140 个单元格均可打开轨迹查看器。消息采用 [Ant Design X Bubble](https://x.ant.design/components/bubble/)，工具参数、输出与 reasoning 采用 Ant Design Collapse，弹窗使用 Radix Dialog。支持全文搜索、每页 20 步、原始步骤与顶层元数据查看；页面和弹窗均不提供下载按钮；不截断或改写源文件。Markdown 禁止嵌入 HTML 和远程图片。
 
 ```bash
 npm run data:trajectories
@@ -69,9 +69,9 @@ npm run build
 npx playwright test
 ```
 
-浏览器测试覆盖 140 个分数与快照逐项一致、筛选与搜索、指标切换、下载内容、空态、详情和 390/768/1440px 无页面溢出。可通过 `CHROMIUM_PATH` 指定已有 Chromium，`TEST_BASE_URL` 指向预览地址。Pages 工作流通过仓库变量 `NEXT_PUBLIC_PROJECT_GITHUB` 设置公开代码链接。
+浏览器测试覆盖 140 个分数与快照逐项一致、筛选与搜索、指标切换、无下载入口、空态、详情和 390/768/1440px 无页面溢出。可通过 `CHROMIUM_PATH` 指定已有 Chromium，`TEST_BASE_URL` 指向预览地址。Pages 工作流通过仓库变量 `NEXT_PUBLIC_PROJECT_GITHUB` 设置公开代码链接。
 
-轨迹验证还覆盖 140 个索引绑定、139 份原始文件 SHA-256、工具折叠、跨页搜索、原始文件下载、缺失提示、请求失败重试，以及移动端弹窗布局。
+轨迹验证还覆盖 140 个索引绑定、139 份原始文件 SHA-256、工具折叠、跨页搜索、源文件完整性、缺失提示、请求失败重试，以及移动端弹窗布局。
 
 ## 公开结果选择
 
@@ -79,6 +79,6 @@ npx playwright test
 
 `data/selected-results.json` 固定 Claude Opus 5.5 的 infer-kimik3-2p8t 使用 attempt #271，保存 verifier 原始指标与 result.json SHA-256。该运行状态仍为 failed，但 verifier 有效分数为 1.1804461942257218；公开分数状态为 verified。轨迹同步指向 #271。其余四道题按用户提供的说明标注 Anthropic 风控限制，缺失保留为 null，聚合仍使用全 20 题。
 
-`public_results.py` 将公开模型范围和指定结果应用到数据刷新，不改实验管理器记录。公开下载和轨迹目录仅包含当前展示的七个模型。
+`public_results.py` 将公开模型范围和指定结果应用到数据刷新，不改实验管理器记录。静态数据和轨迹目录仅包含当前展示的七个模型。
 
 `data/selected-trajectories.json` 固定 GLM-5.3 模型的 Qwen3 TTS 单元格使用 attempt #326 的原始轨迹（源模型名 deployed/GLM-5.3）。该次实验没有 verifier 得分，单元格继续显示缺失；导出器验证模型与任务身份，并禁止以仅轨迹选择替换已验证得分的来源。归一化公式使用 KaTeX，Lite 逐题表只展示 Agent 得分。
