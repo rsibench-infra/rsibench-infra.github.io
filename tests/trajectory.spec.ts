@@ -9,10 +9,10 @@ const labels: Record<string, string> = { 'gpt-6-astra': 'GPT-6 Astra', 'claude-o
 const first = manifest.entries[0];
 const original = JSON.parse(gunzipSync(readFileSync(`public/data/trajectories/${first.file}`)).toString());
 
-test('all 160 cells bind to the score snapshot and intact original ATIF artifacts', () => {
+test('all published cells bind to the score snapshot and intact original ATIF artifacts', () => {
   expect(manifest.leaderboard_sha256).toBe(createHash('sha256').update(readFileSync('data/leaderboard.json')).digest('hex'));
-  expect(manifest.entries).toHaveLength(160);
-  expect(new Set(manifest.entries.map(e => `${e.model}/${e.task}`)).size).toBe(160);
+  expect(manifest.entries).toHaveLength(snapshot.rows.length * 20);
+  expect(new Set(manifest.entries.map(e => `${e.model}/${e.task}`)).size).toBe(snapshot.rows.length * 20);
   for (const row of snapshot.rows) for (const cell of row.tasks) {
     const entry = manifest.entries.find(e => e.model === row.model && e.task === cell.task)!;
     expect(entry).toBeTruthy(); expect(entry.reward).toBe(cell.reward); expect(entry.score_status).toBe(cell.status);

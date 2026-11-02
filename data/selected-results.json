@@ -1,0 +1,28 @@
+[
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-kimik3-2p8t",
+    "attempt_id": 271,
+    "reward": 1.1804461942257218,
+    "run_status": "failed",
+    "result_sha256": "7d7edcb9ca66b18598912a1b5c173faccfe548a5e512afe3230d73a3317f8c0b",
+    "verifier_rewards": {
+      "reward": 1.1804461942257218,
+      "deploy_success": 1,
+      "gate_accuracy": 0.75,
+      "accuracy_within_tolerance": 1,
+      "performance_score": 1.1804461942257218,
+      "request_success_rate": 1.0,
+      "ttft_ms_p50": -1.0,
+      "ttft_ms_p99": -1.0,
+      "tpot_ms_p50": -1.0,
+      "tpot_ms_p99": -1.0,
+      "output_throughput": 30.982777777777777,
+      "benchmark_wall_time_sec": 3600.0,
+      "grm_transferable_infra_optimization": 1.0,
+      "grm_score": 1.0,
+      "grm_succ_quality": 1.0
+    },
+    "selection_reason": "Explicitly selected historical verifier result; Agent run status remains failed."
+  }
+]

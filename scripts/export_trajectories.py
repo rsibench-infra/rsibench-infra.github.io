@@ -33,8 +33,9 @@ def export(api, database):
         source_tasks = {t['task']: t for t in live_rows[model['model']]['tasks']}
         for cell in model['tasks']:
             source = source_tasks[cell['task']]
+            pin = next((p for p in scores.get('selected_results', []) if p['model'] == model['model'] and p['task'] == cell['task']), None)
             # A new reward requires refreshing the leaderboard first, never silently rebinding it.
-            if source['reward'] != cell['reward']:
+            if not pin and source['reward'] != cell['reward']:
                 raise ValueError(f"Score changed: {model['display_name']} / {cell['task']}; refresh scores first")
             record = tasks[source['task_id']]
             if record['task'] != cell['task'] or json.loads(record['spec']).get('model') != model['model']:
@@ -42,7 +43,14 @@ def export(api, database):
             if record['reward'] != source['reward'] or record['status'] != source['status']:
                 raise ValueError('Source changed during export; retry')
             candidates = [a for a in attempts if a['task_id'] == record['id']]
-            if record['result_path']:
+            if pin:
+                selected = next(a for a in candidates if a['id'] == pin['attempt_id'])
+                result_bytes = Path(selected['result_path']).read_bytes()
+                if hashlib.sha256(result_bytes).hexdigest() != pin['result_sha256']:
+                    raise ValueError('Selected result artifact changed')
+                if json.loads(result_bytes)['verifier_result']['rewards']['reward'] != cell['reward']:
+                    raise ValueError('Selected verifier reward does not match snapshot')
+            elif record['result_path']:
                 selected = next((a for a in candidates if a['result_path'] == record['result_path']), None)
                 if selected is None and not record['imported']:
                     raise ValueError('Cannot bind score to an exact attempt')
@@ -50,7 +58,7 @@ def export(api, database):
                 selected = candidates[0] if candidates else None
             kind, identity = ('attempt', selected['id']) if selected else ('task', record['id'])
             entry = dict(model=model['model'], task=cell['task'], reward=cell['reward'],
-                         score_status=cell['status'], run_status=source['status'],
+                         score_status=cell['status'], run_status=selected['status'] if pin else source['status'],
                          source=dict(kind=kind, id=identity), available=False)
             if not selected and not record['imported']:
                 entry['reason'] = 'No Agent attempt has been recorded for this run.'

@@ -248,13 +248,13 @@
         "opencode"
       ],
       "enabled": true,
-      "scored": 15,
+      "scored": 16,
       "running": 0,
-      "pending": 1,
+      "pending": 0,
       "failed": 4,
-      "faster_count": 11,
-      "faster_rate_percent": 55.0,
-      "median_speedup": 1.1297015262972219,
+      "faster_count": 12,
+      "faster_rate_percent": 60.0,
+      "median_speedup": 1.143926886320688,
       "rank": 3,
       "tasks": [
         {
@@ -284,8 +284,9 @@
         },
         {
           "task": "infer-kimik3-2p8t",
-          "status": "pending",
-          "reward": null
+          "status": "verified",
+          "reward": 1.1804461942257218,
+          "source_attempt_id": 271
         },
         {
           "task": "infer-lingbotworld2p0-14b",
@@ -357,7 +358,8 @@
           "status": "failed",
           "reward": null
         }
-      ]
+      ],
+      "evaluation_note": "Four tasks could not be tested because Anthropic risk-control restrictions were triggered."
     },
     {
       "model": "deployed/glm-5.3",
@@ -714,124 +716,6 @@
       ]
     },
     {
-      "model": "deployed/claude-opus-5",
-      "display_name": "claude-opus-5",
-      "agents": [
-        "opencode"
-      ],
-      "enabled": true,
-      "scored": 19,
-      "running": 0,
-      "pending": 0,
-      "failed": 1,
-      "faster_count": 7,
-      "faster_rate_percent": 35.0,
-      "median_speedup": 1.0355021905534003,
-      "rank": 7,
-      "tasks": [
-        {
-          "task": "infer-deepseekv4flash-284b",
-          "status": "completed",
-          "reward": 1.8939201621556838
-        },
-        {
-          "task": "infer-glm5p2-744b",
-          "status": "completed",
-          "reward": 0.9818287260777112
-        },
-        {
-          "task": "infer-glm5p3-744b",
-          "status": "completed",
-          "reward": 1.663564764150135
-        },
-        {
-          "task": "infer-glm5p3flash-320b",
-          "status": "completed",
-          "reward": 0.0
-        },
-        {
-          "task": "infer-inkling-975b",
-          "status": "completed",
-          "reward": 1.1513951433468537
-        },
-        {
-          "task": "infer-kimik3-2p8t",
-          "status": "completed",
-          "reward": 1.2978367623401914
-        },
-        {
-          "task": "infer-lingbotworld2p0-14b",
-          "status": "completed",
-          "reward": 0.9994392899622571
-        },
-        {
-          "task": "infer-llada2p1mini-16b",
-          "status": "completed",
-          "reward": 1.0944832911619502
-        },
-        {
-          "task": "infer-minimaxh3-64b",
-          "status": "completed",
-          "reward": 1.0541818599194315
-        },
-        {
-          "task": "infer-museglimmer-30b",
-          "status": "completed",
-          "reward": 1.0877942210369131
-        },
-        {
-          "task": "infer-nemotron3ultra-550a55b",
-          "status": "completed",
-          "reward": 4.902785005099598
-        },
-        {
-          "task": "infer-pi0p5libero-3p3b",
-          "status": "completed",
-          "reward": 2.498981719707461
-        },
-        {
-          "task": "infer-qwen3p8-27b",
-          "status": "completed",
-          "reward": 1.2852024409711862
-        },
-        {
-          "task": "infer-qwen3ttsbase-1p7b",
-          "status": "completed",
-          "reward": 1.0168225211873694
-        },
-        {
-          "task": "infer-qwen3vl-32b",
-          "status": "completed",
-          "reward": 0.9628057725582683
-        },
-        {
-          "task": "infer-wan2p2ti2v-5b",
-          "status": "completed",
-          "reward": 1.0070355020630368
-        },
-        {
-          "task": "train-qwen3-30a3b-grpo",
-          "status": "completed",
-          "reward": 0.8361097968860244
-        },
-        {
-          "task": "train-qwen3-30a3b-sft",
-          "status": "completed",
-          "reward": 1.000221056715275
-        },
-        {
-          "task": "train-qwen3-8b-opd",
-          "status": "completed",
-          "reward": 0.9917531961821814
-        },
-        {
-          "task": "train-qwen3vl-4b-grpo",
-          "status": "failed",
-          "reward": null
-        }
-      ]
-    },
-    {
       "model": "deployed/kimi-k3",
       "display_name": "kimi-k3",
       "agents": [
@@ -845,7 +729,7 @@
       "faster_count": 6,
       "faster_rate_percent": 30.0,
       "median_speedup": 1.0430881252207165,
-      "rank": 8,
+      "rank": 7,
       "tasks": [
         {
           "task": "infer-deepseekv4flash-284b",
@@ -949,5 +833,34 @@
         }
       ]
     }
-  ]
+  ],
+  "selected_results": [
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-kimik3-2p8t",
+      "attempt_id": 271,
+      "reward": 1.1804461942257218,
+      "run_status": "failed",
+      "result_sha256": "7d7edcb9ca66b18598912a1b5c173faccfe548a5e512afe3230d73a3317f8c0b",
+      "verifier_rewards": {
+        "reward": 1.1804461942257218,
+        "deploy_success": 1,
+        "gate_accuracy": 0.75,
+        "accuracy_within_tolerance": 1,
+        "performance_score": 1.1804461942257218,
+        "request_success_rate": 1.0,
+        "ttft_ms_p50": -1.0,
+        "ttft_ms_p99": -1.0,
+        "tpot_ms_p50": -1.0,
+        "tpot_ms_p99": -1.0,
+        "output_throughput": 30.982777777777777,
+        "benchmark_wall_time_sec": 3600.0,
+        "grm_transferable_infra_optimization": 1.0,
+        "grm_score": 1.0,
+        "grm_succ_quality": 1.0
+      },
+      "selection_reason": "Explicitly selected historical verifier result; Agent run status remains failed."
+    }
+  ],
+  "publication_updated_at": "2026-11-02T07:27:08.136700+00:00"
 }

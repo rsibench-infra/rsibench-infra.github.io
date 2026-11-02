@@ -88,43 +88,6 @@
       ]
     },
     {
-      "model": "openai/opensource/deepseek_v4_flash_0731",
-      "display_name": "deepseek-v4-flash",
-      "mean_score": 0.63220287673507,
-      "tasks": [
-        {
-          "task": "infer-llada2p1mini-16b",
-          "score": 1.3446790618010327,
-          "speedup": 2.129603425353956,
-          "status": "completed"
-        },
-        {
-          "task": "infer-museglimmer-30b",
-          "score": 0.559879484802468,
-          "speedup": 1.0754530611770585,
-          "status": "completed"
-        },
-        {
-          "task": "infer-qwen3p8-27b",
-          "score": 0.7168307439145125,
-          "speedup": 1.6272724722611116,
-          "status": "completed"
-        },
-        {
-          "task": "infer-qwen3vl-32b",
-          "score": 0.5396250931573375,
-          "speedup": 1.1051835846490385,
-          "status": "completed"
-        },
-        {
-          "task": "infer-wan2p2ti2v-5b",
-          "score": 0.0,
-          "speedup": 0.0,
-          "status": "completed"
-        }
-      ]
-    },
-    {
       "model": "deployed/claude-opus-5-5",
       "display_name": "claude-opus-5-5",
       "mean_score": 0.8965042718233894,
@@ -199,38 +162,38 @@
       ]
     },
     {
-      "model": "deployed/qwen3.8-max",
-      "display_name": "qwen3.8-max",
-      "mean_score": 0.47216400413660004,
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "display_name": "deepseek-v4-flash",
+      "mean_score": 0.63220287673507,
       "tasks": [
         {
           "task": "infer-llada2p1mini-16b",
-          "score": 0.0,
-          "speedup": 0.0,
+          "score": 1.3446790618010327,
+          "speedup": 2.129603425353956,
           "status": "completed"
         },
         {
           "task": "infer-museglimmer-30b",
-          "score": 0.5832214437990905,
-          "speedup": 1.1032729639119851,
+          "score": 0.559879484802468,
+          "speedup": 1.0754530611770585,
           "status": "completed"
         },
         {
           "task": "infer-qwen3p8-27b",
-          "score": 0.5770892272137756,
-          "speedup": 1.2051568448942849,
+          "score": 0.7168307439145125,
+          "speedup": 1.6272724722611116,
           "status": "completed"
         },
         {
           "task": "infer-qwen3vl-32b",
-          "score": 0.4999453766204898,
-          "speedup": 0.999858410875589,
+          "score": 0.5396250931573375,
+          "speedup": 1.1051835846490385,
           "status": "completed"
         },
         {
           "task": "infer-wan2p2ti2v-5b",
-          "score": 0.7005639730496442,
-          "speedup": 1.251358431353812,
+          "score": 0.0,
+          "speedup": 0.0,
           "status": "completed"
         }
       ]
@@ -273,38 +236,38 @@
       ]
     },
     {
-      "model": "deployed/claude-opus-5",
-      "display_name": "claude-opus-5",
-      "mean_score": 0.5446135372151855,
+      "model": "deployed/qwen3.8-max",
+      "display_name": "qwen3.8-max",
+      "mean_score": 0.47216400413660004,
       "tasks": [
         {
           "task": "infer-llada2p1mini-16b",
-          "score": 0.5569374658375655,
-          "speedup": 1.0944832911619502,
+          "score": 0.0,
+          "speedup": 0.0,
           "status": "completed"
         },
         {
           "task": "infer-museglimmer-30b",
-          "score": 0.5701460829249715,
-          "speedup": 1.0877942210369131,
+          "score": 0.5832214437990905,
+          "speedup": 1.1032729639119851,
           "status": "completed"
         },
         {
           "task": "infer-qwen3p8-27b",
-          "score": 0.6054269759696405,
-          "speedup": 1.2852024409711862,
+          "score": 0.5770892272137756,
+          "speedup": 1.2051568448942849,
           "status": "completed"
         },
         {
           "task": "infer-qwen3vl-32b",
-          "score": 0.48552841413937314,
-          "speedup": 0.9628057725582683,
+          "score": 0.4999453766204898,
+          "speedup": 0.999858410875589,
           "status": "completed"
         },
         {
           "task": "infer-wan2p2ti2v-5b",
-          "score": 0.5050287472043764,
-          "speedup": 1.0070355020630368,
+          "score": 0.7005639730496442,
+          "speedup": 1.251358431353812,
           "status": "completed"
         }
       ]

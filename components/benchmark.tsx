@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import type { TraceFocus } from './trajectory-viewer';
 const TrajectoryViewer = dynamic(() => import('./trajectory-viewer'), { ssr: false });
@@ -17,25 +17,22 @@ const identities: Record<string, { color: string; icon: string }> = {
   'glm-5.3': { color: '#586174', icon: 'zai' },
   'qwen3.8-max': { color: '#082dff', icon: 'qwen-color' },
   'seed-evolving-auto': { color: '#00a5b0', icon: 'bytedance-color' },
-  'claude-opus-5': { color: '#b85e42', icon: 'claude-color' },
   'kimi-k3': { color: '#1783ff', icon: 'kimi-color' },
 };
-const labels: Record<string,string> = { 'gpt-6-astra':'GPT-6 Astra', 'deepseek-v4-flash':'DeepSeek V4 Flash', 'claude-opus-5-5':'Claude Opus 5.5', 'glm-5.3':'GLM-5.3', 'qwen3.8-max':'Qwen3.8 Max', 'seed-evolving-auto':'Seed Evolving Auto', 'claude-opus-5':'Claude Opus 5', 'kimi-k3':'Kimi K3' };
+const labels: Record<string,string> = { 'gpt-6-astra':'GPT-6 Astra', 'deepseek-v4-flash':'DeepSeek V4 Flash', 'claude-opus-5-5':'Claude Opus 5.5', 'glm-5.3':'GLM-5.3', 'qwen3.8-max':'Qwen3.8 Max', 'seed-evolving-auto':'Seed Evolving Auto', 'kimi-k3':'Kimi K3' };
 const models = snapshot.rows.map((r) => ({...r, name:labels[r.display_name] || r.display_name, color:identities[r.display_name]?.color || '#6f819c', icon:identities[r.display_name]?.icon}));
-const liteModels = liteSet.models.map(model => ({ ...model, name: labels[model.display_name] || model.display_name }));
+const liteModels = liteSet.models.map(model => ({ ...model, name: labels[model.display_name] || model.display_name, ...identities[model.display_name] })).sort((a,b)=>b.mean_score-a.mean_score);
 const liteDomain = [Math.min(0, Math.floor(Math.min(...liteModels.map(model => model.mean_score)) * 5) / 5), Math.ceil((Math.max(1, ...liteModels.map(model => model.mean_score)) + 0.1) * 5) / 5];
-const liteTaskNames = Object.fromEntries(liteSet.rows.map(row => [row.task_id, row.task]));
-const chartMax = Math.max(8, Math.ceil(Math.max(...models.flatMap(m=>m.tasks.map(t=>t.reward ?? 0)))));
 const tasks = models[0].tasks.map(t=>t.task);
 const taskNames = ['DeepSeek V4 Flash','GLM-5.2','GLM-5.3','GLM-5.3 Flash','Inkling','Kimi K3','LingBot World 2.0','LLaDA 2.1 Mini','MiniMax H3','Muse Glimmer','Nemotron 3 Ultra','π0.5 LIBERO','Qwen3.8','Qwen3 TTS','Qwen3-VL','Wan 2.2','Qwen3 · GRPO','Qwen3 · SFT','Qwen3 · OPD','Qwen3-VL · GRPO'];
 const github = process.env.NEXT_PUBLIC_PROJECT_GITHUB || '';
 function CodeLink({children, className}: {children: React.ReactNode; className?: string}) { return github ? <a className={className} href={github} target="_blank" rel="noreferrer">{children}</a> : <span className={`${className || ''} coming-soon`} title="The public code repository will be announced here."><Github size={16}/> Code coming soon</span>; }
 const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
-function ModelIcon({model}: {model: typeof models[number]}) {
+function ModelIcon({model}: {model: { icon?: string; color: string }}) {
   return model.icon ? <img className="model-icon" src={`${base}/icons/models/${model.icon}.svg`} width={20} height={20} alt="" aria-hidden="true"/> : <span className="model-dot" style={{background:model.color}}/>;
 }
 function ModelAxisTick({x = 0, y = 0, payload}: {x?: number; y?: number; payload?: {value: string}}) {
-  const model = models.find(m => m.name === payload?.value);
+  const model = [...liteModels, ...models].find(m => m.name === payload?.value);
   if (!model) return <g/>;
   return <g transform={`translate(${x},${y})`} className="model-axis-tick">
     {model.icon && <image href={`${base}/icons/models/${model.icon}.svg`} x={-162} y={-10} width={20} height={20} aria-hidden="true"/>}
@@ -45,70 +42,57 @@ function ModelAxisTick({x = 0, y = 0, payload}: {x?: number; y?: number; payload
 const fmt = (v:number|null) => v === null ? '—' : `${v.toFixed(2)}×`;
 export default function Benchmark() {
   const [metric,setMetric] = useState('faster_rate_percent');
+  const sorted = [...models].sort((a,b)=>metric==='faster_rate_percent' ? b.faster_rate_percent-a.faster_rate_percent || b.median_speedup-a.median_speedup : b.median_speedup-a.median_speedup);
+  const chartMax = Math.ceil(Math.max(...models.flatMap(m=>m.tasks.map(t=>t.reward ?? 0))));
   const [query,setQuery] = useState('');
   const [group,setGroup] = useState('all');
   const [selected,setSelected] = useState<string[]>(models.map(m=>m.model));
   const [focus,setFocus] = useState<TraceFocus|null>(null);
   const visible = models.filter(m=>selected.includes(m.model));
-  const sorted = useMemo(()=>[...visible].sort((a,b)=>metric==='faster_rate_percent'? b.faster_rate_percent-a.faster_rate_percent : b.median_speedup-a.median_speedup),[visible,metric]);
   const indices = tasks.map((t,i)=>i).filter(i=>(group==='all'||tasks[i].startsWith(group)) && `${tasks[i]} ${taskNames[i]}`.toLowerCase().includes(query.toLowerCase()));
   const date = new Date(snapshot.observed_at).toISOString().slice(0,16).replace('T',' ')+' UTC';
-  return <Tooltip.Provider delayDuration={150}><a className="skip" href="#leaderboard">Skip to results</a>
-    <header><a className="brand" href="#"><Layers3 size={23}/> <span>RSIBench<span className="muted"> / Infra</span></span></a><nav aria-label="Main navigation"><a href="#leaderboard">Leaderboard</a><a href="#results">Task explorer</a><a href="#about">About</a></nav><CodeLink className="nav-github"><Github size={17}/><span>GitHub</span><ArrowUpRight size={14}/></CodeLink></header>
+  return <Tooltip.Provider delayDuration={150}><a className="skip" href="#lite-set">Skip to results</a>
+    <header><a className="brand" href="#"><Layers3 size={23}/> <span>RSIBench<span className="muted"> / Infra</span></span></a><nav aria-label="Main navigation"><a href="#lite-set">01 / Infra-Lite</a><a href="#leaderboard">02 / Infra</a><a href="#results">03 / Tasks</a><a href="#about">04 / Benchmarks</a></nav><CodeLink className="nav-github"><Github size={17}/><span>GitHub</span><ArrowUpRight size={14}/></CodeLink></header>
     <main><section className="hero">
       <div className="eyebrow"><span className="status-dot"/> A BENCHMARK FOR RECURSIVE SELF-IMPROVEMENT</div>
       <h1>RSIBench<span>-Infra</span></h1>
       <h2>Can agents optimize their own<br className="desktop-break"/> training and inference infrastructure?</h2>
-      <p className="hero-description">From kernels to the full software stack. Evaluating AI agents on<br className="desktop-break"/> real, production-scale infrastructure optimization.</p>
+      <p className="hero-description">From kernels to the full software stack. Evaluating AI agents on<br className="desktop-break"/> real, production-scale infrastructure optimization.</p><p className="benchmark-names">RSIBench-Infra-Lite · RSIBench-Infra</p>
       <p className="authors">Hanlin Wu<sup>1,2,3,*</sup><span>Yifei Wang<sup>1,2,3,*</sup></span> Zhicheng Cai<sup>1,2,3</sup><span>Huan-ang Gao<sup>1,2,3</sup></span><br/>Wei-Ying Ma<sup>2,3</sup><span>Ya-Qin Zhang<sup>2,3</sup></span> Jingjing Liu<sup>2,3</sup><span>Mingxuan Wang<sup>1,3</sup></span> Hao Zhou<sup>2,3,†</sup></p>
       <p className="affiliations">¹ ByteDance Seed <span>² Tsinghua AIR</span> ³ SIA-Lab</p><p className="contributions">* Equal contribution · † Corresponding author</p>
-      <div className="hero-actions"><a className="button primary" href="#leaderboard">Explore the results <ArrowDown size={16}/></a><CodeLink className="button"><Github size={17}/> Code & benchmark <ArrowUpRight size={15}/></CodeLink></div>
+      <div className="hero-actions"><a className="button primary" href="#lite-set">Explore the results <ArrowDown size={16}/></a><CodeLink className="button"><Github size={17}/> Code & benchmark <ArrowUpRight size={15}/></CodeLink></div>
       <div className="stats"><div><strong>20</strong><span>real-world tasks</span></div><div><strong>16 <small>+ 4</small></strong><span>inference + training</span></div><div><strong>{models.length}</strong><span>evaluated models</span></div><div><strong>Full stack</strong><span>optimization freedom</span></div></div>
     </section>
-    <section id="leaderboard" className="section leaderboard"><div className="section-kicker">01 / THE BIG PICTURE</div><div className="section-heading"><div><h2>The infrastructure frontier.</h2><p>How often can an agent make a real workload faster?</p></div><a className="text-link" href={`${base}/data/leaderboard.json`} download><Download size={15}/> Download results</a></div>
-      <div className="snapshot"><span className="status-dot"/> Latest exported snapshot <span className="snapshot-date">{date}</span><span className="snapshot-note">Includes ongoing evaluations</span></div>
+    <section id="lite-set" className="section lite-section">
+      <div className="section-kicker">01 / RSIBench-Infra-Lite</div>
+      <div className="section-heading"><div><h2>RSIBench-Infra-Lite leaderboard.</h2><p>Mean normalized score across five workloads; ranked from highest to lowest.</p></div><a className="text-link" href={`${base}/data/lite-set.json`} download><Download size={15}/> Download results</a></div>
+      <div className="snapshot"><span className="status-dot"/> Lite Set snapshot <span className="snapshot-date">{liteSet.as_of}</span></div>
+      <div className="lite-chart"><div className="lite-chart-legend"><span>Mean normalized Agent score</span><span className="lite-reference oracle">Oracle = 0.5</span><span className="lite-reference sol">SOL = 1</span></div><div role="img" aria-label="Lite Set model ranking by mean normalized Agent score; exact values are in the table below."><ResponsiveContainer width="100%" height={liteModels.length * 42 + 40}><BarChart data={liteModels} layout="vertical" margin={{left:0,right:48,top:12,bottom:0}} barSize={22}><CartesianGrid horizontal={false} stroke="#e8ecef" strokeDasharray="3 5"/><XAxis type="number" domain={liteDomain} tickFormatter={v=>v.toFixed(1)} axisLine={false} tickLine={false}/><YAxis type="category" dataKey="name" width={175} interval={0} axisLine={false} tickLine={false} tick={<ModelAxisTick/>}/><ChartTooltip formatter={v=>[Number(v).toFixed(3), "Mean normalized Agent score"]}/><ReferenceLine x={0.5} stroke="#8793a0" strokeDasharray="4 3"/><ReferenceLine x={1} stroke="#0b7285" strokeDasharray="4 3"/><Bar isAnimationActive={false} dataKey="mean_score" radius={[0,3,3,0]}><LabelList dataKey="mean_score" position="right" formatter={v=>Number(v).toFixed(3)} style={{fontSize:11,fill:"#343b45"}}/>{liteModels.map(m=><Cell key={m.model} fill={identities[m.display_name]?.color || "#0b7285"}/>)}</Bar></BarChart></ResponsiveContainer></div></div>
+      <div className="lite-table-wrap">
+        <table className="lite-score-table"><caption className="sr-only">Latest normalized Lite Set scores by model and workload. Each cell shows Oracle, Agent, and SOL scores.</caption><thead><tr><th>MODEL</th>{liteSet.rows.map(row=><th key={row.task_id}>{row.task}</th>)}<th>MEAN AGENT</th></tr></thead>
+          <tbody>{liteModels.map(model=><tr key={model.model} style={{"--model-color":model.color} as React.CSSProperties}><th><span className="lite-model-name"><ModelIcon model={model}/>{model.name}</span></th>{liteSet.rows.map(row=>{const task=model.tasks.find(item=>item.task===row.task_id);return <td key={row.task_id}><div className="lite-score-meta"><span>Oracle <b>0.500</b></span><span className="lite-score-agent">Agent <b>{task?.score.toFixed(3) ?? '—'}</b></span><span>SOL <b>1.000</b></span></div></td>})}<td className="lite-mean-cell">{model.mean_score.toFixed(3)}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div className="lite-table-legend"><span>Oracle = 0.500</span><span>Agent = normalized verified result</span><span>SOL = 1.000</span><span>All values use the latest normalized score; higher is better.</span></div>
+      <p className="chart-note">Normalization follows SOL-ExecBench: score = 1 / (1 + (T<sub>k</sub> − T<sub>SOL</sub>) / (T<sub>b</sub> − T<sub>SOL</sub>)). Oracle = 0.5 and SOL = 1.0. Agent values are derived from each model's verified Lite Set speedup; these derived scores are not official rewards. Values above 1 are retained as an audit signal that measured runtime is faster than the analytical SOL estimate. SOL estimates use AISimulate and AIConfigurator evidence with the task-specific caveats described in the paper.</p>
+    </section>
+    <section id="leaderboard" className="section leaderboard"><div className="section-kicker">02 / RSIBench-Infra</div><div className="section-heading"><div><h2>RSIBench-Infra leaderboard.</h2><p>How often can an agent make a real workload faster?</p></div><a className="text-link" href={`${base}/data/leaderboard.json`} download><Download size={15}/> Download Infra results</a></div>
+      <div className="snapshot"><span className="status-dot"/> Base score snapshot <span className="snapshot-date">{date}</span><span className="snapshot-note">Includes selected #271 verifier result</span></div>
       <Tabs.Root value={metric} onValueChange={setMetric}><div className="chart-toolbar"><Tabs.List className="tabs" aria-label="Ranking metric"><Tabs.Trigger value="faster_rate_percent">Faster rate</Tabs.Trigger><Tabs.Trigger value="median_speedup">Median speedup</Tabs.Trigger></Tabs.List><span className="axis-note">Higher is better <ArrowUpRight size={14}/></span></div>
       <div className="ranking-chart" role="img" aria-label={`Model ranking by ${metric === 'faster_rate_percent' ? 'faster rate' : 'median speedup'}. Exact values are available in the model cards below.`}><ResponsiveContainer width="100%" height={350}><BarChart data={sorted} layout="vertical" margin={{left:0,right:48,top:12,bottom:0}} barSize={22}><CartesianGrid horizontal={false} stroke="#e8ecef" strokeDasharray="3 5"/><XAxis type="number" domain={metric==='faster_rate_percent'?[0,100]:[0,'auto']} tickFormatter={v=>metric==='faster_rate_percent'?`${v}%`:`${v}×`} axisLine={false} tickLine={false} tick={{fontSize:11,fill:'#7b8088'}}/><YAxis type="category" dataKey="name" width={175} axisLine={false} tickLine={false} interval={0} tick={<ModelAxisTick/>}/><ChartTooltip cursor={{fill:'#f5f7fa'}} formatter={(v)=>metric==='faster_rate_percent'?`${v}%`:`${Number(v).toFixed(3)}×`}/><Bar isAnimationActive={false} dataKey={metric} radius={[0,4,4,0]} label={{position:'right',fontSize:12,fill:'#404752',formatter:(v:unknown)=>metric==='faster_rate_percent'?`${v}%`:`${Number(v).toFixed(2)}×`}}>{sorted.map(m=><Cell key={m.model} fill={m.color}/>)}</Bar></BarChart></ResponsiveContainer></div></Tabs.Root>
       <div className="metric-footnote"><span><strong>Faster rate</strong> · Share of all 20 tasks with speedup &gt; 1.10×.</span><span><strong>Median speedup</strong> · Across all 20 tasks; missing results contribute 0.</span></div>
       <div className="model-grid">{models.map(m=><article className="model-card" key={m.model} style={{'--model-color':m.color} as React.CSSProperties}><div className="model-top"><ModelIcon model={m}/><h3>{m.name}</h3><span className="model-rank">#{m.rank}</span></div><div className="model-values"><strong>{m.faster_rate_percent.toFixed(0)}<small>%</small></strong><div>{fmt(m.median_speedup)}<span>median speedup</span></div></div><div className="mini-chart" role="img" aria-label={`${m.name}: ${m.faster_rate_percent}% faster rate, ${fmt(m.median_speedup)} median speedup. Bars show the 20 tasks with a shared 0 to ${chartMax} scale.`}><ResponsiveContainer width="100%" height={65}><BarChart data={m.tasks} margin={{top:3,right:0,left:0,bottom:0}}><YAxis hide domain={[0,chartMax]}/><ChartTooltip labelFormatter={(_,p)=>p[0]?.payload.task} formatter={v=>fmt(Number(v))}/><ReferenceLine y={1.1} stroke="#b9c0c9" strokeDasharray="2 2"/><Bar isAnimationActive={false} dataKey="reward" fill={m.color} radius={[2,2,0,0]}/></BarChart></ResponsiveContainer></div><div className="model-bottom"><span>{m.scored}/20 scored</span><span className={m.scored===20?'complete':'provisional'}>{m.scored===20?'Complete':'Provisional'}</span></div></article>)}</div>
+      <p className="evaluation-note"><strong>Claude Opus 5.5:</strong> 4 of 20 tasks could not be tested because Anthropic risk-control restrictions were triggered. The infer-kimik3-2p8t result uses attempt #271: 1.180446× verified speedup. Aggregates retain the full 20-task denominator.</p>
     </section>
-    <section id="results" className="section"><div className="section-kicker">02 / UNDER THE HOOD</div><div className="section-heading"><div><h2>Every model. Every task.</h2><p>Click any score to explore the original Agent trajectory.</p></div><span className="small-label">RAW VERIFIED SPEEDUP</span></div>
+    <section id="results" className="section"><div className="section-kicker">03 / RSIBench-Infra</div><div className="section-heading"><div><h2>RSIBench-Infra task explorer.</h2><p>Click any score to explore the original Agent trajectory.</p></div><span className="small-label">RAW VERIFIED SPEEDUP</span></div>
       <div className="explorer-tools"><Tabs.Root value={group} onValueChange={setGroup}><Tabs.List className="tabs" aria-label="Task category"><Tabs.Trigger value="all">All tasks · 20</Tabs.Trigger><Tabs.Trigger value="infer">Inference · 16</Tabs.Trigger><Tabs.Trigger value="train">Training · 4</Tabs.Trigger></Tabs.List></Tabs.Root><label className="search"><Search size={16}/><input aria-label="Search tasks" placeholder="Find a task…" value={query} onChange={e=>setQuery(e.target.value)}/></label></div>
       <div className="model-filters"><SlidersHorizontal size={14}/>{models.map(m=><button key={m.model} aria-pressed={selected.includes(m.model)} onClick={()=>setSelected(selected.includes(m.model)?selected.filter(x=>x!==m.model):[...selected,m.model])} className={selected.includes(m.model)?'selected':''}><span style={{background:m.color}}>{selected.includes(m.model)&&<Check size={9}/>}</span>{m.name}</button>)}<button onClick={()=>{setSelected(models.map(m=>m.model));setGroup('all');setQuery('')}}>Reset</button></div>
       {visible.length&&indices.length?<div className="table-scroll"><table><caption className="sr-only">Verified speedup by task and model. Click any cell to view the original Agent trajectory. Missing results are displayed as a dash.</caption><thead><tr><th>WORKLOAD <span>↓</span></th>{visible.map(m=><th key={m.model}><ModelIcon model={m}/>{m.name}</th>)}</tr></thead><tbody>{indices.map(i=><tr key={tasks[i]}><th><span className="task-index">{String(i+1).padStart(2,'0')}</span><div>{taskNames[i]}<small>{tasks[i].startsWith('train')?'TRAINING':'INFERENCE'}</small></div></th>{visible.map(m=>{const t=m.tasks[i];const best=Math.max(...models.map(x=>x.tasks[i].reward??-1));return <td key={m.model}><Tooltip.Root><Tooltip.Trigger asChild><button className={`score ${t.reward===null?'missing':''} ${t.reward===best?'best':''}`} style={{background:t.reward===null?'#f4f5f6':`${m.color}${Math.round(15+Math.min(t.reward/4,1)*65).toString(16).padStart(2,'0')}`,borderColor:t.reward===best?m.color:'transparent'}} data-trace-selected={focus?.modelId===m.model && focus?.task===tasks[i]} onClick={()=>setFocus({model:m.name,modelId:m.model,task:tasks[i],reward:t.reward,status:t.status})} aria-label={`${m.name}, ${tasks[i]}, ${fmt(t.reward)}, ${t.status}`}>{fmt(t.reward)}</button></Tooltip.Trigger><Tooltip.Portal><Tooltip.Content className="tooltip" sideOffset={5}>{m.name}<br/>{tasks[i]}<br/>{t.reward===null?'No verified score':`${t.reward.toFixed(6)}×`} · {t.status}<Tooltip.Arrow/></Tooltip.Content></Tooltip.Portal></Tooltip.Root></td>})}</tr>)}</tbody></table></div>:<div className="empty">No results match your selection. Use Reset to show all models and tasks.</div>}
       <div className="matrix-legend"><span>Color intensity indicates speedup</span><span><i className="legend-best"/> Best on task (ties included)</span><span>— No verified score</span><span>0.00× Verified zero reward</span></div>
       {focus&&<TrajectoryViewer key={`${focus.modelId}/${focus.task}`} focus={focus} onClose={()=>setFocus(null)}/>}
     </section>
-    <section id="lite-set" className="section lite-section">
-      <div className="section-kicker">03 / LITE SET</div>
-      <div className="section-heading"><div><h2>How much of the SOL gap do models close?</h2><p>Per model, averaged over the five Lite Set workloads.</p></div></div>
-      <div className="lite-chart">
-        <div className="lite-chart-legend"><span>Mean SOL gap score</span><span className="lite-reference oracle">Oracle = 0.5</span><span className="lite-reference sol">SOL = 1</span></div>
-        <div role="img" aria-label="Average normalized SOL gap-closure score by model over the five Lite Set tasks. Oracle baseline 0.5; analytical SOL 1.">
-          <ResponsiveContainer width="100%" height={liteModels.length * 42 + 40}>
-            <BarChart data={liteModels} layout="vertical" margin={{left:0,right:42,top:12,bottom:0}} barSize={20}>
-              <CartesianGrid horizontal={false} stroke="#e8ecef" strokeDasharray="3 5"/>
-              <XAxis type="number" domain={liteDomain} tickCount={4} tickFormatter={v=>v.toFixed(1)} axisLine={false} tickLine={false} tick={{fontSize:11,fill:'#7b8088'}}/>
-              <YAxis type="category" dataKey="name" width={130} axisLine={false} tickLine={false} tick={{fontSize:11,fill:'#343b45'}}/>
-              <ChartTooltip formatter={(v)=>[Number(v).toFixed(3), 'Mean SOL gap score']} />
-              <ReferenceLine x={0} stroke="#c4ccd4"/>
-              <ReferenceLine x={0.5} stroke="#8793a0" strokeDasharray="4 3"/>
-              <ReferenceLine x={1} stroke="#0b7285" strokeDasharray="4 3"/>
-              <Bar isAnimationActive={false} dataKey="mean_score" name="Mean SOL gap score" fill="#0b7285" radius={[0,3,3,0]}>
-                <LabelList dataKey="mean_score" position="right" formatter={v=>Number(v).toFixed(3)} style={{fontSize:11,fill:'#343b45'}}/>
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
-      <div className="lite-table">{liteModels.map(row=><article className="lite-row" key={row.model}>
-        <h3>{row.name}</h3><div className="lite-mean"><span>Mean SOL gap score</span><strong>{row.mean_score.toFixed(3)}</strong></div>
-        <dl>{row.tasks.map(task=><div key={task.task}><dt>{liteTaskNames[task.task] || task.task}</dt><dd>{task.score.toFixed(2)}</dd></div>)}</dl>
-      </article>)}</div>
-      <p className="chart-note">For each task, score = 1 / (1 + (T_k − T_SOL) / (T_b − T_SOL)), following SOL-ExecBench. Here T_b is the Oracle baseline runtime, T_SOL is the analytical SOL runtime, and T_k is the runtime implied by the verified leaderboard speedup. Oracle = 0.5 and SOL = 1; values above 1 indicate an audit signal that the measured result exceeds the analytical SOL estimate. SOL estimates use AISimulate and AIConfigurator evidence with the task-specific caveats described in the paper.</p>
-    </section>
-    <section id="about" className="section about"><div><div className="section-kicker">04 / BEYOND THE KERNEL</div><h2>Real systems.<br/>Measurable progress.</h2><p>Optimizing a single kernel is only part of the story. RSIBench-Infra asks agents to improve end-to-end training and inference workloads at production scale.</p><CodeLink className="text-link">Explore the benchmark <ArrowRight size={16}/></CodeLink></div><div className="method-list"><article><span>01</span><div><h3>Freedom across the stack</h3><p>Agents can modify the software stack inside a sandbox, rather than being limited to a single layer.</p></div></article><article><span>02</span><div><h3>End-to-end evaluation</h3><p>16 inference and 4 training tasks measure performance on real workloads, with task-specific verification.</p></div></article><article><span>03</span><div><h3>Reproducible submissions</h3><p>An OCI image layer submission protocol captures changes across the environment, beyond a Git patch.</p></div></article></div></section>
-    <aside className="data-note"><strong>About these results</strong><p>This is a dated export from the npu-fly experiment manager, not a live feed. Current model/task records are selected by the manager; historical best scores are not substituted. Incomplete evaluations are provisional. Missing scores stay distinct from zero in task views, while aggregate metrics use the complete 20-task denominator.</p><p>Snapshot: {date} · {models.reduce((n,m)=>n+m.scored,0)} verified scores / {models.length*20} model-task pairs.</p></aside>
+    <section id="about" className="section about"><div><div className="section-kicker">04 / THE BENCHMARKS</div><h2>RSIBench-Infra-Lite<br/>&amp; RSIBench-Infra.</h2><p>RSIBench-Infra evaluates 20 production-scale training and inference workloads. RSIBench-Infra-Lite focuses on five inference workloads, with normalized scores relative to Oracle and analytical SOL references.</p><CodeLink className="text-link">Explore the benchmark <ArrowRight size={16}/></CodeLink></div><div className="method-list"><article><span>01</span><div><h3>Freedom across the stack</h3><p>Agents can modify the software stack inside a sandbox, rather than being limited to a single layer.</p></div></article><article><span>02</span><div><h3>End-to-end evaluation</h3><p>16 inference and 4 training tasks measure performance on real workloads, with task-specific verification.</p></div></article><article><span>03</span><div><h3>Reproducible submissions</h3><p>An OCI image layer submission protocol captures changes across the environment, beyond a Git patch.</p></div></article></div></section>
+
     </main><footer><a className="brand" href="#"><Layers3 size={19}/> RSIBench-Infra</a><span>A benchmark for the infrastructure of self-improvement.</span><CodeLink>GitHub <ArrowUpRight size={14}/></CodeLink></footer>
   </Tooltip.Provider>;
 }

@@ -1,4 +1,5 @@
 """Export a validated, public-safe snapshot from the read-only manager API."""
+from public_results import apply_policy
 import argparse
 import hashlib
 import json
@@ -32,6 +33,7 @@ for row in source['rows']:
     rows.append(result)
 snapshot = {'observed_at': datetime.fromtimestamp(source['observed_at'], timezone.utc).isoformat(), 'source': 'npu-fly experiment manager · /api/leaderboard', 'source_sha256': hashlib.sha256(raw).hexdigest(), 'suite_size': 20, 'faster_threshold': 1.1, 'rows': rows}
 root = Path(__file__).resolve().parents[1]
+snapshot = apply_policy(snapshot)
 encoded = json.dumps(snapshot, indent=2, ensure_ascii=False) + '\n'
 for path in [root / 'data/leaderboard.json', root / 'public/data/leaderboard.json']:
     path.parent.mkdir(parents=True, exist_ok=True)
