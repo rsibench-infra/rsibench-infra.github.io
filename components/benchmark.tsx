@@ -7,7 +7,7 @@ const TrajectoryViewer = dynamic(() => import('./trajectory-viewer'), { ssr: fal
 import * as Tabs from '@radix-ui/react-tabs';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { ArrowUpRight, ArrowDown, Github, Search, ArrowRight, Layers3, SlidersHorizontal, Check } from 'lucide-react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as ChartTooltip, Cell, ReferenceLine, LabelList } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip as ChartTooltip, Cell, ReferenceLine, LabelList, Rectangle } from 'recharts';
 import snapshot from '@/data/leaderboard.json';
 import liteSet from '@/data/lite-set.json';
 
@@ -24,6 +24,9 @@ const labels: Record<string,string> = { 'gpt-6-astra':'GPT-6 Astra', 'deepseek-v
 const models = snapshot.rows.map((r) => ({...r, name:labels[r.display_name] || r.display_name, color:identities[r.display_name]?.color || '#6f819c', icon:identities[r.display_name]?.icon}));
 const liteModels = liteSet.models.map(model => ({ ...model, name: labels[model.display_name] || model.display_name, ...identities[model.display_name] })).sort((a,b)=>b.mean_score-a.mean_score);
 const liteDomain = [Math.min(0, Math.floor(Math.min(...liteModels.map(model => model.mean_score)) * 5) / 5), Math.ceil((Math.max(1, ...liteModels.map(model => model.mean_score)) + 0.1) * 5) / 5];
+// One scale across workloads preserves cross-task comparisons, including scores above SOL.
+const liteTaskScores = liteModels.flatMap(model => model.tasks.map(task => task.score));
+const liteTaskDomain = [Math.min(0, Math.floor(Math.min(...liteTaskScores) * 2) / 2), Math.ceil(Math.max(1, ...liteTaskScores) * 2) / 2];
 const tasks = models[0].tasks.map(t=>t.task);
 const taskNames = ['DeepSeek V4 Flash','GLM-5.2','GLM-5.3','GLM-5.3 Flash','Inkling','Kimi K3','LingBot World 2.0','LLaDA 2.1 Mini','MiniMax H3','Muse Glimmer','Nemotron 3 Ultra','π0.5 LIBERO','Qwen3.8','Qwen3 TTS','Qwen3-VL','Wan 2.2','Qwen3 · GRPO','Qwen3 · SFT','Qwen3 · OPD','Qwen3-VL · GRPO'];
 const github = process.env.NEXT_PUBLIC_PROJECT_GITHUB || '';
@@ -65,13 +68,33 @@ export default function Benchmark() {
     <section id="lite-set" className="section lite-section">
       <div className="section-kicker">01 / RSIBench-Infra-Lite</div>
       <div className="section-heading"><div><h2>RSIBench-Infra-Lite leaderboard.</h2><p>Mean normalized score across five workloads; ranked from highest to lowest.</p></div></div>
-      <div className="lite-chart"><div className="lite-chart-legend"><span>Mean normalized Agent score</span><span className="lite-reference oracle">Oracle = 0.5</span><span className="lite-reference sol">SOL = 1</span></div><div role="img" aria-label="Lite Set model ranking by mean normalized Agent score; exact values are in the table below."><ResponsiveContainer width="100%" height={liteModels.length * 42 + 40}><BarChart data={liteModels} layout="vertical" margin={{left:0,right:48,top:12,bottom:0}} barSize={22}><CartesianGrid horizontal={false} stroke="#e8ecef" strokeDasharray="3 5"/><XAxis type="number" domain={liteDomain} tickFormatter={v=>v.toFixed(1)} axisLine={false} tickLine={false}/><YAxis type="category" dataKey="name" width={175} interval={0} axisLine={false} tickLine={false} tick={<ModelAxisTick/>}/><ChartTooltip formatter={v=>[Number(v).toFixed(3), "Mean normalized Agent score"]}/><ReferenceLine x={0.5} stroke="#8793a0" strokeDasharray="4 3"/><ReferenceLine x={1} stroke="#0b7285" strokeDasharray="4 3"/><Bar isAnimationActive={false} dataKey="mean_score" radius={[0,3,3,0]}><LabelList dataKey="mean_score" position="right" formatter={v=>Number(v).toFixed(3)} style={{fontSize:11,fill:"#343b45"}}/>{liteModels.map(m=><Cell key={m.model} fill={identities[m.display_name]?.color || "#0b7285"}/>)}</Bar></BarChart></ResponsiveContainer></div></div>
-      <div className="lite-table-wrap">
-        <table className="lite-score-table"><caption className="sr-only">Latest normalized Lite Set scores by model and workload. Each cell shows the normalized Agent score.</caption><thead><tr><th>MODEL</th>{liteSet.rows.map(row=><th key={row.task_id}>{row.task}</th>)}<th>MEAN SCORE</th></tr></thead>
-          <tbody>{liteModels.map(model=><tr key={model.model} style={{"--model-color":model.color} as React.CSSProperties}><th><span className="lite-model-name"><ModelIcon model={model}/>{model.name}</span></th>{liteSet.rows.map(row=>{const task=model.tasks.find(item=>item.task===row.task_id);return <td key={row.task_id}><span className="lite-score-agent">{task?.score.toFixed(3) ?? '—'}</span></td>})}<td className="lite-mean-cell">{model.mean_score.toFixed(3)}</td></tr>)}</tbody>
-        </table>
+      <div className="lite-chart"><div className="lite-chart-legend"><span>Mean normalized Agent score</span><span className="lite-reference oracle">Oracle = 0.5</span><span className="lite-reference sol">SOL = 1</span></div><div role="img" aria-label="Lite Set model ranking by mean normalized Agent score; exact mean scores are labeled on the bars."><ResponsiveContainer width="100%" height={liteModels.length * 42 + 40}><BarChart data={liteModels} layout="vertical" margin={{left:0,right:48,top:12,bottom:0}} barSize={22}><CartesianGrid horizontal={false} stroke="#e8ecef" strokeDasharray="3 5"/><XAxis type="number" domain={liteDomain} tickFormatter={v=>v.toFixed(1)} axisLine={false} tickLine={false}/><YAxis type="category" dataKey="name" width={175} interval={0} axisLine={false} tickLine={false} tick={<ModelAxisTick/>}/><ChartTooltip formatter={v=>[Number(v).toFixed(3), "Mean normalized Agent score"]}/><ReferenceLine x={0.5} stroke="#8793a0" strokeDasharray="4 3"/><ReferenceLine x={1} stroke="#0b7285" strokeDasharray="4 3"/><Bar isAnimationActive={false} dataKey="mean_score" radius={[0,3,3,0]}><LabelList dataKey="mean_score" position="right" formatter={v=>Number(v).toFixed(3)} style={{fontSize:11,fill:"#343b45"}}/>{liteModels.map(m=><Cell key={m.model} fill={identities[m.display_name]?.color || "#0b7285"}/>)}</Bar></BarChart></ResponsiveContainer></div></div>
+      <div className="lite-workload-heading"><h3>Model scores by workload</h3><p>Same scale and model order across all five charts. Higher is better.</p></div>
+      <div className="lite-chart-legend"><span>Normalized Agent score · — No verified score</span><span className="lite-reference oracle">Oracle = 0.5</span><span className="lite-reference sol">SOL = 1</span></div>
+      <div className="lite-workload-grid">
+        {liteSet.rows.map((row, index) => {
+          const chartData = liteModels.map(model => ({ ...model, score: model.tasks.find(task => task.task === row.task_id)?.score ?? null }));
+          return <figure className="lite-workload-chart" key={row.task_id} aria-labelledby={`lite-workload-${index}`}>
+            <figcaption id={`lite-workload-${index}`}><span>{String(index + 1).padStart(2, '0')}</span>{row.task}</figcaption>
+            <div aria-hidden="true"><ResponsiveContainer width="100%" height={liteModels.length * 34 + 40}>
+              <BarChart data={chartData} layout="vertical" margin={{ left: 0, right: 44, top: 10, bottom: 0 }} barSize={16}>
+                <CartesianGrid horizontal={false} stroke="#e8ecef" strokeDasharray="3 5"/>
+                <XAxis type="number" domain={liteTaskDomain} ticks={Array.from({length: Math.round((liteTaskDomain[1] - liteTaskDomain[0]) * 2) + 1}, (_, i) => liteTaskDomain[0] + i * 0.5)} tickFormatter={v => v.toFixed(1)} axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#7b8088' }}/>
+                <YAxis type="category" dataKey="name" width={175} interval={0} axisLine={false} tickLine={false} tick={<ModelAxisTick/>}/>
+                <ChartTooltip cursor={{ fill: '#f5f7fa' }} formatter={v => [Number(v).toFixed(6), 'Normalized Agent score']}/>
+                <ReferenceLine x={0.5} stroke="#8793a0" strokeDasharray="4 3"/>
+                <ReferenceLine x={1} stroke="#0b7285" strokeDasharray="4 3"/>
+                {/* An explicit shape retains zero-width bars in Recharts label data. */}
+                <Bar isAnimationActive={false} dataKey="score" radius={[0, 3, 3, 0]} shape={<Rectangle/>}>
+                  <LabelList dataKey="score" position="right" formatter={v => v == null ? '—' : Number(v).toFixed(3)} style={{ fontSize: 10, fill: '#343b45' }}/>
+                  {chartData.map(model => <Cell key={model.model} fill={model.color || '#0b7285'}/>)}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer></div>
+            <ul className="sr-only">{chartData.map(model => <li key={model.model}>{model.name}: <span className="lite-score-agent">{model.score === null ? '—' : model.score.toFixed(3)}</span></li>)}</ul>
+          </figure>;
+        })}
       </div>
-      <div className="lite-table-legend"><span>Agent score = normalized verified result</span><span>All values use the latest normalized score; higher is better.</span></div>
       <p className="chart-note">Normalization follows <a href="https://research.nvidia.com/benchmarks/sol-execbench" target="_blank" rel="noreferrer">SOL-ExecBench</a>: <span className="normalization-formula" dangerouslySetInnerHTML={{ __html: normalizationHtml }}/>. Oracle = 0.5 and SOL = 1.0. Agent values are derived from each model's verified Lite Set speedup; these derived scores are not official rewards. Values above 1 are retained as an audit signal that measured runtime is faster than the analytical SOL estimate. SOL estimates use <a href="https://github.com/ai-dynamo/aisimulate" target="_blank" rel="noreferrer">AISimulate</a> evidence with the task-specific caveats described in the paper.</p>
     </section>
     <section id="leaderboard" className="section leaderboard"><div className="section-kicker">02 / RSIBench-Infra</div><div className="section-heading"><div><h2>RSIBench-Infra leaderboard.</h2><p>How often can an agent make a real workload faster?</p></div></div>

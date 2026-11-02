@@ -75,10 +75,10 @@ npx playwright test
 
 ## 公开结果选择
 
-页面顺序为 RSIBench-Infra-Lite 排行榜、RSIBench-Infra 排行榜、RSIBench-Infra 逐题结果、两个 benchmark 的介绍。Lite 图表和表格统一按五题 mean_score 降序排列。
+页面顺序为 RSIBench-Infra-Lite 排行榜、RSIBench-Infra 排行榜、RSIBench-Infra 逐题结果、两个 benchmark 的介绍。Lite 总榜和五张逐题横向条形图统一按五题 mean_score 降序排列。逐题图共用刻度、模型颜色和 Oracle / SOL 参考线，条末标注精确到三位小数的 Agent 得分，保留零分及超过 SOL 的分数。
 
 `data/selected-results.json` 固定 Claude Opus 5.5 的 infer-kimik3-2p8t 使用 attempt #271，保存 verifier 原始指标与 result.json SHA-256。该运行状态仍为 failed，但 verifier 有效分数为 1.1804461942257218；公开分数状态为 verified。轨迹同步指向 #271。其余四道题按用户提供的说明标注 Anthropic 风控限制，缺失保留为 null，聚合仍使用全 20 题。
 
 `public_results.py` 将公开模型范围和指定结果应用到数据刷新，不改实验管理器记录。静态数据和轨迹目录仅包含当前展示的七个模型。
 
-`data/selected-trajectories.json` 固定 GLM-5.3 模型的 Qwen3 TTS 单元格使用 attempt #326 的原始轨迹（源模型名 deployed/GLM-5.3）。该次实验没有 verifier 得分，单元格继续显示缺失；导出器验证模型与任务身份，并禁止以仅轨迹选择替换已验证得分的来源。归一化公式使用 KaTeX，Lite 逐题表只展示 Agent 得分。
+`data/selected-trajectories.json` 固定 GLM-5.3 模型的 Qwen3 TTS 单元格使用 attempt #326 的原始轨迹（源模型名 deployed/GLM-5.3）。该次实验没有 verifier 得分，单元格继续显示缺失；导出器验证模型与任务身份，并禁止以仅轨迹选择替换已验证得分的来源。归一化公式使用 KaTeX，Lite 逐题条形图只展示 Agent 得分，Oracle / SOL 以参考线呈现。
