@@ -1676,18 +1676,20 @@
       "run_status": "failed",
       "source": {
         "kind": "attempt",
-        "id": 325
+        "id": 326
       },
-      "available": false,
+      "available": true,
       "source_attempt_ids": [
-        325
+        326
       ],
       "live": false,
-      "modified_at": null,
-      "reason": "No ATIF trajectory was saved for this run. This does not mean the Agent did not execute.",
-      "log_file": "dad479e145ab138618779c0ba582949fc707b5c024afb2bb093c5a68bcea1cc4.txt.gz",
-      "log_sha256": "dad479e145ab138618779c0ba582949fc707b5c024afb2bb093c5a68bcea1cc4",
-      "log_bytes": 33532
+      "modified_at": 1793563372.8075643,
+      "file": "141decb87723dbb77335e61dc9835c2c5c2247125d390277f965421de48d2f41.json.gz",
+      "sha256": "141decb87723dbb77335e61dc9835c2c5c2247125d390277f965421de48d2f41",
+      "bytes": 1179083,
+      "steps": 189,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
     },
     {
       "model": "deployed/glm-5.3",

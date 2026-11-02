@@ -19,6 +19,7 @@ def fetch(url):
 def export(api, database):
     snapshot_bytes = (ROOT / 'data/leaderboard.json').read_bytes()
     scores = json.loads(snapshot_bytes)
+    trajectory_selections = json.loads((ROOT / 'data/selected-trajectories.json').read_text())
     live = json.loads(fetch(api + '/leaderboard'))
     live_rows = {row['model']: row for row in live['rows']}
     db = sqlite3.connect(f'file:{Path(database).resolve()}?mode=ro', uri=True)
@@ -56,9 +57,17 @@ def export(api, database):
                     raise ValueError('Cannot bind score to an exact attempt')
             else:
                 selected = candidates[0] if candidates else None
+            trace_pin = next((p for p in trajectory_selections if p['model'] == model['model'] and p['task'] == cell['task']), None)
+            if trace_pin:
+                selected = next(a for a in attempts if a['id'] == trace_pin['attempt_id'])
+                trace_task = tasks[selected['task_id']]
+                if trace_task['task'] != cell['task'] or json.loads(trace_task['spec']).get('model', '').casefold() != model['model'].casefold():
+                    raise ValueError('Selected trajectory does not match model/task identity')
+                if cell['reward'] is not None:
+                    raise ValueError('Trajectory-only selection must not replace a verified score source')
             kind, identity = ('attempt', selected['id']) if selected else ('task', record['id'])
             entry = dict(model=model['model'], task=cell['task'], reward=cell['reward'],
-                         score_status=cell['status'], run_status=selected['status'] if pin else source['status'],
+                         score_status=cell['status'], run_status=selected['status'] if pin or trace_pin else source['status'],
                          source=dict(kind=kind, id=identity), available=False)
             if not selected and not record['imported']:
                 entry['reason'] = 'No Agent attempt has been recorded for this run.'

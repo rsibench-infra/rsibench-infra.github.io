@@ -69,3 +69,28 @@ test('benchmark order, model identities, selected result and publication data ag
   const full = await page.request.get((await page.getByRole('link', { name: 'Download Infra results' }).getAttribute('href'))!);
   expect(await full.json()).toEqual(snapshot);
 });
+
+test('requested copy, agent-only Lite scores, linked formula and selected GLM trajectory', async ({ page }) => {
+  await page.goto('./');
+  await expect(page.locator('header nav')).toContainText('01 / RSIBench-Infra-Lite');
+  await expect(page.locator('header nav')).toContainText('02 / RSIBench-Infra');
+  await expect(page.locator('.stats > div').last()).toHaveText('5Lite Set tasks');
+  await expect(page.locator('.snapshot, .benchmark-names, .eyebrow')).toHaveCount(0);
+  await expect(page.locator('.lite-score-table')).not.toContainText('Oracle');
+  await expect(page.locator('.lite-score-table')).not.toContainText('SOL');
+  await expect(page.locator('.lite-score-table')).toContainText('MEAN SCORE');
+  await expect(page.locator('.chart-note .katex')).toBeVisible();
+  await expect(page.getByRole('link', { name: 'SOL-ExecBench', exact: true })).toHaveAttribute('href', 'https://research.nvidia.com/benchmarks/sol-execbench');
+  await expect(page.getByRole('link', { name: 'AISimulate', exact: true })).toHaveAttribute('href', 'https://github.com/ai-dynamo/aisimulate');
+  for (const task of snapshot.rows.find(r => r.display_name === 'claude-opus-5-5')!.tasks.filter(t => t.reward === null)) {
+    await expect(page.locator('.evaluation-note')).toContainText(task.task);
+  }
+  await expect(page.locator('.evaluation-note')).not.toContainText('#271');
+  await expect(page.getByText('RAW VERIFIED SPEEDUP', { exact: true })).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: 'RSIBench-Infra agent trajectory explorer.', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'GLM-5.3, infer-qwen3ttsbase-1p7b,', exact: false }).click();
+  await expect(page.locator('.trace-summary')).toContainText('Source: attempt 326');
+  await expect(page.locator('.trace-summary')).toContainText('No verified score');
+  await expect(page.getByText('SHA-256 verified.', { exact: false })).toBeVisible();
+  await expect(page.locator('.ant-bubble')).toHaveCount(20);
+});

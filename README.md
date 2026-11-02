@@ -33,7 +33,7 @@ python3 scripts/export_trajectories.py --api http://127.0.0.1:10952/api --state-
 
 导出器保持已有分数快照不变，按 manager 榜单选中的 task、对应 result_path 的 attempt 定位轨迹；重评沿 source_attempt_ids 读取原始 Agent。若分数已变化则拒绝导出，需先运行 `npm run data:refresh`，然后重新导出轨迹。公开索引保留来源运行 ID、分数状态与当前运行状态、导出时间、文件 SHA-256 和采集完整性提示，不导出数据库路径。轨迹比评分快照更新时仍单独标明来源与导出时间。
 
-静态文件位于 `public/data/trajectories/`，浏览器只在打开单元格时请求对应 gzip 文件，解压后校验 SHA-256。原始文件共约 40 MB（gzip），不会加入首页 JS。当前导出 138 份轨迹，另外 2 个单元格明确显示 ATIF 缺失，其中 1 个提供原生 Agent 日志查看和下载；不使用其他运行补位。源轨迹里的命令、路径及工具输出保持原样。浏览器需支持 DecompressionStream 和 Web Crypto（HTTPS 或 localhost）。
+静态文件位于 `public/data/trajectories/`，浏览器只在打开单元格时请求对应 gzip 文件，解压后校验 SHA-256。原始文件共约 40 MB（gzip），不会加入首页 JS。当前导出 139 份轨迹，另外 1 个单元格明确显示 ATIF 缺失；不使用其他运行补位。源轨迹里的命令、路径及工具输出保持原样。浏览器需支持 DecompressionStream 和 Web Crypto（HTTPS 或 localhost）。
 
 ## GitHub Pages
 
@@ -71,7 +71,7 @@ npx playwright test
 
 浏览器测试覆盖 140 个分数与快照逐项一致、筛选与搜索、指标切换、下载内容、空态、详情和 390/768/1440px 无页面溢出。可通过 `CHROMIUM_PATH` 指定已有 Chromium，`TEST_BASE_URL` 指向预览地址。Pages 工作流通过仓库变量 `NEXT_PUBLIC_PROJECT_GITHUB` 设置公开代码链接。
 
-轨迹验证还覆盖 140 个索引绑定、138 份原始文件 SHA-256、工具折叠、跨页搜索、原始文件下载、缺失提示、请求失败重试，以及移动端弹窗布局。
+轨迹验证还覆盖 140 个索引绑定、139 份原始文件 SHA-256、工具折叠、跨页搜索、原始文件下载、缺失提示、请求失败重试，以及移动端弹窗布局。
 
 ## 公开结果选择
 
@@ -80,3 +80,5 @@ npx playwright test
 `data/selected-results.json` 固定 Claude Opus 5.5 的 infer-kimik3-2p8t 使用 attempt #271，保存 verifier 原始指标与 result.json SHA-256。该运行状态仍为 failed，但 verifier 有效分数为 1.1804461942257218；公开分数状态为 verified。轨迹同步指向 #271。其余四道题按用户提供的说明标注 Anthropic 风控限制，缺失保留为 null，聚合仍使用全 20 题。
 
 `public_results.py` 将公开模型范围和指定结果应用到数据刷新，不改实验管理器记录。公开下载和轨迹目录仅包含当前展示的七个模型。
+
+`data/selected-trajectories.json` 固定 GLM-5.3 模型的 Qwen3 TTS 单元格使用 attempt #326 的原始轨迹（源模型名 deployed/GLM-5.3）。该次实验没有 verifier 得分，单元格继续显示缺失；导出器验证模型与任务身份，并禁止以仅轨迹选择替换已验证得分的来源。归一化公式使用 KaTeX，Lite 逐题表只展示 Agent 得分。

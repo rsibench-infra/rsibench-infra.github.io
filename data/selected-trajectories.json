@@ -1,0 +1,8 @@
+[
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-qwen3ttsbase-1p7b",
+    "attempt_id": 326,
+    "selection_reason": "Explicitly selected Agent trajectory; no verified score."
+  }
+]
