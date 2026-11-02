@@ -1,6 +1,6 @@
 # RSIBench-Infra Pages
 
-白底研究项目页：作者介绍、可切换指标的排行榜、8 个模型的独立图表、20 题交互得分矩阵和评测方法。采用 Next.js 静态导出、React、TypeScript、Tailwind CSS、Radix UI Tabs/Tooltip、Recharts 和 Lucide；字体通过 Fontsource 自托管。
+白底研究项目页：作者介绍、可切换指标的排行榜、8 个模型的独立图表、20 题交互得分矩阵和评测方法。采用 Next.js 静态导出、React、TypeScript、Tailwind CSS、Radix UI Tabs/Tooltip/Dialog、Ant Design X Bubble、Recharts 和 Lucide；字体通过 Fontsource 自托管。
 
 ## 本地运行
 
@@ -21,6 +21,20 @@ npm run data:refresh
 
 Faster Rate 为全 20 题中 reward > 1.10 的比例；Median Speedup 按全 20 题计算，缺失以 0 参与聚合。单题视图中缺失始终显示 `—`，不冒充零分。未完成模型标为 Provisional。
 
+## 原始 Agent trajectory
+
+矩阵中的 160 个单元格均可打开轨迹查看器。消息采用 [Ant Design X Bubble](https://x.ant.design/components/bubble/)，工具参数、输出与 reasoning 采用 Ant Design Collapse，弹窗使用 Radix Dialog。支持全文搜索、每页 20 步、原始步骤与顶层元数据查看，以及原始 JSON gzip 下载；不截断或改写源文件。Markdown 禁止嵌入 HTML 和远程图片。
+
+```bash
+npm run data:trajectories
+# 在其他机器上显式指定只读数据源：
+python3 scripts/export_trajectories.py --api http://127.0.0.1:10952/api --state-db /path/to/state.sqlite3
+```
+
+导出器保持已有分数快照不变，按 manager 榜单选中的 task、对应 result_path 的 attempt 定位轨迹；重评沿 source_attempt_ids 读取原始 Agent。若分数已变化则拒绝导出，需先运行 `npm run data:refresh`，然后重新导出轨迹。公开索引保留来源运行 ID、分数状态与当前运行状态、导出时间、文件 SHA-256 和采集完整性提示，不导出数据库路径。轨迹比评分快照更新时仍单独标明来源与导出时间。
+
+静态文件位于 `public/data/trajectories/`，浏览器只在打开单元格时请求对应 gzip 文件，解压后校验 SHA-256。原始文件共约 40 MB（gzip），不会加入首页 JS。当前导出 158 份轨迹，另外 2 个单元格明确显示 ATIF 缺失，其中 1 个提供原生 Agent 日志查看和下载；不使用其他运行补位。源轨迹里的命令、路径及工具输出保持原样。浏览器需支持 DecompressionStream 和 Web Crypto（HTTPS 或 localhost）。
+
 ## GitHub Pages
 
 ```bash
@@ -37,7 +51,9 @@ NEXT_PUBLIC_BASE_PATH=/rsibench-infra-pages npm run build
 
 作者和项目描述参考 `/opt/tiger/arxiv-seed-rsibench-infra/paper.tex`，未添加未经确认的论文或 arXiv URL。
 
-- [Radix UI](https://www.radix-ui.com/)：可访问的标签页、提示框（MIT）。
+- [Radix UI](https://www.radix-ui.com/)：可访问的标签页、提示框、轨迹弹窗（MIT）。
+- [Ant Design X](https://x.ant.design/) / [Ant Design](https://ant.design/)：现成 Bubble 对话消息、Collapse 工具详情与分页组件（MIT）。
+- [react-markdown](https://github.com/remarkjs/react-markdown) / remark-gfm：消息 Markdown 渲染（MIT）。
 - [Recharts](https://recharts.org/)：排行榜及各模型独立图表（MIT）。
 - [Lucide](https://lucide.dev/)：图标（ISC）。
 - [Fontsource](https://fontsource.org/)：Inter、Source Serif 4，字体许可随 npm 包保留（OFL）。
@@ -54,3 +70,5 @@ npx playwright test
 ```
 
 浏览器测试覆盖 160 个分数与快照逐项一致、筛选与搜索、指标切换、下载内容、空态、详情和 390/768/1440px 无页面溢出。可通过 `CHROMIUM_PATH` 指定已有 Chromium，`TEST_BASE_URL` 指向预览地址。Pages 工作流通过仓库变量 `NEXT_PUBLIC_PROJECT_GITHUB` 设置公开代码链接。
+
+轨迹验证还覆盖 160 个索引绑定、158 份原始文件 SHA-256、工具折叠、跨页搜索、原始文件下载、缺失提示、请求失败重试，以及移动端弹窗布局。

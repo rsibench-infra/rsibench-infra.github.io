@@ -1,0 +1,3671 @@
+{
+  "exported_at": "2026-11-01T18:14:17.451247+00:00",
+  "leaderboard_sha256": "f1914b6daa741e9cfaacc69ec522904c0840c43570865782f460737e4e4fa190",
+  "score_observed_at": "2026-10-31T08:22:50.113069+00:00",
+  "entries": [
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-deepseekv4flash-284b",
+      "reward": 2.1076352778462413,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 181
+      },
+      "available": true,
+      "source_attempt_ids": [
+        181
+      ],
+      "live": false,
+      "modified_at": 1792449756.157652,
+      "file": "42b9079200f3aa1097ec7f49e2ffdb3f2f6fa5996db03397a38d1fa3ecff00da.json.gz",
+      "sha256": "42b9079200f3aa1097ec7f49e2ffdb3f2f6fa5996db03397a38d1fa3ecff00da",
+      "bytes": 1220432,
+      "steps": 135,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-glm5p2-744b",
+      "reward": 4.670769164679855,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 203
+      },
+      "available": true,
+      "source_attempt_ids": [
+        203
+      ],
+      "live": false,
+      "modified_at": 1792491475.3523836,
+      "file": "7dbfafe3effb3d282039e222e06f2940a59c624d859cf7d608e97154372323b1.json.gz",
+      "sha256": "7dbfafe3effb3d282039e222e06f2940a59c624d859cf7d608e97154372323b1",
+      "bytes": 822029,
+      "steps": 107,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-glm5p3-744b",
+      "reward": 2.0171938921654315,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 208
+      },
+      "available": true,
+      "source_attempt_ids": [
+        208
+      ],
+      "live": false,
+      "modified_at": 1792503474.2858026,
+      "file": "91d6f7c5dcc0913feead2316057b9b2d163b40feb25b7a936f6d00564ba6d2f5.json.gz",
+      "sha256": "91d6f7c5dcc0913feead2316057b9b2d163b40feb25b7a936f6d00564ba6d2f5",
+      "bytes": 1048395,
+      "steps": 129,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-glm5p3flash-320b",
+      "reward": 0.9879449562151713,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 260
+      },
+      "available": true,
+      "source_attempt_ids": [
+        260
+      ],
+      "live": false,
+      "modified_at": 1792694560.5323002,
+      "file": "111860a3c2415fa184ce11f8b693e560e593ff6b3f32ebe169671cb3f573f05e.json.gz",
+      "sha256": "111860a3c2415fa184ce11f8b693e560e593ff6b3f32ebe169671cb3f573f05e",
+      "bytes": 541767,
+      "steps": 40,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-inkling-975b",
+      "reward": 1.9866394131987692,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 207
+      },
+      "available": true,
+      "source_attempt_ids": [
+        207
+      ],
+      "live": false,
+      "modified_at": 1792498233.0088708,
+      "file": "69ea7f98cd4d98174f2680e83cf50bef2dd0f87339683e176b2b916cc40d5466.json.gz",
+      "sha256": "69ea7f98cd4d98174f2680e83cf50bef2dd0f87339683e176b2b916cc40d5466",
+      "bytes": 814423,
+      "steps": 81,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-kimik3-2p8t",
+      "reward": 1.1523050546101092,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 221
+      },
+      "available": true,
+      "source_attempt_ids": [
+        221
+      ],
+      "live": false,
+      "modified_at": 1792548086.8008752,
+      "file": "cde370b9e942fd53a5f80f6a587fbfaa7600816c85763110cc9f95f2d2fea1bb.json.gz",
+      "sha256": "cde370b9e942fd53a5f80f6a587fbfaa7600816c85763110cc9f95f2d2fea1bb",
+      "bytes": 1421473,
+      "steps": 215,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-lingbotworld2p0-14b",
+      "reward": 1.0366251818663637,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 193
+      },
+      "available": true,
+      "source_attempt_ids": [
+        193
+      ],
+      "live": false,
+      "modified_at": 1792446063.8004572,
+      "file": "d4d0aa7fb0e77f0098045f8d0840de4b00a9fc96b1d29658a543d60c860f8dc6.json.gz",
+      "sha256": "d4d0aa7fb0e77f0098045f8d0840de4b00a9fc96b1d29658a543d60c860f8dc6",
+      "bytes": 918697,
+      "steps": 72,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-llada2p1mini-16b",
+      "reward": 3.2610247159985146,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 184
+      },
+      "available": true,
+      "source_attempt_ids": [
+        184
+      ],
+      "live": false,
+      "modified_at": 1792439378.0932636,
+      "file": "f9dd5797f468c1ec26b4c3e9d092fc4fa3e2bf31d1da085b6f14f485b576e716.json.gz",
+      "sha256": "f9dd5797f468c1ec26b4c3e9d092fc4fa3e2bf31d1da085b6f14f485b576e716",
+      "bytes": 1115639,
+      "steps": 118,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-minimaxh3-64b",
+      "reward": 1.2085809677750774,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 190
+      },
+      "available": true,
+      "source_attempt_ids": [
+        190
+      ],
+      "live": false,
+      "modified_at": 1792442120.524221,
+      "file": "e6183bd958e1d7c8bef0c4b5081b4223c65b186ee86df4c083a1a61803ba21bc.json.gz",
+      "sha256": "e6183bd958e1d7c8bef0c4b5081b4223c65b186ee86df4c083a1a61803ba21bc",
+      "bytes": 811220,
+      "steps": 96,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-museglimmer-30b",
+      "reward": 1.1011173281737525,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 185
+      },
+      "available": true,
+      "source_attempt_ids": [
+        185
+      ],
+      "live": false,
+      "modified_at": 1792447540.5885613,
+      "file": "08f73d9219ed47e47170246e638da9302f4ca6bc93619dd2f90d199dc7b39c17.json.gz",
+      "sha256": "08f73d9219ed47e47170246e638da9302f4ca6bc93619dd2f90d199dc7b39c17",
+      "bytes": 927332,
+      "steps": 156,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-nemotron3ultra-550a55b",
+      "reward": 2.0561476177590907,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 261
+      },
+      "available": true,
+      "source_attempt_ids": [
+        261
+      ],
+      "live": false,
+      "modified_at": 1792719523.8728886,
+      "file": "b92c06f9103a66c7620f4f1511d9a506a703fa3bbe65a4b8be8b7fc6f3970988.json.gz",
+      "sha256": "b92c06f9103a66c7620f4f1511d9a506a703fa3bbe65a4b8be8b7fc6f3970988",
+      "bytes": 796413,
+      "steps": 122,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-pi0p5libero-3p3b",
+      "reward": 2.6142058774799604,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 186
+      },
+      "available": true,
+      "source_attempt_ids": [
+        186
+      ],
+      "live": false,
+      "modified_at": 1792442886.4171298,
+      "file": "84a9d9a2178de0f2eb08f2b3c81112efef65827a29aff23918f5acda0c9616ba.json.gz",
+      "sha256": "84a9d9a2178de0f2eb08f2b3c81112efef65827a29aff23918f5acda0c9616ba",
+      "bytes": 840575,
+      "steps": 81,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-qwen3p8-27b",
+      "reward": 1.967146853539179,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 187
+      },
+      "available": true,
+      "source_attempt_ids": [
+        187
+      ],
+      "live": false,
+      "modified_at": 1792453115.173836,
+      "file": "90bacce917e3eaba06d54a59673e7672d0fff098e2bc1d281ed423722d526d9a.json.gz",
+      "sha256": "90bacce917e3eaba06d54a59673e7672d0fff098e2bc1d281ed423722d526d9a",
+      "bytes": 1054911,
+      "steps": 154,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-qwen3ttsbase-1p7b",
+      "reward": 1.1105871123627695,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 281
+      },
+      "available": true,
+      "source_attempt_ids": [
+        281
+      ],
+      "live": false,
+      "modified_at": 1792750837.7639892,
+      "file": "aa4ab299847a561266d879a6072d43e074cae3d44a5204b45a2366ffaea24071.json.gz",
+      "sha256": "aa4ab299847a561266d879a6072d43e074cae3d44a5204b45a2366ffaea24071",
+      "bytes": 911700,
+      "steps": 88,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-qwen3vl-32b",
+      "reward": 1.205765684024507,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 188
+      },
+      "available": true,
+      "source_attempt_ids": [
+        188
+      ],
+      "live": false,
+      "modified_at": 1792442043.679532,
+      "file": "a75a119d4b9995fff3b8f78ee10afb06dc07f261dcd4c255c4154db095960839.json.gz",
+      "sha256": "a75a119d4b9995fff3b8f78ee10afb06dc07f261dcd4c255c4154db095960839",
+      "bytes": 972750,
+      "steps": 108,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "infer-wan2p2ti2v-5b",
+      "reward": 0.9999363373733333,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 189
+      },
+      "available": true,
+      "source_attempt_ids": [
+        189
+      ],
+      "live": false,
+      "modified_at": 1792436157.7954123,
+      "file": "2c6d86e2057afd92136b58eb7e072be8bbacb0d69132f053058cbb92dd5656b6.json.gz",
+      "sha256": "2c6d86e2057afd92136b58eb7e072be8bbacb0d69132f053058cbb92dd5656b6",
+      "bytes": 293678,
+      "steps": 22,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "train-qwen3-30a3b-grpo",
+      "reward": 0.818522108483354,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 195
+      },
+      "available": true,
+      "source_attempt_ids": [
+        195
+      ],
+      "live": false,
+      "modified_at": 1792477580.5395837,
+      "file": "1c1360f9b85e1a769e2a88365f1c4964d2726016c3f63c432bbb52c0f739bf0c.json.gz",
+      "sha256": "1c1360f9b85e1a769e2a88365f1c4964d2726016c3f63c432bbb52c0f739bf0c",
+      "bytes": 1085310,
+      "steps": 167,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "train-qwen3-30a3b-sft",
+      "reward": 1.2091575102970922,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 200
+      },
+      "available": true,
+      "source_attempt_ids": [
+        200
+      ],
+      "live": false,
+      "modified_at": 1792456098.796897,
+      "file": "86a30a95393a7abd8e106c4517dbdfb6daf5a27a9df7114aeeaccfa22a992ecd.json.gz",
+      "sha256": "86a30a95393a7abd8e106c4517dbdfb6daf5a27a9df7114aeeaccfa22a992ecd",
+      "bytes": 822099,
+      "steps": 95,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "train-qwen3-8b-opd",
+      "reward": 1.0658383439792352,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 204
+      },
+      "available": true,
+      "source_attempt_ids": [
+        204
+      ],
+      "live": false,
+      "modified_at": 1792500927.511102,
+      "file": "c91f52cafd68589ce7a0a017f1850c72098f2f3d027745cf0c596af31b60e10d.json.gz",
+      "sha256": "c91f52cafd68589ce7a0a017f1850c72098f2f3d027745cf0c596af31b60e10d",
+      "bytes": 1415378,
+      "steps": 275,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/gpt-6-astra",
+      "task": "train-qwen3vl-4b-grpo",
+      "reward": 1.0559806545540051,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 202
+      },
+      "available": true,
+      "source_attempt_ids": [
+        202
+      ],
+      "live": false,
+      "modified_at": 1792468664.2442567,
+      "file": "68dd32c92e505812223332864d62702bcee284e167f4bdb985a02ac682f46b21.json.gz",
+      "sha256": "68dd32c92e505812223332864d62702bcee284e167f4bdb985a02ac682f46b21",
+      "bytes": 1032580,
+      "steps": 114,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-deepseekv4flash-284b",
+      "reward": 2.206989193022648,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "task",
+        "id": 1
+      },
+      "available": true,
+      "source_attempt_ids": [],
+      "live": false,
+      "modified_at": 1791886031.1387188,
+      "file": "ab64d5252e27ce2401ce43f452738c7d3ab734558366a4cdd3da28ccbdf41379.json.gz",
+      "sha256": "ab64d5252e27ce2401ce43f452738c7d3ab734558366a4cdd3da28ccbdf41379",
+      "bytes": 590307,
+      "steps": 123,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-glm5p2-744b",
+      "reward": 5.871018321627253,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "task",
+        "id": 2
+      },
+      "available": true,
+      "source_attempt_ids": [],
+      "live": false,
+      "modified_at": 1791853489.2652295,
+      "file": "d42af8fa59163cd56c60738129865bb019c99cc45323ecdd9cec3d6f361d0b01.json.gz",
+      "sha256": "d42af8fa59163cd56c60738129865bb019c99cc45323ecdd9cec3d6f361d0b01",
+      "bytes": 1222048,
+      "steps": 445,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-glm5p3-744b",
+      "reward": 2.313297050621972,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 65
+      },
+      "available": true,
+      "source_attempt_ids": [
+        65
+      ],
+      "live": false,
+      "modified_at": 1792046227.2562792,
+      "file": "1c876b046998ce47f591973a817237e70e240ea0c33cc6101182f2466042521f.json.gz",
+      "sha256": "1c876b046998ce47f591973a817237e70e240ea0c33cc6101182f2466042521f",
+      "bytes": 1248425,
+      "steps": 376,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-glm5p3flash-320b",
+      "reward": 7.605936540429888,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 98
+      },
+      "available": true,
+      "source_attempt_ids": [
+        98,
+        69
+      ],
+      "live": false,
+      "modified_at": 1792048618.2782068,
+      "file": "dfb754ce11f7e83ab7df480ff44e340095558753f8eebf5a5867fe69fe1ebeb1.json.gz",
+      "sha256": "dfb754ce11f7e83ab7df480ff44e340095558753f8eebf5a5867fe69fe1ebeb1",
+      "bytes": 1637630,
+      "steps": 503,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-inkling-975b",
+      "reward": 1.865994911266541,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "task",
+        "id": 5
+      },
+      "available": true,
+      "source_attempt_ids": [],
+      "live": false,
+      "modified_at": 1791852056.1219115,
+      "file": "84a0d6d87bb609af32e2a740a6111a45044cf192f9e4d659779c85a66630b6da.json.gz",
+      "sha256": "84a0d6d87bb609af32e2a740a6111a45044cf192f9e4d659779c85a66630b6da",
+      "bytes": 660530,
+      "steps": 176,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-kimik3-2p8t",
+      "reward": 1.082222081110829,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 67
+      },
+      "available": true,
+      "source_attempt_ids": [
+        67
+      ],
+      "live": false,
+      "modified_at": 1792027551.8839161,
+      "file": "209dcb92798f8ba59e25c9346f6fff217427f39805dee99fed79c3316bc868a6.json.gz",
+      "sha256": "209dcb92798f8ba59e25c9346f6fff217427f39805dee99fed79c3316bc868a6",
+      "bytes": 1377273,
+      "steps": 439,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-lingbotworld2p0-14b",
+      "reward": 1.0002121877522911,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "task",
+        "id": 7
+      },
+      "available": true,
+      "source_attempt_ids": [],
+      "live": false,
+      "modified_at": 1791850663.2994316,
+      "file": "ed108eb173af5df0ecc5ab88b3ee01c106e9d4be8cf4777c10b7b12f00163a7b.json.gz",
+      "sha256": "ed108eb173af5df0ecc5ab88b3ee01c106e9d4be8cf4777c10b7b12f00163a7b",
+      "bytes": 1319059,
+      "steps": 260,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-llada2p1mini-16b",
+      "reward": 2.129603425353956,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "task",
+        "id": 8
+      },
+      "available": true,
+      "source_attempt_ids": [],
+      "live": false,
+      "modified_at": 1791849202.1622407,
+      "file": "55f1389bfc77536646125ed7bfe88e0bd0e2fccf8f520edf29ddec6a7afcc5fb.json.gz",
+      "sha256": "55f1389bfc77536646125ed7bfe88e0bd0e2fccf8f520edf29ddec6a7afcc5fb",
+      "bytes": 1111318,
+      "steps": 301,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-minimaxh3-64b",
+      "reward": 1.3211571954310868,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 51
+      },
+      "available": true,
+      "source_attempt_ids": [
+        51
+      ],
+      "live": false,
+      "modified_at": 1792014087.0382829,
+      "file": "1b5eaf96d31b322ed970b46a54c3eecd50df91cc0382487593ee5546d6f1a7ff.json.gz",
+      "sha256": "1b5eaf96d31b322ed970b46a54c3eecd50df91cc0382487593ee5546d6f1a7ff",
+      "bytes": 1419901,
+      "steps": 368,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-museglimmer-30b",
+      "reward": 1.0754530611770585,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 59
+      },
+      "available": true,
+      "source_attempt_ids": [
+        59
+      ],
+      "live": false,
+      "modified_at": 1792030064.5646486,
+      "file": "e16f13398feeb548107b1f3ae8c8dd169001cc511cfc353b69b1643b3b966362.json.gz",
+      "sha256": "e16f13398feeb548107b1f3ae8c8dd169001cc511cfc353b69b1643b3b966362",
+      "bytes": 892058,
+      "steps": 232,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-nemotron3ultra-550a55b",
+      "reward": 4.888620610702912,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 55
+      },
+      "available": true,
+      "source_attempt_ids": [
+        55
+      ],
+      "live": false,
+      "modified_at": 1792032424.4350615,
+      "file": "76b22d41c87feeebab80e82f90d402784cef1b6872ac565189cc23b5ce821da0.json.gz",
+      "sha256": "76b22d41c87feeebab80e82f90d402784cef1b6872ac565189cc23b5ce821da0",
+      "bytes": 1014536,
+      "steps": 276,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-pi0p5libero-3p3b",
+      "reward": 2.417827718481613,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 11
+      },
+      "available": true,
+      "source_attempt_ids": [
+        11
+      ],
+      "live": false,
+      "modified_at": 1791920383.7515104,
+      "file": "e27bd9446f0c0b419ca45dd54d35fbdc991d628443b12aa067e81f8ea1fa222d.json.gz",
+      "sha256": "e27bd9446f0c0b419ca45dd54d35fbdc991d628443b12aa067e81f8ea1fa222d",
+      "bytes": 703010,
+      "steps": 135,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-qwen3p8-27b",
+      "reward": 1.6272724722611116,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 60
+      },
+      "available": true,
+      "source_attempt_ids": [
+        60
+      ],
+      "live": false,
+      "modified_at": 1792036719.8954546,
+      "file": "351f710e1e27f272f4c5dafefc5b400df34fcb13531b441834ed30776572bd49.json.gz",
+      "sha256": "351f710e1e27f272f4c5dafefc5b400df34fcb13531b441834ed30776572bd49",
+      "bytes": 1121304,
+      "steps": 241,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-qwen3ttsbase-1p7b",
+      "reward": 0.9859431753748333,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 277
+      },
+      "available": true,
+      "source_attempt_ids": [
+        277
+      ],
+      "live": false,
+      "modified_at": 1792760828.3121011,
+      "file": "cd8cf6f690459f82e816a55c8bdad733bb1a83164d1f9586794c7abe33f9e3ee.json.gz",
+      "sha256": "cd8cf6f690459f82e816a55c8bdad733bb1a83164d1f9586794c7abe33f9e3ee",
+      "bytes": 833040,
+      "steps": 189,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-qwen3vl-32b",
+      "reward": 1.1051835846490385,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 13
+      },
+      "available": true,
+      "source_attempt_ids": [
+        13
+      ],
+      "live": false,
+      "modified_at": 1791944143.914499,
+      "file": "2a868705b3fabd9a0f924ec424e6379806cac3647d657a5c73193652ee3129dc.json.gz",
+      "sha256": "2a868705b3fabd9a0f924ec424e6379806cac3647d657a5c73193652ee3129dc",
+      "bytes": 988233,
+      "steps": 285,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "infer-wan2p2ti2v-5b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 50
+      },
+      "available": true,
+      "source_attempt_ids": [
+        50
+      ],
+      "live": false,
+      "modified_at": 1792017235.6587389,
+      "file": "ea9aa1411ad887496b43e3c516e256fe6ce248364a1f65948c35a8bf24cbd2d8.json.gz",
+      "sha256": "ea9aa1411ad887496b43e3c516e256fe6ce248364a1f65948c35a8bf24cbd2d8",
+      "bytes": 1243458,
+      "steps": 289,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "train-qwen3-30a3b-grpo",
+      "reward": 0.8009601173962246,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 71
+      },
+      "available": true,
+      "source_attempt_ids": [
+        71
+      ],
+      "live": false,
+      "modified_at": 1792015298.1464715,
+      "file": "5e2efadf750501c0fedf038bd56973959bf4321e9387175e362b562e19005ae6.json.gz",
+      "sha256": "5e2efadf750501c0fedf038bd56973959bf4321e9387175e362b562e19005ae6",
+      "bytes": 953793,
+      "steps": 218,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "train-qwen3-30a3b-sft",
+      "reward": 1.0180902825047158,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 72
+      },
+      "available": true,
+      "source_attempt_ids": [
+        72
+      ],
+      "live": false,
+      "modified_at": 1792020799.2853363,
+      "file": "79c8f5e4254492af64f4bce6e7ce156dd88bdd7f71ab956c645c00d9f1e31fd3.json.gz",
+      "sha256": "79c8f5e4254492af64f4bce6e7ce156dd88bdd7f71ab956c645c00d9f1e31fd3",
+      "bytes": 1112503,
+      "steps": 244,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "train-qwen3-8b-opd",
+      "reward": 1.2479535492781517,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 56
+      },
+      "available": true,
+      "source_attempt_ids": [
+        56
+      ],
+      "live": false,
+      "modified_at": 1792015378.7401545,
+      "file": "254ac6326bf2dadd5a9c27cfef75225259861b60bde8d805fab067253084fe07.json.gz",
+      "sha256": "254ac6326bf2dadd5a9c27cfef75225259861b60bde8d805fab067253084fe07",
+      "bytes": 1273198,
+      "steps": 388,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/opensource/deepseek_v4_flash_0731",
+      "task": "train-qwen3vl-4b-grpo",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 61
+      },
+      "available": true,
+      "source_attempt_ids": [
+        61
+      ],
+      "live": false,
+      "modified_at": 1791990305.795796,
+      "file": "c2b785cb3b9e12e1a3df26ce1390d27a047a9cf1d67278c469c128b085d7a3bd.json.gz",
+      "sha256": "c2b785cb3b9e12e1a3df26ce1390d27a047a9cf1d67278c469c128b085d7a3bd",
+      "bytes": 248172,
+      "steps": 31,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-deepseekv4flash-284b",
+      "reward": null,
+      "score_status": "failed",
+      "run_status": "failed",
+      "source": {
+        "kind": "attempt",
+        "id": 320
+      },
+      "available": true,
+      "source_attempt_ids": [
+        320
+      ],
+      "live": false,
+      "modified_at": 1793153628.6750145,
+      "file": "d9712604060f5cecefa532b56aa272dd1bbb5d505bd3f3bbaf0345242afc98bf.json.gz",
+      "sha256": "d9712604060f5cecefa532b56aa272dd1bbb5d505bd3f3bbaf0345242afc98bf",
+      "bytes": 21906,
+      "steps": 2,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-glm5p2-744b",
+      "reward": 0.9317610670790645,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 265
+      },
+      "available": true,
+      "source_attempt_ids": [
+        265
+      ],
+      "live": false,
+      "modified_at": 1792714388.1476448,
+      "file": "aa583cee05e269f5b00050e5ef703fc8e771b057e041b989c852f4e053e73783.json.gz",
+      "sha256": "aa583cee05e269f5b00050e5ef703fc8e771b057e041b989c852f4e053e73783",
+      "bytes": 144910,
+      "steps": 39,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-glm5p3-744b",
+      "reward": 2.217610580254077,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 259
+      },
+      "available": true,
+      "source_attempt_ids": [
+        259
+      ],
+      "live": false,
+      "modified_at": 1792693859.0291607,
+      "file": "c43f99e331ae0d223832f2d6d1e1f7506c26d4ca1fe69a90418f9f1fc5d91908.json.gz",
+      "sha256": "c43f99e331ae0d223832f2d6d1e1f7506c26d4ca1fe69a90418f9f1fc5d91908",
+      "bytes": 700900,
+      "steps": 203,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-glm5p3flash-320b",
+      "reward": null,
+      "score_status": "failed",
+      "run_status": "failed",
+      "source": {
+        "kind": "attempt",
+        "id": 318
+      },
+      "available": false,
+      "source_attempt_ids": [
+        318
+      ],
+      "live": false,
+      "modified_at": null,
+      "reason": "No ATIF trajectory was saved for this run. This does not mean the Agent did not execute."
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-inkling-975b",
+      "reward": 1.1523213354199269,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 266
+      },
+      "available": true,
+      "source_attempt_ids": [
+        266
+      ],
+      "live": false,
+      "modified_at": 1792713197.900517,
+      "file": "b063d4beb2a67005214993992b27f23ec0ca1482831273bd9428f0df7c5d1805.json.gz",
+      "sha256": "b063d4beb2a67005214993992b27f23ec0ca1482831273bd9428f0df7c5d1805",
+      "bytes": 351532,
+      "steps": 107,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-kimik3-2p8t",
+      "reward": null,
+      "score_status": "pending",
+      "run_status": "pending",
+      "source": {
+        "kind": "attempt",
+        "id": 296
+      },
+      "available": true,
+      "source_attempt_ids": [
+        296
+      ],
+      "live": false,
+      "modified_at": 1792856499.687465,
+      "file": "7a62ddf2d01f7c0a1287db66f75bfe163ac20fff642c0734e295ece2eefb5e75.json.gz",
+      "sha256": "7a62ddf2d01f7c0a1287db66f75bfe163ac20fff642c0734e295ece2eefb5e75",
+      "bytes": 553717,
+      "steps": 135,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-lingbotworld2p0-14b",
+      "reward": 1.0004273820421814,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 267
+      },
+      "available": true,
+      "source_attempt_ids": [
+        267
+      ],
+      "live": false,
+      "modified_at": 1792712119.3239734,
+      "file": "9a1424ac920bcccda31c977b1640a1a340496b4672392c0276ef410b1e120b58.json.gz",
+      "sha256": "9a1424ac920bcccda31c977b1640a1a340496b4672392c0276ef410b1e120b58",
+      "bytes": 366921,
+      "steps": 76,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-llada2p1mini-16b",
+      "reward": 2.7143571906442823,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 255
+      },
+      "available": true,
+      "source_attempt_ids": [
+        255
+      ],
+      "live": false,
+      "modified_at": 1792684883.970394,
+      "file": "49c7df0c135ed53e244fbc8a67c6e12a8f64c83d4fb719094a5353522f937bd3.json.gz",
+      "sha256": "49c7df0c135ed53e244fbc8a67c6e12a8f64c83d4fb719094a5353522f937bd3",
+      "bytes": 2608568,
+      "steps": 391,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-minimaxh3-64b",
+      "reward": 0.8650324971631449,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 293
+      },
+      "available": true,
+      "source_attempt_ids": [
+        293
+      ],
+      "live": false,
+      "modified_at": 1792826548.470264,
+      "file": "17f76af9c64a15e51bffbe3913c9394fad40045bd6c1fcd35ee2af439c9b1705.json.gz",
+      "sha256": "17f76af9c64a15e51bffbe3913c9394fad40045bd6c1fcd35ee2af439c9b1705",
+      "bytes": 529042,
+      "steps": 87,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-museglimmer-30b",
+      "reward": 1.1238706153729947,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 256
+      },
+      "available": true,
+      "source_attempt_ids": [
+        256
+      ],
+      "live": false,
+      "modified_at": 1792681928.335318,
+      "file": "569545fc66361e0db32357ec4bbfa811b2cb625b989249a9ac9f083715ae7d36.json.gz",
+      "sha256": "569545fc66361e0db32357ec4bbfa811b2cb625b989249a9ac9f083715ae7d36",
+      "bytes": 633668,
+      "steps": 142,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-nemotron3ultra-550a55b",
+      "reward": 4.743146764356931,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 274
+      },
+      "available": true,
+      "source_attempt_ids": [
+        274
+      ],
+      "live": false,
+      "modified_at": 1792739914.1444492,
+      "file": "682c354d51ece5b090064ba1865c547b2476ffbdf0d2fc71511ae3ff36a58dfd.json.gz",
+      "sha256": "682c354d51ece5b090064ba1865c547b2476ffbdf0d2fc71511ae3ff36a58dfd",
+      "bytes": 419589,
+      "steps": 124,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-pi0p5libero-3p3b",
+      "reward": 1.9620290798476645,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 257
+      },
+      "available": true,
+      "source_attempt_ids": [
+        257
+      ],
+      "live": false,
+      "modified_at": 1792667843.6342452,
+      "file": "cb640301fab71778817a393a4b2f9e49fa298ec6545373d71a12922cfeccbbee.json.gz",
+      "sha256": "cb640301fab71778817a393a4b2f9e49fa298ec6545373d71a12922cfeccbbee",
+      "bytes": 408054,
+      "steps": 44,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-qwen3p8-27b",
+      "reward": 1.285977676283155,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 258
+      },
+      "available": true,
+      "source_attempt_ids": [
+        258
+      ],
+      "live": false,
+      "modified_at": 1792694407.495926,
+      "file": "da7cf0d41adbe2a95617a03ead78c8e1d2bd628b6266e75ab80de330416b2119.json.gz",
+      "sha256": "da7cf0d41adbe2a95617a03ead78c8e1d2bd628b6266e75ab80de330416b2119",
+      "bytes": 429684,
+      "steps": 180,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-qwen3ttsbase-1p7b",
+      "reward": 1.1972781005438766,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 292
+      },
+      "available": true,
+      "source_attempt_ids": [
+        292
+      ],
+      "live": false,
+      "modified_at": 1792830254.2404516,
+      "file": "1ad89f79c460610236018243f12eb11853a2f5ac805f4ebca751ae5ae38778fd.json.gz",
+      "sha256": "1ad89f79c460610236018243f12eb11853a2f5ac805f4ebca751ae5ae38778fd",
+      "bytes": 1104367,
+      "steps": 178,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-qwen3vl-32b",
+      "reward": 1.135532437221449,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 262
+      },
+      "available": true,
+      "source_attempt_ids": [
+        262
+      ],
+      "live": false,
+      "modified_at": 1792698402.7576017,
+      "file": "043c66991f0c6977cd29ca2ddce28bca937fe5bca2bb1e6914b2b0cab11920b1.json.gz",
+      "sha256": "043c66991f0c6977cd29ca2ddce28bca937fe5bca2bb1e6914b2b0cab11920b1",
+      "bytes": 371174,
+      "steps": 115,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "infer-wan2p2ti2v-5b",
+      "reward": 1.2959858461304543,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 263
+      },
+      "available": true,
+      "source_attempt_ids": [
+        263
+      ],
+      "live": false,
+      "modified_at": 1792700512.9650826,
+      "file": "898992b365e5d1047e71e90958af1ac007b612b28c8886d469bf49179e866c8f.json.gz",
+      "sha256": "898992b365e5d1047e71e90958af1ac007b612b28c8886d469bf49179e866c8f",
+      "bytes": 584046,
+      "steps": 121,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "train-qwen3-30a3b-grpo",
+      "reward": 0.9881529764580889,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 268
+      },
+      "available": true,
+      "source_attempt_ids": [
+        268
+      ],
+      "live": false,
+      "modified_at": 1792718415.110305,
+      "file": "e7157cfdb548f6858211413f1ca1a4dda247e94edec20f62586a2c6a39436c23.json.gz",
+      "sha256": "e7157cfdb548f6858211413f1ca1a4dda247e94edec20f62586a2c6a39436c23",
+      "bytes": 1156771,
+      "steps": 204,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "train-qwen3-30a3b-sft",
+      "reward": 1.1992909819588615,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 269
+      },
+      "available": true,
+      "source_attempt_ids": [
+        269
+      ],
+      "live": false,
+      "modified_at": 1792716280.4219813,
+      "file": "46c961f697e21cb1aace055f57350f118c1c995bad69698440233767dad66b4b.json.gz",
+      "sha256": "46c961f697e21cb1aace055f57350f118c1c995bad69698440233767dad66b4b",
+      "bytes": 321577,
+      "steps": 59,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "train-qwen3-8b-opd",
+      "reward": null,
+      "score_status": "failed",
+      "run_status": "failed",
+      "source": {
+        "kind": "attempt",
+        "id": 323
+      },
+      "available": true,
+      "source_attempt_ids": [
+        323
+      ],
+      "live": false,
+      "modified_at": 1793261661.4742858,
+      "file": "7795cf8810a3af13e9ba56b12a9a563efb8fee848f29533a6c512dd2d032e35b.json.gz",
+      "sha256": "7795cf8810a3af13e9ba56b12a9a563efb8fee848f29533a6c512dd2d032e35b",
+      "bytes": 241034,
+      "steps": 42,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5-5",
+      "task": "train-qwen3vl-4b-grpo",
+      "reward": null,
+      "score_status": "failed",
+      "run_status": "failed",
+      "source": {
+        "kind": "attempt",
+        "id": 321
+      },
+      "available": true,
+      "source_attempt_ids": [
+        321
+      ],
+      "live": false,
+      "modified_at": 1793263011.0258687,
+      "file": "fb427a786fafff002596fa1cf56a57a14faa8af69eac809cf74007d6395aa42e.json.gz",
+      "sha256": "fb427a786fafff002596fa1cf56a57a14faa8af69eac809cf74007d6395aa42e",
+      "bytes": 61776,
+      "steps": 7,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-deepseekv4flash-284b",
+      "reward": 2.150621367599913,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 120
+      },
+      "available": true,
+      "source_attempt_ids": [
+        120
+      ],
+      "live": false,
+      "modified_at": 1792152008.8493316,
+      "file": "e7350a404b2aef9592abb3f8dc961f6b3ef22690210daff5bc80615cc447724e.json.gz",
+      "sha256": "e7350a404b2aef9592abb3f8dc961f6b3ef22690210daff5bc80615cc447724e",
+      "bytes": 2464274,
+      "steps": 363,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-glm5p2-744b",
+      "reward": 0.8308954614773288,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 124
+      },
+      "available": true,
+      "source_attempt_ids": [
+        124
+      ],
+      "live": false,
+      "modified_at": 1792172128.7132115,
+      "file": "624db3a80031718f7ef8772de4b05447c9cb263d32e377a386b363140a3dd8ed.json.gz",
+      "sha256": "624db3a80031718f7ef8772de4b05447c9cb263d32e377a386b363140a3dd8ed",
+      "bytes": 1095811,
+      "steps": 328,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-glm5p3-744b",
+      "reward": 2.01176127836576,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 90
+      },
+      "available": true,
+      "source_attempt_ids": [
+        90
+      ],
+      "live": false,
+      "modified_at": 1792088463.3319356,
+      "file": "64ce358e306a069146b8c614dae03fb73e4d107dc133f6e0e3867145d4d31739.json.gz",
+      "sha256": "64ce358e306a069146b8c614dae03fb73e4d107dc133f6e0e3867145d4d31739",
+      "bytes": 1150671,
+      "steps": 226,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-glm5p3flash-320b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 214
+      },
+      "available": true,
+      "source_attempt_ids": [
+        214
+      ],
+      "live": false,
+      "modified_at": 1792513700.9432573,
+      "file": "482ce5441fad802ac5d1ac9496173d5a0b828fdb4797d9c42c28de4729814dfc.json.gz",
+      "sha256": "482ce5441fad802ac5d1ac9496173d5a0b828fdb4797d9c42c28de4729814dfc",
+      "bytes": 1826928,
+      "steps": 291,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-inkling-975b",
+      "reward": 1.776117019577784,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 89
+      },
+      "available": true,
+      "source_attempt_ids": [
+        89
+      ],
+      "live": false,
+      "modified_at": 1792078512.1915653,
+      "file": "fe40241d6557ba26a2bac198417a6c85fbaf6c996dc52ccf568b1ab2475f21ab.json.gz",
+      "sha256": "fe40241d6557ba26a2bac198417a6c85fbaf6c996dc52ccf568b1ab2475f21ab",
+      "bytes": 1170233,
+      "steps": 199,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-kimik3-2p8t",
+      "reward": 1.187780458894251,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 118
+      },
+      "available": true,
+      "source_attempt_ids": [
+        118
+      ],
+      "live": false,
+      "modified_at": 1792168777.2570727,
+      "file": "b34c471f664a7a10e63ac19037199151c8ad2ba271e3dfecbe1b0560997036e4.json.gz",
+      "sha256": "b34c471f664a7a10e63ac19037199151c8ad2ba271e3dfecbe1b0560997036e4",
+      "bytes": 1990125,
+      "steps": 308,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-lingbotworld2p0-14b",
+      "reward": 1.0010737926631934,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 91
+      },
+      "available": true,
+      "source_attempt_ids": [
+        91
+      ],
+      "live": false,
+      "modified_at": 1792054853.1635094,
+      "file": "b0215d52b7440624c42ee13f6c49cd64aa9e0dac77f6a21134d1a6d3ba0e8170.json.gz",
+      "sha256": "b0215d52b7440624c42ee13f6c49cd64aa9e0dac77f6a21134d1a6d3ba0e8170",
+      "bytes": 1792287,
+      "steps": 328,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-llada2p1mini-16b",
+      "reward": 2.2076215913731376,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 77
+      },
+      "available": true,
+      "source_attempt_ids": [
+        77
+      ],
+      "live": false,
+      "modified_at": 1792054528.1788025,
+      "file": "5ada52271f18673856d39ddfedac157bfca7b1551d8a77e34c344c0c6646bdbd.json.gz",
+      "sha256": "5ada52271f18673856d39ddfedac157bfca7b1551d8a77e34c344c0c6646bdbd",
+      "bytes": 1369461,
+      "steps": 235,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-minimaxh3-64b",
+      "reward": 0.8992443014403337,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 87
+      },
+      "available": true,
+      "source_attempt_ids": [
+        87
+      ],
+      "live": false,
+      "modified_at": 1792053618.2134686,
+      "file": "35be22bae6e64cbfe7e22832d7c5794b49c33d5f4281293842df45681e047861.json.gz",
+      "sha256": "35be22bae6e64cbfe7e22832d7c5794b49c33d5f4281293842df45681e047861",
+      "bytes": 1483105,
+      "steps": 318,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-museglimmer-30b",
+      "reward": 1.0670280697473085,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 119
+      },
+      "available": true,
+      "source_attempt_ids": [
+        119
+      ],
+      "live": false,
+      "modified_at": 1792159467.7216988,
+      "file": "86a16a527002ae6f12b4d8474213dba104e29a81eac8406b72d478dccfc7b95b.json.gz",
+      "sha256": "86a16a527002ae6f12b4d8474213dba104e29a81eac8406b72d478dccfc7b95b",
+      "bytes": 1378224,
+      "steps": 224,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-nemotron3ultra-550a55b",
+      "reward": 5.017421892887622,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 123
+      },
+      "available": true,
+      "source_attempt_ids": [
+        123
+      ],
+      "live": false,
+      "modified_at": 1792166516.6229117,
+      "file": "b86a02626f2ac11e996a6744f441efd2b8b20dc7469a7103168cffe4475e5ae8.json.gz",
+      "sha256": "b86a02626f2ac11e996a6744f441efd2b8b20dc7469a7103168cffe4475e5ae8",
+      "bytes": 1035799,
+      "steps": 226,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-pi0p5libero-3p3b",
+      "reward": 3.64556795096556,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 85
+      },
+      "available": true,
+      "source_attempt_ids": [
+        85
+      ],
+      "live": false,
+      "modified_at": 1792060582.1415794,
+      "file": "029d5884691edeb13430f7db2567bad6566ef1bbb72040bed79b81e9b6d84d80.json.gz",
+      "sha256": "029d5884691edeb13430f7db2567bad6566ef1bbb72040bed79b81e9b6d84d80",
+      "bytes": 3728226,
+      "steps": 620,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-qwen3p8-27b",
+      "reward": 1.9463863578986023,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 79
+      },
+      "available": true,
+      "source_attempt_ids": [
+        79
+      ],
+      "live": false,
+      "modified_at": 1792067666.2669187,
+      "file": "46b292576c4d5cf53824f2a337b10f471978fe64981fd34b10848778ab7e1871.json.gz",
+      "sha256": "46b292576c4d5cf53824f2a337b10f471978fe64981fd34b10848778ab7e1871",
+      "bytes": 1278749,
+      "steps": 339,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-qwen3ttsbase-1p7b",
+      "reward": null,
+      "score_status": "running",
+      "run_status": "failed",
+      "source": {
+        "kind": "attempt",
+        "id": 325
+      },
+      "available": false,
+      "source_attempt_ids": [
+        325
+      ],
+      "live": false,
+      "modified_at": null,
+      "reason": "No ATIF trajectory was saved for this run. This does not mean the Agent did not execute.",
+      "log_file": "dad479e145ab138618779c0ba582949fc707b5c024afb2bb093c5a68bcea1cc4.txt.gz",
+      "log_sha256": "dad479e145ab138618779c0ba582949fc707b5c024afb2bb093c5a68bcea1cc4",
+      "log_bytes": 33532
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-qwen3vl-32b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 86
+      },
+      "available": true,
+      "source_attempt_ids": [
+        86
+      ],
+      "live": false,
+      "modified_at": 1792056760.0588422,
+      "file": "f62275003195758ad75a0c0267a444d0134dad298eed3dc95f5b880cb53675ad.json.gz",
+      "sha256": "f62275003195758ad75a0c0267a444d0134dad298eed3dc95f5b880cb53675ad",
+      "bytes": 1074077,
+      "steps": 210,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "infer-wan2p2ti2v-5b",
+      "reward": 1.0471931635968899,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 80
+      },
+      "available": true,
+      "source_attempt_ids": [
+        80
+      ],
+      "live": false,
+      "modified_at": 1792053350.8555226,
+      "file": "6d485e3a299d43ecfaed9cd31c27d0b516dfea593ed5fab9dae29790a1313829.json.gz",
+      "sha256": "6d485e3a299d43ecfaed9cd31c27d0b516dfea593ed5fab9dae29790a1313829",
+      "bytes": 1553226,
+      "steps": 157,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "train-qwen3-30a3b-grpo",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 81
+      },
+      "available": true,
+      "source_attempt_ids": [
+        81
+      ],
+      "live": false,
+      "modified_at": 1792061259.1698866,
+      "file": "ad814e2b021c06ae98a3819a46f08751ad3357482f4ef2f1567e6383f75efcaa.json.gz",
+      "sha256": "ad814e2b021c06ae98a3819a46f08751ad3357482f4ef2f1567e6383f75efcaa",
+      "bytes": 1193896,
+      "steps": 239,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "train-qwen3-30a3b-sft",
+      "reward": 1.8869577864692264,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 122
+      },
+      "available": true,
+      "source_attempt_ids": [
+        122
+      ],
+      "live": false,
+      "modified_at": 1792144834.6824746,
+      "file": "f2ba6f7468609b2be5a8036f518a6fad9afb7545dd495bcac5e521af6e5a5f4d.json.gz",
+      "sha256": "f2ba6f7468609b2be5a8036f518a6fad9afb7545dd495bcac5e521af6e5a5f4d",
+      "bytes": 2265783,
+      "steps": 252,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "train-qwen3-8b-opd",
+      "reward": 1.00126536929848,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 83
+      },
+      "available": true,
+      "source_attempt_ids": [
+        83
+      ],
+      "live": false,
+      "modified_at": 1792056908.8222444,
+      "file": "d9405d73f4eef1288f620260da7c963ecbcd077bcbe3b0f8b6d3e518dc83b7a3.json.gz",
+      "sha256": "d9405d73f4eef1288f620260da7c963ecbcd077bcbe3b0f8b6d3e518dc83b7a3",
+      "bytes": 1817393,
+      "steps": 229,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/glm-5.3",
+      "task": "train-qwen3vl-4b-grpo",
+      "reward": 1.1609652399685642,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 82
+      },
+      "available": true,
+      "source_attempt_ids": [
+        82
+      ],
+      "live": false,
+      "modified_at": 1792063369.4995003,
+      "file": "903d5d870da58568eaca2ef6cf5c5514b273707630119e796572ca20f8e3749a.json.gz",
+      "sha256": "903d5d870da58568eaca2ef6cf5c5514b273707630119e796572ca20f8e3749a",
+      "bytes": 2903322,
+      "steps": 402,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-deepseekv4flash-284b",
+      "reward": 1.5511074583173377,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 156
+      },
+      "available": true,
+      "source_attempt_ids": [
+        156
+      ],
+      "live": false,
+      "modified_at": 1792357661.418708,
+      "file": "966564e7954acdb8945c990b00de4e9e6c16eb686b80876744e100f998ba08de.json.gz",
+      "sha256": "966564e7954acdb8945c990b00de4e9e6c16eb686b80876744e100f998ba08de",
+      "bytes": 843055,
+      "steps": 162,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-glm5p2-744b",
+      "reward": 4.980862168954186,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 138
+      },
+      "available": true,
+      "source_attempt_ids": [
+        138
+      ],
+      "live": false,
+      "modified_at": 1792336979.498591,
+      "file": "f2b8897389a3c2675b295eb856474cb2e566597a3b9676f7716c1f14f6ffff8b.json.gz",
+      "sha256": "f2b8897389a3c2675b295eb856474cb2e566597a3b9676f7716c1f14f6ffff8b",
+      "bytes": 981951,
+      "steps": 163,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-glm5p3-744b",
+      "reward": 1.5961357198641726,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 216
+      },
+      "available": true,
+      "source_attempt_ids": [
+        216
+      ],
+      "live": false,
+      "modified_at": 1792542839.340948,
+      "file": "6bd37944283449868c899f807b64ac87edeabc77e8557b53f6506012e52a01e0.json.gz",
+      "sha256": "6bd37944283449868c899f807b64ac87edeabc77e8557b53f6506012e52a01e0",
+      "bytes": 1579932,
+      "steps": 204,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-glm5p3flash-320b",
+      "reward": 6.335892186966905,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 180
+      },
+      "available": true,
+      "source_attempt_ids": [
+        180
+      ],
+      "live": false,
+      "modified_at": 1792444470.3437436,
+      "file": "8a44fc49ba30ade22d3f99d4595fe186bd6cfe6a580c6866cdaabd8dbcce2a05.json.gz",
+      "sha256": "8a44fc49ba30ade22d3f99d4595fe186bd6cfe6a580c6866cdaabd8dbcce2a05",
+      "bytes": 2931619,
+      "steps": 166,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-inkling-975b",
+      "reward": 1.976738739314192,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 153
+      },
+      "available": true,
+      "source_attempt_ids": [
+        153
+      ],
+      "live": false,
+      "modified_at": 1792345731.4562736,
+      "file": "e9db7c56d29413682ed1adfd4bcfe2fbea307f5e2cdbf6b670876060b59b7ea2.json.gz",
+      "sha256": "e9db7c56d29413682ed1adfd4bcfe2fbea307f5e2cdbf6b670876060b59b7ea2",
+      "bytes": 713451,
+      "steps": 134,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-kimik3-2p8t",
+      "reward": 1.0876195919058504,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 173
+      },
+      "available": true,
+      "source_attempt_ids": [
+        173
+      ],
+      "live": false,
+      "modified_at": 1792448853.6802874,
+      "file": "fdfca1e15d8767f43d4dbbbdbdb906fa6663f455984f24d43e39a0c857f1b447.json.gz",
+      "sha256": "fdfca1e15d8767f43d4dbbbdbdb906fa6663f455984f24d43e39a0c857f1b447",
+      "bytes": 1260300,
+      "steps": 193,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-lingbotworld2p0-14b",
+      "reward": 0.9933651494071718,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 212
+      },
+      "available": true,
+      "source_attempt_ids": [
+        212
+      ],
+      "live": false,
+      "modified_at": 1792518490.4298952,
+      "file": "fbfa283cacc4e360db3317d38c9f5d86bb44ae9bb3f911f81febab9df3c31a99.json.gz",
+      "sha256": "fbfa283cacc4e360db3317d38c9f5d86bb44ae9bb3f911f81febab9df3c31a99",
+      "bytes": 4679694,
+      "steps": 224,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-llada2p1mini-16b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 136
+      },
+      "available": true,
+      "source_attempt_ids": [
+        136
+      ],
+      "live": false,
+      "modified_at": 1792328224.5777655,
+      "file": "07d74f338e5c5cc9572f98b23a939df5fe26be3d363e9d11b4da156e050341c6.json.gz",
+      "sha256": "07d74f338e5c5cc9572f98b23a939df5fe26be3d363e9d11b4da156e050341c6",
+      "bytes": 2084447,
+      "steps": 245,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-minimaxh3-64b",
+      "reward": 1.0629299711274756,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 151
+      },
+      "available": true,
+      "source_attempt_ids": [
+        151
+      ],
+      "live": false,
+      "modified_at": 1792318749.9506829,
+      "file": "29c1fbde408f9f58fd2411fefd2084363807a52f6f608d3cc9c17ff518fe01d7.json.gz",
+      "sha256": "29c1fbde408f9f58fd2411fefd2084363807a52f6f608d3cc9c17ff518fe01d7",
+      "bytes": 860510,
+      "steps": 128,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-museglimmer-30b",
+      "reward": 1.1032729639119851,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 137
+      },
+      "available": true,
+      "source_attempt_ids": [
+        137
+      ],
+      "live": false,
+      "modified_at": 1792327422.5069683,
+      "file": "69bafdca49301a54ff547a0fe4dc4ed7220fe2ee666f0473672e8b93fa00dcc0.json.gz",
+      "sha256": "69bafdca49301a54ff547a0fe4dc4ed7220fe2ee666f0473672e8b93fa00dcc0",
+      "bytes": 1569062,
+      "steps": 212,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-nemotron3ultra-550a55b",
+      "reward": 1.1192057115500698,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 169
+      },
+      "available": true,
+      "source_attempt_ids": [
+        169
+      ],
+      "live": false,
+      "modified_at": 1792398195.1302423,
+      "file": "1bbcad44f8732168e1fc991e72eea4e331bd6c3e74a2fc90d64cf86045822d20.json.gz",
+      "sha256": "1bbcad44f8732168e1fc991e72eea4e331bd6c3e74a2fc90d64cf86045822d20",
+      "bytes": 510070,
+      "steps": 66,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-pi0p5libero-3p3b",
+      "reward": 2.2032400160776047,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 140
+      },
+      "available": true,
+      "source_attempt_ids": [
+        140
+      ],
+      "live": false,
+      "modified_at": 1792312163.8682623,
+      "file": "143280588f1eeac5d3a658a5839e8bac83821cd11725622b1b5733e6165bc573.json.gz",
+      "sha256": "143280588f1eeac5d3a658a5839e8bac83821cd11725622b1b5733e6165bc573",
+      "bytes": 588850,
+      "steps": 67,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-qwen3p8-27b",
+      "reward": 1.2051568448942849,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 179
+      },
+      "available": true,
+      "source_attempt_ids": [
+        179
+      ],
+      "live": false,
+      "modified_at": 1792444223.0077293,
+      "file": "9e8eec8b6eb09219050b6d671a5100f6ca6c7e7002c5aaf3e391f4ea65eeecba.json.gz",
+      "sha256": "9e8eec8b6eb09219050b6d671a5100f6ca6c7e7002c5aaf3e391f4ea65eeecba",
+      "bytes": 1152323,
+      "steps": 174,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-qwen3ttsbase-1p7b",
+      "reward": 0.9888729896356673,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 291
+      },
+      "available": true,
+      "source_attempt_ids": [
+        291
+      ],
+      "live": false,
+      "modified_at": 1792836311.4104888,
+      "file": "297371fcb70a5588f765716dcf32c53a2c098acd13426d736b2dbe839a90f996.json.gz",
+      "sha256": "297371fcb70a5588f765716dcf32c53a2c098acd13426d736b2dbe839a90f996",
+      "bytes": 1885776,
+      "steps": 210,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-qwen3vl-32b",
+      "reward": 0.999858410875589,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 143
+      },
+      "available": true,
+      "source_attempt_ids": [
+        143
+      ],
+      "live": false,
+      "modified_at": 1792313621.1881285,
+      "file": "56939c2ea2263d483911be5dde14845b292527bf185f6f81a4e9b69c4901c8eb.json.gz",
+      "sha256": "56939c2ea2263d483911be5dde14845b292527bf185f6f81a4e9b69c4901c8eb",
+      "bytes": 470736,
+      "steps": 60,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "infer-wan2p2ti2v-5b",
+      "reward": 1.251358431353812,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 150
+      },
+      "available": true,
+      "source_attempt_ids": [
+        150
+      ],
+      "live": false,
+      "modified_at": 1792319801.993493,
+      "file": "5f5dbb36cb84de8ed72bfd1525ca3e680a4ad753e2fcbe5a626ad47d6b80a0f8.json.gz",
+      "sha256": "5f5dbb36cb84de8ed72bfd1525ca3e680a4ad753e2fcbe5a626ad47d6b80a0f8",
+      "bytes": 510581,
+      "steps": 70,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "train-qwen3-30a3b-grpo",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 197
+      },
+      "available": true,
+      "source_attempt_ids": [
+        197
+      ],
+      "live": false,
+      "modified_at": 1792471334.8174374,
+      "file": "0a9d8de82a45bbc3e07734973397de8bd17fc3e5ceb6a59a6ef2791312168f2b.json.gz",
+      "sha256": "0a9d8de82a45bbc3e07734973397de8bd17fc3e5ceb6a59a6ef2791312168f2b",
+      "bytes": 1923952,
+      "steps": 222,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "train-qwen3-30a3b-sft",
+      "reward": 1.0607596139897606,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 199
+      },
+      "available": true,
+      "source_attempt_ids": [
+        199
+      ],
+      "live": false,
+      "modified_at": 1792468627.3174067,
+      "file": "20935e6b99a038838d304665088f6096447b3e378e82bb4eb3e47e3dfefd46d5.json.gz",
+      "sha256": "20935e6b99a038838d304665088f6096447b3e378e82bb4eb3e47e3dfefd46d5",
+      "bytes": 2527908,
+      "steps": 249,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "train-qwen3-8b-opd",
+      "reward": 1.0069389440629353,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 171
+      },
+      "available": true,
+      "source_attempt_ids": [
+        171
+      ],
+      "live": false,
+      "modified_at": 1792375475.892044,
+      "file": "f5dae566537b0648047acb0e3454940e681f14048aedd1dff68cc16e0bdbd67c.json.gz",
+      "sha256": "f5dae566537b0648047acb0e3454940e681f14048aedd1dff68cc16e0bdbd67c",
+      "bytes": 1720307,
+      "steps": 178,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/qwen3.8-max",
+      "task": "train-qwen3vl-4b-grpo",
+      "reward": 1.0021812968783903,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 166
+      },
+      "available": true,
+      "source_attempt_ids": [
+        166
+      ],
+      "live": false,
+      "modified_at": 1792396259.5010688,
+      "file": "2a9a5761d7aea7652b334b9d185fd5dade188e87e9b6b9aafed901804d705b21.json.gz",
+      "sha256": "2a9a5761d7aea7652b334b9d185fd5dade188e87e9b6b9aafed901804d705b21",
+      "bytes": 6781926,
+      "steps": 323,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-deepseekv4flash-284b",
+      "reward": 2.2303717142357393,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 68
+      },
+      "available": true,
+      "source_attempt_ids": [
+        68
+      ],
+      "live": false,
+      "modified_at": 1792037665.5025866,
+      "file": "ffdcb8e8958dace0acdec3bf4f5dc241f249611f64e17ee0bdfafc42c6f5e6b6.json.gz",
+      "sha256": "ffdcb8e8958dace0acdec3bf4f5dc241f249611f64e17ee0bdfafc42c6f5e6b6",
+      "bytes": 889121,
+      "steps": 304,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-glm5p2-744b",
+      "reward": 6.778615460618167,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 41
+      },
+      "available": true,
+      "source_attempt_ids": [
+        41
+      ],
+      "live": false,
+      "modified_at": 1792010152.8171427,
+      "file": "e0798c88d32d21f131712ce196d2accf0b2a28e40644e2228d634971e43f6472.json.gz",
+      "sha256": "e0798c88d32d21f131712ce196d2accf0b2a28e40644e2228d634971e43f6472",
+      "bytes": 593312,
+      "steps": 197,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-glm5p3-744b",
+      "reward": 2.2692142907856114,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 43
+      },
+      "available": true,
+      "source_attempt_ids": [
+        43
+      ],
+      "live": false,
+      "modified_at": 1792024488.9874253,
+      "file": "25e16393498aeb34f12b608a182db6c5db37f799c2ea30bbae4a12a9ddd70bda.json.gz",
+      "sha256": "25e16393498aeb34f12b608a182db6c5db37f799c2ea30bbae4a12a9ddd70bda",
+      "bytes": 837239,
+      "steps": 331,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-glm5p3flash-320b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 239
+      },
+      "available": true,
+      "source_attempt_ids": [
+        239
+      ],
+      "live": false,
+      "modified_at": 1792624045.7910328,
+      "file": "895d7a14ba748c6d38f7d9bdb256bd3da377840afe30ca36736a3455eeed88ae.json.gz",
+      "sha256": "895d7a14ba748c6d38f7d9bdb256bd3da377840afe30ca36736a3455eeed88ae",
+      "bytes": 1157826,
+      "steps": 395,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-inkling-975b",
+      "reward": 1.7186372201462745,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 44
+      },
+      "available": true,
+      "source_attempt_ids": [
+        44
+      ],
+      "live": false,
+      "modified_at": 1792008360.8134413,
+      "file": "2796f00ded87c6e03ca4c83a4ba04f49da125ccc3884c67729776ef22210d4d8.json.gz",
+      "sha256": "2796f00ded87c6e03ca4c83a4ba04f49da125ccc3884c67729776ef22210d4d8",
+      "bytes": 554516,
+      "steps": 180,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-kimik3-2p8t",
+      "reward": 1.3538967911269157,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 198
+      },
+      "available": true,
+      "source_attempt_ids": [
+        198
+      ],
+      "live": false,
+      "modified_at": 1792483219.756628,
+      "file": "beb7a2d8f1078c01180bad7fb3daf1337ade46b4674d24df6fe0d89aeca1aff2.json.gz",
+      "sha256": "beb7a2d8f1078c01180bad7fb3daf1337ade46b4674d24df6fe0d89aeca1aff2",
+      "bytes": 1067278,
+      "steps": 337,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-lingbotworld2p0-14b",
+      "reward": 1.0022881076171164,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 46
+      },
+      "available": true,
+      "source_attempt_ids": [
+        46
+      ],
+      "live": false,
+      "modified_at": 1792011504.5215752,
+      "file": "1c03f9cdaa02d6cff4d3c07a880d80b7dad51e21babedea7f2fa8ada8d7f2b74.json.gz",
+      "sha256": "1c03f9cdaa02d6cff4d3c07a880d80b7dad51e21babedea7f2fa8ada8d7f2b74",
+      "bytes": 487626,
+      "steps": 108,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-llada2p1mini-16b",
+      "reward": 1.1058686021938788,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 36
+      },
+      "available": true,
+      "source_attempt_ids": [
+        36
+      ],
+      "live": false,
+      "modified_at": 1792009200.6480541,
+      "file": "340203833e6a4dbb6b0d2cb65dc8fb1bfb6444d1cc5085b3621cec13ca76be3a.json.gz",
+      "sha256": "340203833e6a4dbb6b0d2cb65dc8fb1bfb6444d1cc5085b3621cec13ca76be3a",
+      "bytes": 796679,
+      "steps": 272,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-minimaxh3-64b",
+      "reward": 1.079096046490572,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 75
+      },
+      "available": true,
+      "source_attempt_ids": [
+        75
+      ],
+      "live": false,
+      "modified_at": 1792056803.5186677,
+      "file": "fa6e2bd734d169fbbba5e55d9229aab8b274546ad784452243f1264f47a0942b.json.gz",
+      "sha256": "fa6e2bd734d169fbbba5e55d9229aab8b274546ad784452243f1264f47a0942b",
+      "bytes": 907722,
+      "steps": 299,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-museglimmer-30b",
+      "reward": 1.0749185099966883,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 37
+      },
+      "available": true,
+      "source_attempt_ids": [
+        37
+      ],
+      "live": false,
+      "modified_at": 1792004293.032729,
+      "file": "b8dbee85bb68e94458994698477484b70d76ae5ba8ed672e62806511239d4307.json.gz",
+      "sha256": "b8dbee85bb68e94458994698477484b70d76ae5ba8ed672e62806511239d4307",
+      "bytes": 601899,
+      "steps": 216,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-nemotron3ultra-550a55b",
+      "reward": 3.5106467123202134,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 45
+      },
+      "available": true,
+      "source_attempt_ids": [
+        45
+      ],
+      "live": false,
+      "modified_at": 1792010708.3108454,
+      "file": "f8158e115f0fbaa9b07414f4c570372e18237a377483a17d23864e624f559817.json.gz",
+      "sha256": "f8158e115f0fbaa9b07414f4c570372e18237a377483a17d23864e624f559817",
+      "bytes": 702431,
+      "steps": 192,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-pi0p5libero-3p3b",
+      "reward": 1.0807789498498699,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 38
+      },
+      "available": true,
+      "source_attempt_ids": [
+        38
+      ],
+      "live": false,
+      "modified_at": 1791986046.069703,
+      "file": "470964c86015f586f8500d683e89e101f8fab6f1e691d7437b444ce324b04284.json.gz",
+      "sha256": "470964c86015f586f8500d683e89e101f8fab6f1e691d7437b444ce324b04284",
+      "bytes": 316140,
+      "steps": 29,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-qwen3p8-27b",
+      "reward": 1.6252757313095612,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 39
+      },
+      "available": true,
+      "source_attempt_ids": [
+        39
+      ],
+      "live": false,
+      "modified_at": 1792013088.1922174,
+      "file": "da1d1fe95204320b60af90b424a178df190f31028e55a2cdd3e692b0ed342ffa.json.gz",
+      "sha256": "da1d1fe95204320b60af90b424a178df190f31028e55a2cdd3e692b0ed342ffa",
+      "bytes": 702995,
+      "steps": 207,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-qwen3ttsbase-1p7b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 278
+      },
+      "available": true,
+      "source_attempt_ids": [
+        278
+      ],
+      "live": false,
+      "modified_at": 1792761690.5584295,
+      "file": "1721b627cd8fba34a608896ba44a02f1e1b05a37554190eeb8ebbfb8416557c0.json.gz",
+      "sha256": "1721b627cd8fba34a608896ba44a02f1e1b05a37554190eeb8ebbfb8416557c0",
+      "bytes": 1482883,
+      "steps": 496,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-qwen3vl-32b",
+      "reward": 1.0288509004716855,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 40
+      },
+      "available": true,
+      "source_attempt_ids": [
+        40
+      ],
+      "live": false,
+      "modified_at": 1792004191.133132,
+      "file": "d2664db4844ddba6a4a8b4413c8269414892318d5d6c6ba14bd69e451a3cce68.json.gz",
+      "sha256": "d2664db4844ddba6a4a8b4413c8269414892318d5d6c6ba14bd69e451a3cce68",
+      "bytes": 940281,
+      "steps": 301,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "infer-wan2p2ti2v-5b",
+      "reward": 1.242361494271831,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 57
+      },
+      "available": true,
+      "source_attempt_ids": [
+        57
+      ],
+      "live": false,
+      "modified_at": 1792004004.6158686,
+      "file": "e2d271e7fe6806805c45fd1ab67710856a65118921fdbec8183e60a2c7c6f04e.json.gz",
+      "sha256": "e2d271e7fe6806805c45fd1ab67710856a65118921fdbec8183e60a2c7c6f04e",
+      "bytes": 926136,
+      "steps": 321,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "train-qwen3-30a3b-grpo",
+      "reward": 0.8135337223463467,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 48
+      },
+      "available": true,
+      "source_attempt_ids": [
+        48
+      ],
+      "live": false,
+      "modified_at": 1792013164.892916,
+      "file": "0ce8d66f2e4d5053d42a218bdafa74c8ac6249f93d33f267a04f8c327a2717bc.json.gz",
+      "sha256": "0ce8d66f2e4d5053d42a218bdafa74c8ac6249f93d33f267a04f8c327a2717bc",
+      "bytes": 884995,
+      "steps": 241,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "train-qwen3-30a3b-sft",
+      "reward": 1.0065904820925091,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 73
+      },
+      "available": true,
+      "source_attempt_ids": [
+        73
+      ],
+      "live": false,
+      "modified_at": 1791990936.9052527,
+      "file": "b16746183537dbdf9de1033613681501a49c9062240f15158c34b6f6e28712fa.json.gz",
+      "sha256": "b16746183537dbdf9de1033613681501a49c9062240f15158c34b6f6e28712fa",
+      "bytes": 505029,
+      "steps": 118,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "train-qwen3-8b-opd",
+      "reward": 1.2872775605975635,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 47
+      },
+      "available": true,
+      "source_attempt_ids": [
+        47
+      ],
+      "live": false,
+      "modified_at": 1792006890.6523561,
+      "file": "d34c4b943e508245245918acb1fb31d6e94d6054e68edeb43a07ded3d2a36a96.json.gz",
+      "sha256": "d34c4b943e508245245918acb1fb31d6e94d6054e68edeb43a07ded3d2a36a96",
+      "bytes": 1165611,
+      "steps": 350,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "openai/auto_model/seed-evolving-auto",
+      "task": "train-qwen3vl-4b-grpo",
+      "reward": 0.9965919425430976,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 94
+      },
+      "available": true,
+      "source_attempt_ids": [
+        94
+      ],
+      "live": false,
+      "modified_at": 1792019545.1693711,
+      "file": "20bc4a58797fdedcba5aadd09c5b016bd0c3286ab252673345d45704e646deeb.json.gz",
+      "sha256": "20bc4a58797fdedcba5aadd09c5b016bd0c3286ab252673345d45704e646deeb",
+      "bytes": 1180566,
+      "steps": 363,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-deepseekv4flash-284b",
+      "reward": 1.8939201621556838,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 249
+      },
+      "available": true,
+      "source_attempt_ids": [
+        249
+      ],
+      "live": false,
+      "modified_at": 1792655782.0717309,
+      "file": "be17d7e13ad2bb627f73895b7b451dbb3784bc7482e929966c4bc272387e5ec5.json.gz",
+      "sha256": "be17d7e13ad2bb627f73895b7b451dbb3784bc7482e929966c4bc272387e5ec5",
+      "bytes": 1225384,
+      "steps": 276,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-glm5p2-744b",
+      "reward": 0.9818287260777112,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 235
+      },
+      "available": true,
+      "source_attempt_ids": [
+        235
+      ],
+      "live": false,
+      "modified_at": 1792568863.0153785,
+      "file": "47c9627863b0f12a7958578c2ec71cbfa45ac45ee747dd2b31636698a0110cd2.json.gz",
+      "sha256": "47c9627863b0f12a7958578c2ec71cbfa45ac45ee747dd2b31636698a0110cd2",
+      "bytes": 177985,
+      "steps": 48,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-glm5p3-744b",
+      "reward": 1.663564764150135,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 233
+      },
+      "available": true,
+      "source_attempt_ids": [
+        233
+      ],
+      "live": false,
+      "modified_at": 1792578934.8892498,
+      "file": "a2b4f9ab736215faa0ec2370f9703176c51f3f43e8282c7497bcdaa5948c0a03.json.gz",
+      "sha256": "a2b4f9ab736215faa0ec2370f9703176c51f3f43e8282c7497bcdaa5948c0a03",
+      "bytes": 195871,
+      "steps": 37,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-glm5p3flash-320b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 252
+      },
+      "available": true,
+      "source_attempt_ids": [
+        252
+      ],
+      "live": false,
+      "modified_at": 1792688536.3946614,
+      "file": "3caa3670bf04cf8aa28c4419792c3bf44fae11913b44dd98bd4798d0308433b6.json.gz",
+      "sha256": "3caa3670bf04cf8aa28c4419792c3bf44fae11913b44dd98bd4798d0308433b6",
+      "bytes": 1198616,
+      "steps": 331,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-inkling-975b",
+      "reward": 1.1513951433468537,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 231
+      },
+      "available": true,
+      "source_attempt_ids": [
+        231
+      ],
+      "live": false,
+      "modified_at": 1792577096.2506194,
+      "file": "7d59f665ab50b888c707649e389bed2380abf64d7924bf5a48f2050ba22b2d16.json.gz",
+      "sha256": "7d59f665ab50b888c707649e389bed2380abf64d7924bf5a48f2050ba22b2d16",
+      "bytes": 201478,
+      "steps": 37,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-kimik3-2p8t",
+      "reward": 1.2978367623401914,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 289
+      },
+      "available": true,
+      "source_attempt_ids": [
+        289
+      ],
+      "live": false,
+      "modified_at": 1792827724.2315617,
+      "file": "91b2b66124d625b48bcb3497425a2fd77014904431d58045b3c6406e6e068a3e.json.gz",
+      "sha256": "91b2b66124d625b48bcb3497425a2fd77014904431d58045b3c6406e6e068a3e",
+      "bytes": 545849,
+      "steps": 109,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-lingbotworld2p0-14b",
+      "reward": 0.9994392899622571,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 232
+      },
+      "available": true,
+      "source_attempt_ids": [
+        232
+      ],
+      "live": false,
+      "modified_at": 1792562550.8874002,
+      "file": "70356c74356801da8fbf2cb301ff2b8add7fa5ec8e423443e902b5f6443ea62f.json.gz",
+      "sha256": "70356c74356801da8fbf2cb301ff2b8add7fa5ec8e423443e902b5f6443ea62f",
+      "bytes": 348795,
+      "steps": 55,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-llada2p1mini-16b",
+      "reward": 1.0944832911619502,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 240
+      },
+      "available": true,
+      "source_attempt_ids": [
+        240
+      ],
+      "live": false,
+      "modified_at": 1792602925.5980651,
+      "file": "b46772edbf46741b23789dac081625cf75457a14bd643ae5e388a4c87fc2b364.json.gz",
+      "sha256": "b46772edbf46741b23789dac081625cf75457a14bd643ae5e388a4c87fc2b364",
+      "bytes": 484893,
+      "steps": 98,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-minimaxh3-64b",
+      "reward": 1.0541818599194315,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 245
+      },
+      "available": true,
+      "source_attempt_ids": [
+        245
+      ],
+      "live": false,
+      "modified_at": 1792633257.5431404,
+      "file": "c81115209a01f90a73f600cd251435baf559083732c73e01958cbbc92f419033.json.gz",
+      "sha256": "c81115209a01f90a73f600cd251435baf559083732c73e01958cbbc92f419033",
+      "bytes": 861711,
+      "steps": 243,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-museglimmer-30b",
+      "reward": 1.0877942210369131,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 315
+      },
+      "available": true,
+      "source_attempt_ids": [
+        315
+      ],
+      "live": false,
+      "modified_at": 1793083363.43309,
+      "file": "4b3566abaf7a5da1bbd3b15702aa39bb12f82c76973744f60e8c6af553466a44.json.gz",
+      "sha256": "4b3566abaf7a5da1bbd3b15702aa39bb12f82c76973744f60e8c6af553466a44",
+      "bytes": 398950,
+      "steps": 97,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-nemotron3ultra-550a55b",
+      "reward": 4.902785005099598,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 247
+      },
+      "available": true,
+      "source_attempt_ids": [
+        247
+      ],
+      "live": false,
+      "modified_at": 1792656245.44191,
+      "file": "a21eaf8fe9c6f33d5bfddc0cf042db959e0361356688a032052c7d7529e36090.json.gz",
+      "sha256": "a21eaf8fe9c6f33d5bfddc0cf042db959e0361356688a032052c7d7529e36090",
+      "bytes": 678742,
+      "steps": 166,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-pi0p5libero-3p3b",
+      "reward": 2.498981719707461,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 242
+      },
+      "available": true,
+      "source_attempt_ids": [
+        242
+      ],
+      "live": false,
+      "modified_at": 1792608831.9761696,
+      "file": "e6b4ae7ffae8ff0ce5db57082e58b49fe9049a22262bebe17b214cb86a53f888.json.gz",
+      "sha256": "e6b4ae7ffae8ff0ce5db57082e58b49fe9049a22262bebe17b214cb86a53f888",
+      "bytes": 630737,
+      "steps": 96,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-qwen3p8-27b",
+      "reward": 1.2852024409711862,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 227
+      },
+      "available": true,
+      "source_attempt_ids": [
+        227
+      ],
+      "live": false,
+      "modified_at": 1792578385.5344558,
+      "file": "4cc5b4c1a231bca1f140da109ad65303f0abbc6bc5a078a4d8dafb2bacd21413.json.gz",
+      "sha256": "4cc5b4c1a231bca1f140da109ad65303f0abbc6bc5a078a4d8dafb2bacd21413",
+      "bytes": 183624,
+      "steps": 39,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-qwen3ttsbase-1p7b",
+      "reward": 1.0168225211873694,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 294
+      },
+      "available": true,
+      "source_attempt_ids": [
+        294
+      ],
+      "live": false,
+      "modified_at": 1792836626.4540825,
+      "file": "cb022a4e9771bfea5b346165e108468f80e3f020098a21db0d1577f6e01b9c0c.json.gz",
+      "sha256": "cb022a4e9771bfea5b346165e108468f80e3f020098a21db0d1577f6e01b9c0c",
+      "bytes": 1261142,
+      "steps": 317,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-qwen3vl-32b",
+      "reward": 0.9628057725582683,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 243
+      },
+      "available": true,
+      "source_attempt_ids": [
+        243
+      ],
+      "live": false,
+      "modified_at": 1792613073.9677753,
+      "file": "13afedc56daecd8613bd20a257df8c16d20d4250e102308d6bb6eef46cc009da.json.gz",
+      "sha256": "13afedc56daecd8613bd20a257df8c16d20d4250e102308d6bb6eef46cc009da",
+      "bytes": 327517,
+      "steps": 52,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "infer-wan2p2ti2v-5b",
+      "reward": 1.0070355020630368,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 244
+      },
+      "available": true,
+      "source_attempt_ids": [
+        244
+      ],
+      "live": false,
+      "modified_at": 1792620524.1363554,
+      "file": "c5bb2f76303199f4161e0ad834a270cf98ef6971f4e9edd226fad9ad8ab4f7a4.json.gz",
+      "sha256": "c5bb2f76303199f4161e0ad834a270cf98ef6971f4e9edd226fad9ad8ab4f7a4",
+      "bytes": 413759,
+      "steps": 83,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "train-qwen3-30a3b-grpo",
+      "reward": 0.8361097968860244,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 246
+      },
+      "available": true,
+      "source_attempt_ids": [
+        246
+      ],
+      "live": false,
+      "modified_at": 1792644686.9159815,
+      "file": "ed98baa2a35f9cc6e4c038f966b088d0989bd4636e5b17b418c33bb18c1a54d8.json.gz",
+      "sha256": "ed98baa2a35f9cc6e4c038f966b088d0989bd4636e5b17b418c33bb18c1a54d8",
+      "bytes": 710590,
+      "steps": 176,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "train-qwen3-30a3b-sft",
+      "reward": 1.000221056715275,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 250
+      },
+      "available": true,
+      "source_attempt_ids": [
+        250
+      ],
+      "live": false,
+      "modified_at": 1792650724.5299325,
+      "file": "8614c317c141b26fb82f4c4f628323a84b7f16308cfc5a8783d9d3159010ffd9.json.gz",
+      "sha256": "8614c317c141b26fb82f4c4f628323a84b7f16308cfc5a8783d9d3159010ffd9",
+      "bytes": 207511,
+      "steps": 26,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "train-qwen3-8b-opd",
+      "reward": 0.9917531961821814,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 248
+      },
+      "available": true,
+      "source_attempt_ids": [
+        248
+      ],
+      "live": false,
+      "modified_at": 1792638583.0202796,
+      "file": "65bb62bc2b9795f25118e20cd1db10af55ff00148b1d03a33719aaaa2e9f7688.json.gz",
+      "sha256": "65bb62bc2b9795f25118e20cd1db10af55ff00148b1d03a33719aaaa2e9f7688",
+      "bytes": 473548,
+      "steps": 53,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/claude-opus-5",
+      "task": "train-qwen3vl-4b-grpo",
+      "reward": null,
+      "score_status": "failed",
+      "run_status": "failed",
+      "source": {
+        "kind": "attempt",
+        "id": 316
+      },
+      "available": true,
+      "source_attempt_ids": [
+        316
+      ],
+      "live": false,
+      "modified_at": 1793086413.226585,
+      "file": "99e9688c7d1fb8119a082f36089950dcbcf0c874c6ce6abfea0dc60b1f7d98ab.json.gz",
+      "sha256": "99e9688c7d1fb8119a082f36089950dcbcf0c874c6ce6abfea0dc60b1f7d98ab",
+      "bytes": 688224,
+      "steps": 85,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-deepseekv4flash-284b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 218
+      },
+      "available": true,
+      "source_attempt_ids": [
+        218
+      ],
+      "live": false,
+      "modified_at": 1792537113.69225,
+      "file": "4c5a08903f27e6564f9327b5e9b229ff45ba205a42f75df94c5612638bd0fd3f.json.gz",
+      "sha256": "4c5a08903f27e6564f9327b5e9b229ff45ba205a42f75df94c5612638bd0fd3f",
+      "bytes": 1324782,
+      "steps": 271,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-glm5p2-744b",
+      "reward": 4.37777348196834,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 222
+      },
+      "available": true,
+      "source_attempt_ids": [
+        222
+      ],
+      "live": false,
+      "modified_at": 1792558228.952816,
+      "file": "c44f8caafc5514e7bb4ccc7412fbcbfe59c1fdc8753dd55625fa95c45665f5f4.json.gz",
+      "sha256": "c44f8caafc5514e7bb4ccc7412fbcbfe59c1fdc8753dd55625fa95c45665f5f4",
+      "bytes": 870600,
+      "steps": 216,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-glm5p3-744b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 149
+      },
+      "available": true,
+      "source_attempt_ids": [
+        149
+      ],
+      "live": false,
+      "modified_at": 1792343718.2884278,
+      "file": "b3e49e0942f79796fbb7d353451161a9d47b66bc7bfbd5c1ee1cdd8f66f96b03.json.gz",
+      "sha256": "b3e49e0942f79796fbb7d353451161a9d47b66bc7bfbd5c1ee1cdd8f66f96b03",
+      "bytes": 1782247,
+      "steps": 425,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-glm5p3flash-320b",
+      "reward": 5.452519049243717,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 220
+      },
+      "available": true,
+      "source_attempt_ids": [
+        220
+      ],
+      "live": false,
+      "modified_at": 1792546475.7480235,
+      "file": "54db2725c780883789633d9ab01dd100dbeb41eee615b4ffeaf5c5c33b758099.json.gz",
+      "sha256": "54db2725c780883789633d9ab01dd100dbeb41eee615b4ffeaf5c5c33b758099",
+      "bytes": 720039,
+      "steps": 145,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-inkling-975b",
+      "reward": 1.7725639551595285,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 174
+      },
+      "available": true,
+      "source_attempt_ids": [
+        174
+      ],
+      "live": false,
+      "modified_at": 1792422306.9568925,
+      "file": "303229f341d2ac617a602a0a76524d1fd26d500a0e6283405c860b1ee082aa7d.json.gz",
+      "sha256": "303229f341d2ac617a602a0a76524d1fd26d500a0e6283405c860b1ee082aa7d",
+      "bytes": 674152,
+      "steps": 156,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-kimik3-2p8t",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 205
+      },
+      "available": true,
+      "source_attempt_ids": [
+        205
+      ],
+      "live": false,
+      "modified_at": 1792529130.812653,
+      "file": "d036a40804525dd8f44c1e19fdedaeef196758c52e4d05a0578d5769abac92b4.json.gz",
+      "sha256": "d036a40804525dd8f44c1e19fdedaeef196758c52e4d05a0578d5769abac92b4",
+      "bytes": 934603,
+      "steps": 192,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-lingbotworld2p0-14b",
+      "reward": 0.9985706503551692,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 175
+      },
+      "available": true,
+      "source_attempt_ids": [
+        175
+      ],
+      "live": false,
+      "modified_at": 1792409683.245034,
+      "file": "87d17224bee2ab530c66a190f10aeec5302c6b3e5ee46e4ca058dfe096e17bfd.json.gz",
+      "sha256": "87d17224bee2ab530c66a190f10aeec5302c6b3e5ee46e4ca058dfe096e17bfd",
+      "bytes": 814273,
+      "steps": 167,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-llada2p1mini-16b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 142
+      },
+      "available": true,
+      "source_attempt_ids": [
+        142
+      ],
+      "live": false,
+      "modified_at": 1792316525.9355657,
+      "file": "d33007feade4b551a65f78908332931c97d3f1582abd14edc9da9aa099a95f58.json.gz",
+      "sha256": "d33007feade4b551a65f78908332931c97d3f1582abd14edc9da9aa099a95f58",
+      "bytes": 1790495,
+      "steps": 279,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-minimaxh3-64b",
+      "reward": 1.0496877978768766,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 183
+      },
+      "available": true,
+      "source_attempt_ids": [
+        183
+      ],
+      "live": false,
+      "modified_at": 1792440339.9963934,
+      "file": "ffa09b90c6e74532872d7a46b23de4ab9f917922546cb464cfa86528b7685fb0.json.gz",
+      "sha256": "ffa09b90c6e74532872d7a46b23de4ab9f917922546cb464cfa86528b7685fb0",
+      "bytes": 883838,
+      "steps": 223,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-museglimmer-30b",
+      "reward": 1.087846514087167,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 144
+      },
+      "available": true,
+      "source_attempt_ids": [
+        144
+      ],
+      "live": false,
+      "modified_at": 1792328142.3540938,
+      "file": "4701c4a56a6f72b3ca78041c2c573ccfea5f2e3455c8494ebab3e6694a3d2c42.json.gz",
+      "sha256": "4701c4a56a6f72b3ca78041c2c573ccfea5f2e3455c8494ebab3e6694a3d2c42",
+      "bytes": 1349046,
+      "steps": 213,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-nemotron3ultra-550a55b",
+      "reward": 3.4144620444185416,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 253
+      },
+      "available": true,
+      "source_attempt_ids": [
+        253
+      ],
+      "live": false,
+      "modified_at": 1792693329.779311,
+      "file": "62451156eb845640f0e1ca16fe467df0ab8f8700d8f51a97b7286387f9cfe5d6.json.gz",
+      "sha256": "62451156eb845640f0e1ca16fe467df0ab8f8700d8f51a97b7286387f9cfe5d6",
+      "bytes": 1202594,
+      "steps": 235,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-pi0p5libero-3p3b",
+      "reward": 3.315463828818812,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 146
+      },
+      "available": true,
+      "source_attempt_ids": [
+        146
+      ],
+      "live": false,
+      "modified_at": 1792323849.2272232,
+      "file": "204d312ad50299f9421918300b908a068d532cb91688cbe7c0f4d04ace8b3dfb.json.gz",
+      "sha256": "204d312ad50299f9421918300b908a068d532cb91688cbe7c0f4d04ace8b3dfb",
+      "bytes": 2382772,
+      "steps": 457,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-qwen3p8-27b",
+      "reward": 1.2236706881998476,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 147
+      },
+      "available": true,
+      "source_attempt_ids": [
+        147
+      ],
+      "live": false,
+      "modified_at": 1792327077.4133565,
+      "file": "04920fa55c8b97f6172d1c2f15536f4e969ee76f5b5e6666b721d9bee5ca33b3.json.gz",
+      "sha256": "04920fa55c8b97f6172d1c2f15536f4e969ee76f5b5e6666b721d9bee5ca33b3",
+      "bytes": 714780,
+      "steps": 129,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-qwen3ttsbase-1p7b",
+      "reward": 1.0364884525645561,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 290
+      },
+      "available": true,
+      "source_attempt_ids": [
+        290
+      ],
+      "live": false,
+      "modified_at": 1792832209.542677,
+      "file": "b294b59b3396511fcac9c6b19fd8d4dfb4b1fe20ae4cbe9ad34c0489cf5695bc.json.gz",
+      "sha256": "b294b59b3396511fcac9c6b19fd8d4dfb4b1fe20ae4cbe9ad34c0489cf5695bc",
+      "bytes": 3862815,
+      "steps": 207,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-qwen3vl-32b",
+      "reward": 1.0876403345468446,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 148
+      },
+      "available": true,
+      "source_attempt_ids": [
+        148
+      ],
+      "live": false,
+      "modified_at": 1792324500.5175896,
+      "file": "ead6682718537a8667fe0101737db39117494a20f09b8554168862c5c395309e.json.gz",
+      "sha256": "ead6682718537a8667fe0101737db39117494a20f09b8554168862c5c395309e",
+      "bytes": 636081,
+      "steps": 101,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "infer-wan2p2ti2v-5b",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 152
+      },
+      "available": true,
+      "source_attempt_ids": [
+        152
+      ],
+      "live": false,
+      "modified_at": 1792327382.11213,
+      "file": "0320f4299790ebbba35f65d0e90aaa731a4a13869c4e6a53551cc48b5ed0310e.json.gz",
+      "sha256": "0320f4299790ebbba35f65d0e90aaa731a4a13869c4e6a53551cc48b5ed0310e",
+      "bytes": 903067,
+      "steps": 171,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "train-qwen3-30a3b-grpo",
+      "reward": 0.7008044537574531,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 176
+      },
+      "available": true,
+      "source_attempt_ids": [
+        176
+      ],
+      "live": false,
+      "modified_at": 1792424905.9193919,
+      "file": "e5eba30aeb694547c0dc339c86fe685c393a1328d60d2d5237ced0a7c3b3e9cd.json.gz",
+      "sha256": "e5eba30aeb694547c0dc339c86fe685c393a1328d60d2d5237ced0a7c3b3e9cd",
+      "bytes": 1415316,
+      "steps": 206,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "train-qwen3-30a3b-sft",
+      "reward": 0.0,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 164
+      },
+      "available": true,
+      "source_attempt_ids": [
+        164
+      ],
+      "live": false,
+      "modified_at": 1792368328.6855125,
+      "file": "e831121bccaa16ade3f7dfb1d39e1185735d2e6b5bff742f78a714dc09310343.json.gz",
+      "sha256": "e831121bccaa16ade3f7dfb1d39e1185735d2e6b5bff742f78a714dc09310343",
+      "bytes": 1019772,
+      "steps": 189,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "train-qwen3-8b-opd",
+      "reward": 1.0102304078852613,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 172
+      },
+      "available": true,
+      "source_attempt_ids": [
+        172
+      ],
+      "live": false,
+      "modified_at": 1792384180.7310092,
+      "file": "e5ff9b9a7b048672df8220ba622806ac607dffe7f22827788c3dbf8cc5bcb1af.json.gz",
+      "sha256": "e5ff9b9a7b048672df8220ba622806ac607dffe7f22827788c3dbf8cc5bcb1af",
+      "bytes": 1287026,
+      "steps": 208,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    },
+    {
+      "model": "deployed/kimi-k3",
+      "task": "train-qwen3vl-4b-grpo",
+      "reward": 1.051463427335373,
+      "score_status": "completed",
+      "run_status": "completed",
+      "source": {
+        "kind": "attempt",
+        "id": 215
+      },
+      "available": true,
+      "source_attempt_ids": [
+        215
+      ],
+      "live": false,
+      "modified_at": 1792522999.3425243,
+      "file": "3a6b84d9393f06377e0acb33988cb0e39f5bf3e83db189c23bf08398d4e10fdd.json.gz",
+      "sha256": "3a6b84d9393f06377e0acb33988cb0e39f5bf3e83db189c23bf08398d4e10fdd",
+      "bytes": 1529261,
+      "steps": 270,
+      "schema_version": "ATIF-v1.7",
+      "collection_warning": false
+    }
+  ]
+}

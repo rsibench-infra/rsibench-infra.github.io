@@ -24,6 +24,7 @@ test('renders the exact snapshot and interactive task explorer', async ({ page }
   await expect(page.locator('.score')).toHaveCount(160);
   await page.locator('.score').first().click();
   await expect(page.getByRole('status')).toContainText('2.107635×');
+  await page.getByRole('button', { name: 'Close trajectory' }).click();
   await page.getByRole('textbox', { name: 'Search tasks' }).fill('not-a-real-task');
   await expect(page.getByText('No results match your selection.', { exact: false })).toBeVisible();
   const downloadHref = await page.getByRole('link', { name: 'Download results' }).getAttribute('href');
