@@ -24,7 +24,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_BASE_PATH: ''
           NEXT_PUBLIC_PROJECT_GITHUB: ${{ vars.NEXT_PUBLIC_PROJECT_GITHUB }}
       - uses: actions/upload-pages-artifact@v3
         with:
