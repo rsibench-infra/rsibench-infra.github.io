@@ -39,11 +39,11 @@ python3 scripts/export_trajectories.py --api http://127.0.0.1:10952/api --state-
 
 ```bash
 npm run build
-# 仓库子路径验证
-NEXT_PUBLIC_BASE_PATH=/rsibench-infra-pages npm run build
+# 组织根域名构建（无仓库子路径）
+NEXT_PUBLIC_BASE_PATH= npm run build
 ```
 
-静态产物在 `out/`。已准备 `.github/workflows/pages.yml`：推送 main 后使用官方 Pages Actions 发布，自动读取 Pages base_path。部署仓库为 https://github.com/wyifei26/rsibench-infra-page ，目标地址为 https://wyifei26.github.io/rsibench-infra-page/ 。首次部署需在仓库 Settings → Pages 中将 Source 设为 GitHub Actions，随后在 Actions 中运行 Deploy GitHub Pages。首次启用需要仓库管理权限，工作流内置 GITHUB_TOKEN 无法代替这一步。
+静态产物在 `out/`。已准备 `.github/workflows/pages.yml`：推送 main 后使用官方 Pages Actions 发布，自动读取 Pages base_path。部署仓库为 https://github.com/rsibench-infra/rsibench-infra.github.io ，目标地址为 https://rsibench-infra.github.io/ 。首次部署需在仓库 Settings → Pages 中将 Source 设为 GitHub Actions，随后在 Actions 中运行 Deploy GitHub Pages。首次启用需要仓库管理权限，工作流内置 GITHUB_TOKEN 无法代替这一步。
 
 项目源码入口通过 `NEXT_PUBLIC_PROJECT_GITHUB` 配置，尚未确认时显示 Code coming soon。此入口与网页部署仓库不同。
 
