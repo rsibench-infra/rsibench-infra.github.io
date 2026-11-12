@@ -1,84 +1,49 @@
 # RSIBench-Infra Pages
 
-白底研究项目页：作者介绍、可切换指标的排行榜、7 个模型的独立图表、20 题交互得分矩阵和评测方法。采用 Next.js 静态导出、React、TypeScript、Tailwind CSS、Radix UI Tabs/Tooltip/Dialog、Ant Design X Bubble、Recharts 和 Lucide；字体通过 Fontsource 自托管。
+研究项目页，包含 RSIBench-Infra-Lite、20 题全榜、逐题 Speedup / SOL score 和原始 Agent trajectory。Next.js 静态导出，发布至 https://rsibench-infra.github.io/ 。
 
-## 本地运行
+## 当前结果选择
+
+2026-11-12 发布口径：
+
+- DeepSeek V4 Flash 和 Seed Evolving Auto 保留原实验的分数和逐字节轨迹，固定在 `data/historical-results.json`。
+- GPT-6 Astra、Claude Opus 5.5、GLM-5.3、Qwen3.8 Max、Kimi K3 使用当前实验结果。逐题 result SHA-256 和 attempt 绑定在 `data/selected-results.json`，重评沿来源链读取原 Agent 轨迹。
+- Claude 只采用当前完成的 10 题；其他 10 题显示未测试和用户指定的 API safety-policy 错误。失败的 GLM-5.2 记录不纳入这 10 个结果。
+- 缺失 reward 保留 `null`，Speedup 显示 `—`，SOL score 为 0；正式零 reward 的 Speedup 显示 `0.00×`。
+
+## SOL 归一化
+
+参考 `ALL-20-SOL-RESULTS-20261112.md`：以 `summary.json` 的 20 题为基础，用 `latest-sb-20261112.json` 覆盖最新七题，使用未舍入数值。公开参考为 `data/sol-reference.json`，保留单位、硬件、baseline、SOL 和解析参考类型。四题为前缀平均外推，不宣称是实测性能。
+
+令 `r = speedup`、`s = SOL / baseline`：
+
+- 无 reward 或 reward=0：score=0。
+- r≥s：score=1（先截断，避免倒数公式越过奇点）。
+- 其他情况：`score = 1 / (1 + (1/r - 1/s) / (1 - 1/s))`。
+
+Oracle=0.5，SOL=1。Full 的 mean SOL score、median speedup 和 faster rate 均按全部 20 题计算；Lite mean 按全部 5 题计算，缺失贡献 0。Faster 阈值为严格大于 1.10。Full 与 Lite 使用完全相同的逐题 SOL score。
+
+## 刷新与验证
 
 ```bash
 npm ci
-npm run dev
-```
-
-## 数据刷新
-
-在可访问 npu-fly 实验管理器的机器上运行：
-
-```bash
 npm run data:refresh
-```
-
-脚本只读 `http://127.0.0.1:10952/api/leaderboard`，验证完整 20 题、有效分数、Faster Rate 和 Median Speedup 后，导出 `data/leaderboard.json` 与静态数据文件 `public/data/leaderboard.json`。仅公开允许字段，移除内部路径、实验 ID、计费说明及错误信息。保存源响应 SHA-256、来源和 UTC 观测时间。失败时不会覆盖已有快照。刷新后重新构建部署，网页不会请求本机 API。
-
-Faster Rate 为全 20 题中 reward > 1.10 的比例；Median Speedup 按全 20 题计算，缺失以 0 参与聚合。单题视图中缺失始终显示 `—`，不冒充零分。未完成模型标为 Provisional。
-
-## 原始 Agent trajectory
-
-矩阵中的 140 个单元格均可打开轨迹查看器。消息采用 [Ant Design X Bubble](https://x.ant.design/components/bubble/)，工具参数、输出与 reasoning 采用 Ant Design Collapse，弹窗使用 Radix Dialog。支持全文搜索、每页 20 步、原始步骤与顶层元数据查看；页面和弹窗均不提供下载按钮；不截断或改写源文件。Markdown 禁止嵌入 HTML 和远程图片。
-
-```bash
-npm run data:trajectories
-# 在其他机器上显式指定只读数据源：
-python3 scripts/export_trajectories.py --api http://127.0.0.1:10952/api --state-db /path/to/state.sqlite3
-```
-
-导出器保持已有分数快照不变，按 manager 榜单选中的 task、对应 result_path 的 attempt 定位轨迹；重评沿 source_attempt_ids 读取原始 Agent。若分数已变化则拒绝导出，需先运行 `npm run data:refresh`，然后重新导出轨迹。公开索引保留来源运行 ID、分数状态与当前运行状态、导出时间、文件 SHA-256 和采集完整性提示，不导出数据库路径。轨迹比评分快照更新时仍单独标明来源与导出时间。
-
-静态文件位于 `public/data/trajectories/`，浏览器只在打开单元格时请求对应 gzip 文件，解压后校验 SHA-256。原始文件共约 40 MB（gzip），不会加入首页 JS。当前导出 139 份轨迹，另外 1 个单元格明确显示 ATIF 缺失；不使用其他运行补位。源轨迹里的命令、路径及工具输出保持原样。浏览器需支持 DecompressionStream 和 Web Crypto（HTTPS 或 localhost）。
-
-## GitHub Pages
-
-```bash
-npm run build
-# 组织根域名构建（无仓库子路径）
-NEXT_PUBLIC_BASE_PATH= npm run build
-```
-
-静态产物在 `out/`。已准备 `.github/workflows/pages.yml`：推送 main 后使用官方 Pages Actions 发布，自动读取 Pages base_path。部署仓库为 https://github.com/rsibench-infra/rsibench-infra.github.io ，目标地址为 https://rsibench-infra.github.io/ 。首次部署需在仓库 Settings → Pages 中将 Source 设为 GitHub Actions，随后在 Actions 中运行 Deploy GitHub Pages。首次启用需要仓库管理权限，工作流内置 GITHUB_TOKEN 无法代替这一步。
-
-项目源码入口通过 `NEXT_PUBLIC_PROJECT_GITHUB` 配置，尚未确认时显示 Code coming soon。此入口与网页部署仓库不同。
-
-## 来源与组件
-
-作者和项目描述参考 `/opt/tiger/arxiv-seed-rsibench-infra/paper.tex`，未添加未经确认的论文或 arXiv URL。
-
-- [Radix UI](https://www.radix-ui.com/)：可访问的标签页、提示框、轨迹弹窗（MIT）。
-- [Ant Design X](https://x.ant.design/) / [Ant Design](https://ant.design/)：现成 Bubble 对话消息、Collapse 工具详情与分页组件（MIT）。
-- [react-markdown](https://github.com/remarkjs/react-markdown) / remark-gfm：消息 Markdown 渲染（MIT）。
-- [Recharts](https://recharts.org/)：排行榜及各模型独立图表（MIT）。
-- [Lucide](https://lucide.dev/)：图标（ISC）。
-- [Fontsource](https://fontsource.org/)：Inter、Source Serif 4，字体许可随 npm 包保留（OFL）。
-
-详细规划见 [docs/site-plan.md](docs/site-plan.md)。
-
-## 验证
-
-```bash
+# 显式指定只读来源：
+python3 scripts/refresh_publication.py --api http://127.0.0.1:10961/api --database /path/to/state.sqlite3 --sol-evidence /path/to/full-sol-20261109
 npm run typecheck
-npm run build
-# 将 out/ 通过静态 HTTP 服务运行在 3100 端口后：
-npx playwright test
+python3 -m unittest discover -s tests -p 'test_*.py'
+NEXT_PUBLIC_BASE_PATH='' npm run build
+python3 -m http.server 3100 --directory out --bind 127.0.0.1
+# 另一个终端：
+CHROMIUM_PATH=/path/to/chrome npx playwright test
 ```
 
-浏览器测试覆盖 140 个分数与快照逐项一致、筛选与搜索、指标切换、无下载入口、空态、详情和 390/768/1440px 无页面溢出。可通过 `CHROMIUM_PATH` 指定已有 Chromium，`TEST_BASE_URL` 指向预览地址。Pages 工作流通过仓库变量 `NEXT_PUBLIC_PROJECT_GITHUB` 设置公开代码链接。
+刷新脚本核对 API、只读 SQLite、原生 result reward 和文件 SHA，导出结束再次检查来源未变化。分数与轨迹一起刷新，禁止旧脚本独立重绑来源。`data:trajectories` 和旧 Python 导出入口均转到同一流程。不会修改实验状态、原始结果或原始轨迹。
 
-轨迹验证还覆盖 140 个索引绑定、139 份原始文件 SHA-256、工具折叠、跨页搜索、源文件完整性、缺失提示、请求失败重试，以及移动端弹窗布局。
+当前共 140 个单元格、138 份可用 ATIF，另两道 Claude 题目明确显示不可用。gzip 以原始内容 SHA-256 命名；浏览器按需加载、解压并验证 SHA。原始 messages / tools / reasoning 保持原格式，支持搜索、分页和字段检查，不提供下载按钮。静态网站不连接实验管理器。
 
-## 公开结果选择
+## 部署
 
-页面顺序为 RSIBench-Infra-Lite 排行榜、RSIBench-Infra 排行榜、RSIBench-Infra 逐题结果、两个 benchmark 的介绍。Lite 总榜按五题 mean_score 降序排列；逐题得分合并为一张分组柱状图，横轴为五道题，每组按总榜顺序展示七个模型，共用刻度和 Oracle / SOL 参考线。悬停或方向键查看精确分数，保留零分及超过 SOL 的分数，移动端可横向滚动。
+部署仓库：https://github.com/rsibench-infra/rsibench-infra.github.io 。`.github/workflows/pages.yml` 在 main 推送后执行 GitHub Pages 部署，根域名强制 `NEXT_PUBLIC_BASE_PATH=''`。构建产物为 `out/`。源码链接由 `NEXT_PUBLIC_PROJECT_GITHUB` 配置。
 
-`data/selected-results.json` 固定 Claude Opus 5.5 的 infer-kimik3-2p8t 使用 attempt #271，保存 verifier 原始指标与 result.json SHA-256。该运行状态仍为 failed，但 verifier 有效分数为 1.1804461942257218；公开分数状态为 verified。轨迹同步指向 #271。其余四道题按用户提供的说明标注 Anthropic 风控限制，缺失保留为 null，聚合仍使用全 20 题。
-
-`public_results.py` 将公开模型范围和指定结果应用到数据刷新，不改实验管理器记录。静态数据和轨迹目录仅包含当前展示的七个模型。
-
-`data/selected-trajectories.json` 固定 GLM-5.3 模型的 Qwen3 TTS 单元格使用 attempt #326 的原始轨迹（源模型名 deployed/GLM-5.3）。该次实验没有 verifier 得分，单元格继续显示缺失；导出器验证模型与任务身份，并禁止以仅轨迹选择替换已验证得分的来源。归一化公式使用 KaTeX，Lite 分组柱状图只展示 Agent 得分，Oracle / SOL 以参考线呈现。
+发布时只提交网站源码、公开数据与当前 manifest 引用的轨迹；保留实验目录和历史来源。上线后核对数据哈希、根路径资源、指标切换和真实轨迹加载。

@@ -3,7 +3,9 @@ import { readFileSync } from 'node:fs';
 import { gunzipSync } from 'node:zlib';
 import { createHash } from 'node:crypto';
 import snapshot from '../data/leaderboard.json';
-import manifest from '../public/data/trajectories/index.json';
+import manifestData from '../public/data/trajectories/index.json';
+import type { TraceManifest } from '../lib/trajectory';
+const manifest: TraceManifest & { leaderboard_sha256: string } = manifestData;
 
 const labels: Record<string, string> = { 'gpt-6-astra': 'GPT-6 Astra', 'claude-opus-5-5': 'Claude Opus 5.5', 'glm-5.3': 'GLM-5.3' };
 const first = manifest.entries[0];
@@ -45,10 +47,10 @@ test('real trajectory uses library bubbles, complete steps, tools, search, pagin
   const dialog = page.getByRole('dialog');
   await expect(dialog).toBeVisible();
   await expect(dialog.locator('.ant-bubble')).toHaveCount(20);
-  await expect(dialog.locator('.trace-markdown').first()).toContainText('Optimize');
+  await expect(dialog.locator('.trace-markdown').first()).toBeVisible();
   await expect(dialog.getByText('SHA-256 verified.', { exact: false })).toBeVisible();
-  await dialog.getByRole('button', { name: 'Tool · todowrite', exact: true }).first().click();
-  await expect(dialog.locator('pre').filter({ hasText: 'Record budget, inspect the baseline' }).first()).toBeVisible();
+  await dialog.getByRole('button', { name: 'Raw step · all fields', exact: true }).first().click();
+  await expect(dialog.locator('pre').filter({ hasText: 'step_id' }).first()).toBeVisible();
   await dialog.getByTitle('2', { exact: true }).click();
   await expect(dialog.locator('.trace-step-label').first()).toContainText('Step 21');
   const lastStep = original.steps.at(-1);
@@ -97,7 +99,7 @@ test('trajectory fits mobile and desktop and keeps tools collapsed initially', a
     await expect(page.locator('.ant-bubble')).toHaveCount(20);
     expect(await page.getByRole('dialog').evaluate(el => el.scrollWidth <= el.clientWidth)).toBeTruthy();
     expect(await page.locator('.trace-messages').evaluate(el => el.scrollWidth <= el.clientWidth)).toBeTruthy();
-    await expect(page.getByRole('button', { name: 'Tool · todowrite', exact: true }).first()).toHaveAttribute('aria-expanded', 'false');
+    await expect(page.getByRole('button', { name: 'Raw step · all fields', exact: true }).first()).toHaveAttribute('aria-expanded', 'false');
     await page.screenshot({ path: `artifacts/trajectory-${width}.png` });
   }
 });

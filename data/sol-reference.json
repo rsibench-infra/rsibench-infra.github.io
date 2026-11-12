@@ -1,0 +1,210 @@
+{
+  "as_of": "2026-11-12",
+  "rows": [
+    {
+      "task": "infer-deepseekv4flash-284b",
+      "model": "DeepSeek V4 Flash(0731 W8A8)",
+      "hardware": "8xAscend910B2",
+      "unit": "tokens/s",
+      "baseline": 160.6204608296244,
+      "sol": 1083.4007886951345,
+      "evidence_status": "audited analytical reference",
+      "sol_baseline_ratio": 6.745098246507552
+    },
+    {
+      "task": "infer-glm5p2-744b",
+      "model": "GLM-5.2",
+      "hardware": "32xAscend910B2",
+      "unit": "tokens/s",
+      "baseline": 12.9325,
+      "sol": 658.0390057122844,
+      "evidence_status": "prefix-average extrapolation",
+      "sol_baseline_ratio": 50.882583082334
+    },
+    {
+      "task": "infer-glm5p3-744b",
+      "model": "GLM-5.3 FP8",
+      "hardware": "16xH20",
+      "unit": "tokens/s",
+      "baseline": 113.46083333333333,
+      "sol": 378.20194444444445,
+      "evidence_status": "audited analytical reference",
+      "sol_baseline_ratio": 3.3333259886549205
+    },
+    {
+      "task": "infer-glm5p3flash-320b",
+      "model": "GLM-5.3-Flash 320B W8A8",
+      "hardware": "16xAscend910B2",
+      "unit": "tokens/s",
+      "baseline": 4.885,
+      "sol": 176.8834055163494,
+      "evidence_status": "prefix-average extrapolation",
+      "sol_baseline_ratio": 36.209499593930275
+    },
+    {
+      "task": "infer-inkling-975b",
+      "model": "Inkling 975B(NVFP4 W4A16)",
+      "hardware": "8xH20",
+      "unit": "tokens/s",
+      "baseline": 104.37,
+      "sol": 586.6226880412424,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 5.6206063815391625
+    },
+    {
+      "task": "infer-kimik3-2p8t",
+      "model": "Kimi-K3(2.8T MXFP4)",
+      "hardware": "32xH20",
+      "unit": "tokens/s",
+      "baseline": 26.246666666666666,
+      "sol": 201.48547359885796,
+      "evidence_status": "prefix-average extrapolation",
+      "sol_baseline_ratio": 7.676611897340283
+    },
+    {
+      "task": "infer-lingbotworld2p0-14b",
+      "model": "LingBot-World 2.0",
+      "hardware": "8xH20",
+      "unit": "frames/s",
+      "baseline": 7.54200888322448,
+      "sol": 10.784332475654498,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 1.4299018527599252
+    },
+    {
+      "task": "infer-llada2p1mini-16b",
+      "model": "LLaDA2.1-mini(BF16)",
+      "hardware": "1xH20",
+      "unit": "tokens/s",
+      "baseline": 92.70917754129844,
+      "sol": 642.2888515233753,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 6.927996435274813
+    },
+    {
+      "task": "infer-minimaxh3-64b",
+      "model": "MiniMax-H3 FL2VA",
+      "hardware": "2xH20",
+      "unit": "videos/hour",
+      "baseline": 202.7968612802803,
+      "sol": 301.53299800107584,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 1.486872114772698
+    },
+    {
+      "task": "infer-museglimmer-30b",
+      "model": "Muse-Glimmer-30B(BF16, text-only)",
+      "hardware": "1xH20",
+      "unit": "tokens/s",
+      "baseline": 47.8075,
+      "sol": 71.14194444444445,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 1.488091710389467
+    },
+    {
+      "task": "infer-nemotron3ultra-550a55b",
+      "model": "Nemotron 3 Ultra(550B-A55B NVFP4)",
+      "hardware": "8xH20",
+      "unit": "tokens/s",
+      "baseline": 26.690555555555555,
+      "sol": 136.26642028548673,
+      "evidence_status": "prefix-average extrapolation",
+      "sol_baseline_ratio": 5.105417157835192
+    },
+    {
+      "task": "infer-pi0p5libero-3p3b",
+      "model": "π0.5",
+      "hardware": "1xH20",
+      "unit": "action_chunks/s",
+      "baseline": 2.7078457221609487,
+      "sol": 31.217109008872132,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 11.528392756423312
+    },
+    {
+      "task": "infer-qwen3p8-27b",
+      "model": "Qwen3.8-27B(FP8)",
+      "hardware": "1xH20",
+      "unit": "tokens/s",
+      "baseline": 108.9275,
+      "sol": 300.2241666666667,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 2.756183394153604
+    },
+    {
+      "task": "infer-qwen3ttsbase-1p7b",
+      "model": "Qwen3-TTS-12Hz-1.7B-Base",
+      "hardware": "1xH20",
+      "unit": "reference-audio-seconds/s",
+      "baseline": 9.83149587958443,
+      "sol": 47.55564931078007,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 4.8370715802802335
+    },
+    {
+      "task": "infer-qwen3vl-32b",
+      "model": "Qwen3-VL-32B(FP8)",
+      "hardware": "1xH20",
+      "unit": "tokens/s",
+      "baseline": 106.07938479466918,
+      "sol": 301.4007234528259,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 2.8412751830737637
+    },
+    {
+      "task": "infer-wan2p2ti2v-5b",
+      "model": "Wan2.2 TI2V-5B (T2V-only)",
+      "hardware": "1xH20",
+      "unit": "videos/hour",
+      "baseline": 6.6280430134963435,
+      "sol": 10.209772756277895,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 1.540390238187691
+    },
+    {
+      "task": "train-qwen3-30a3b-grpo",
+      "model": "Qwen3-30B-A3B-Base",
+      "hardware": "8xH20",
+      "unit": "step/hour",
+      "baseline": 5.888738224407284,
+      "sol": 16.160189140337618,
+      "evidence_status": "audited analytical reference",
+      "sol_baseline_ratio": 2.744253272009588
+    },
+    {
+      "task": "train-qwen3-30a3b-sft",
+      "model": "MiMo-7B-RL",
+      "hardware": "8xH20",
+      "unit": "step/hour",
+      "baseline": 1472.256059717387,
+      "sol": 2228.113649335928,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 1.5134009023971244
+    },
+    {
+      "task": "train-qwen3-8b-opd",
+      "model": "Qwen3-8B",
+      "hardware": "16xH20",
+      "unit": "step/hour",
+      "baseline": 53.76530601507717,
+      "sol": 78.76815932658907,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 1.4650369385882498
+    },
+    {
+      "task": "train-qwen3vl-4b-grpo",
+      "model": "Qwen3-VL-8B-Instruct",
+      "hardware": "8xH20",
+      "unit": "step/hour",
+      "baseline": 4.509013428130678,
+      "sol": 7.375054308264083,
+      "evidence_status": "existing analytical reference",
+      "sol_baseline_ratio": 1.635624826986065
+    }
+  ],
+  "source_sha256": {
+    "summary.json": "13ac673989cbd53fb533db4125932226bbc559f3ac1d496d7fc2fa18d0538eed",
+    "latest-sb-20261112.json": "43b830aa38af201a50c4b2bcd667c6aad5eac3187995e1e413fe0c365653e532",
+    "ALL-20-SOL-RESULTS-20261112.md": "db4bfb8df94db356635275ba61715ba2c6327e58b0c943965a8a6d3955c4928e"
+  }
+}

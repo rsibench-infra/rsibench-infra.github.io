@@ -1,28 +1,786 @@
 [
   {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-deepseekv4flash-284b",
+    "attempt_id": 86,
+    "result_sha256": "54f5efbf2064fd4080d89e4ac1d476656f6b391cc473c62ed45651851df5bc57",
+    "reward": 2.114107294510862,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-glm5p2-744b",
+    "attempt_id": 112,
+    "result_sha256": "3ae458ead4b9b85593a43810bb8786660cd8d5457b7c171034219c030b38a8cd",
+    "reward": 4.494619498679039,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-glm5p3-744b",
+    "attempt_id": 96,
+    "result_sha256": "bf4fb9e1cb5bd18c314fbfff4bd48ba51e903a38c0abebaab0a36291d4dcc80c",
+    "reward": 1.795751838005773,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-glm5p3flash-320b",
+    "attempt_id": 106,
+    "result_sha256": "9b506d79aa68356c1c72441de4f3812fd68be1017767347be28a90e2cf231186",
+    "reward": 4.509553053565336,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-inkling-975b",
+    "attempt_id": 91,
+    "result_sha256": "0499d9f840468a5b395bfad390e8e872d4b65fe2ada4099c85c1f411ab655187",
+    "reward": 2.009227321601567,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-kimik3-2p8t",
+    "attempt_id": 124,
+    "result_sha256": "14d2da6739d7469c12ff51f4db5c9be4d4bb86e460ecea745a8ff4539a8a6b05",
+    "reward": 1.411766573533147,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-lingbotworld2p0-14b",
+    "attempt_id": 98,
+    "result_sha256": "35d5d9fa98483739827e6944d77e683b7f8021743b70e5dfc88ac5b11951ad3c",
+    "reward": 1.0370157521100523,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-llada2p1mini-16b",
+    "attempt_id": 82,
+    "result_sha256": "8712d59ef4e296e31c23a2a4ab2011b33672f09fb51561468386df3f941cdfbe",
+    "reward": 3.0756856997594166,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-minimaxh3-64b",
+    "attempt_id": 94,
+    "result_sha256": "23a45f92fc74f6d8fa8b90b8dd31137619e21ba74af010b17b6df76e3f375a11",
+    "reward": 1.255220425442016,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-museglimmer-30b",
+    "attempt_id": 84,
+    "result_sha256": "be882349c65f17b6f8deb3666507d8c61a0f56cf8860687d7fb93829223103fa",
+    "reward": 1.1231966160586149,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-nemotron3ultra-550a55b",
+    "attempt_id": 97,
+    "result_sha256": "e194cbb9ccb0a2d6b82c70e8ade894bf9b3bb7c9cd12bf8f14b460612598c5dc",
+    "reward": 2.6390525154549054,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-pi0p5libero-3p3b",
+    "attempt_id": 85,
+    "result_sha256": "54128b2f61194f78311d3f15acb1186da2454d822956dbff5a95c8ee5c80720e",
+    "reward": 2.5938255029128126,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-qwen3p8-27b",
+    "attempt_id": 90,
+    "result_sha256": "05f314caf6983a5933c063dc2cdcbed54817f2f358fd48b08f0e61975509d16b",
+    "reward": 1.6755155697342015,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-qwen3ttsbase-1p7b",
+    "attempt_id": 80,
+    "result_sha256": "7e44a04fbeabd4e7f7c170afd14df5c22299c5f03e3cedaf4b0f025ccd5d7cc0",
+    "reward": 1.177183084282266,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-qwen3vl-32b",
+    "attempt_id": 92,
+    "result_sha256": "a5ead6723deed315f8a595b9c2f7c92933207484c745cfbbf5becf6e449a106b",
+    "reward": 1.1329034378843441,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "infer-wan2p2ti2v-5b",
+    "attempt_id": 93,
+    "result_sha256": "e82d04f4957410f93efac51d17f6cba0c10160a36e01792ba7686e95afa8e088",
+    "reward": 0.9995105225410069,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "train-qwen3-30a3b-grpo",
+    "attempt_id": 143,
+    "result_sha256": "ac4a64dd42fb837805d7ceadc7c2994ea94217bbdc154e94318ddec93b07d4e6",
+    "reward": 1.166955434504766,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "train-qwen3-30a3b-sft",
+    "attempt_id": 103,
+    "result_sha256": "c5ccddec98e4f9907c1bbdae26c79562189a28f74aa38288f893cfa2cdb0eb3b",
+    "reward": 1.2231373072744072,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "train-qwen3-8b-opd",
+    "attempt_id": 110,
+    "result_sha256": "d31a250fec045a642e818915725362c49e63c1e08318fce6f636bc2a0dfd2f4b",
+    "reward": 1.0381080612965388,
+    "excluded": false
+  },
+  {
+    "model": "openai/gpt-6-astra",
+    "task": "train-qwen3vl-4b-grpo",
+    "attempt_id": 114,
+    "result_sha256": "51dc76104c161f838cd424b353b2d10ea7c3b6f36921e391b80df8d35f9270dd",
+    "reward": 1.0489515244604168,
+    "excluded": false
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-glm5p2-744b",
+    "attempt_id": 127,
+    "result_sha256": "94536626fa7268e8e571f77df13fce2b64a66772f3a3510a7afe76d78969fe6b",
+    "reward": null,
+    "excluded": true
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-glm5p3-744b",
+    "attempt_id": 156,
+    "result_sha256": "fee2d40b97e2a3a9eac4ad2dfe44b0b6089a6d8cbaa7408b4dd437908e7a774e",
+    "reward": null,
+    "excluded": true
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-inkling-975b",
+    "attempt_id": 126,
+    "result_sha256": "2e0e29149c17727ef39f4aeec00e6a2703ce1dce0f0aab0ea52cc29f653c6040",
+    "reward": 1.1515601545782632,
+    "excluded": false
+  },
+  {
     "model": "deployed/claude-opus-5-5",
     "task": "infer-kimik3-2p8t",
-    "attempt_id": 271,
-    "reward": 1.1804461942257218,
-    "run_status": "failed",
-    "result_sha256": "7d7edcb9ca66b18598912a1b5c173faccfe548a5e512afe3230d73a3317f8c0b",
-    "verifier_rewards": {
-      "reward": 1.1804461942257218,
-      "deploy_success": 1,
-      "gate_accuracy": 0.75,
-      "accuracy_within_tolerance": 1,
-      "performance_score": 1.1804461942257218,
-      "request_success_rate": 1.0,
-      "ttft_ms_p50": -1.0,
-      "ttft_ms_p99": -1.0,
-      "tpot_ms_p50": -1.0,
-      "tpot_ms_p99": -1.0,
-      "output_throughput": 30.982777777777777,
-      "benchmark_wall_time_sec": 3600.0,
-      "grm_transferable_infra_optimization": 1.0,
-      "grm_score": 1.0,
-      "grm_succ_quality": 1.0
-    },
-    "selection_reason": "Explicitly selected historical verifier result; Agent run status remains failed."
+    "attempt_id": 152,
+    "result_sha256": "dccc21a88b1b0931b44a10e1daeb1808b9e5d5d698cf737dcf7794e1a06e1c92",
+    "reward": null,
+    "excluded": true
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-lingbotworld2p0-14b",
+    "attempt_id": 108,
+    "result_sha256": "38d386601c7c081a7673e1afd6a7fef575b7a320bc5f1a2c72c92797b68f1dbb",
+    "reward": 1.092930899642341,
+    "excluded": false
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-llada2p1mini-16b",
+    "attempt_id": 134,
+    "result_sha256": "4bd2bf3556da91be21701a598658b36a429bcfe00908d303e353e115c8af6cc1",
+    "reward": 6.106245085938902,
+    "excluded": false
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-minimaxh3-64b",
+    "attempt_id": 102,
+    "result_sha256": "61e4c830d6f6528dab87748e73cfa4aeab5db11ff25bb5d5e5435a3c6cd3f2d8",
+    "reward": 0.973644358421025,
+    "excluded": false
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-museglimmer-30b",
+    "attempt_id": 160,
+    "result_sha256": "76dece39100ebc493f622ecf23673a45546453e377c78914e8606d202456d242",
+    "reward": null,
+    "excluded": true
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-nemotron3ultra-550a55b",
+    "attempt_id": 157,
+    "result_sha256": "086b24df62955c5c5916bbb8c201ecadfdaae45ed1397a4a7ecd93a4a8041f98",
+    "reward": null,
+    "excluded": true
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-pi0p5libero-3p3b",
+    "attempt_id": 119,
+    "result_sha256": "ed99b809a25a1ab2326eb402b248eb5d108a6596e68217c90476892410825476",
+    "reward": 4.148404621484335,
+    "excluded": false
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-qwen3p8-27b",
+    "attempt_id": 161,
+    "result_sha256": "027bb5150f7ed8569793a87e1c15e1b13016b2465f233cede9f81b901c93d41d",
+    "reward": null,
+    "excluded": true
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-qwen3ttsbase-1p7b",
+    "attempt_id": 79,
+    "result_sha256": "4151268c9c1b5c71b2a9f378cfcd9b7bcd46de89799b7772c33f28924f364b50",
+    "reward": 1.8609410362696415,
+    "excluded": false
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-qwen3vl-32b",
+    "attempt_id": 147,
+    "result_sha256": "c7f7d77ef790b0efc04d7de00623e0ef29fd2ddfbc48f7ea1abd2ca70d81c5f5",
+    "reward": 1.3334666938276136,
+    "excluded": false
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "infer-wan2p2ti2v-5b",
+    "attempt_id": 99,
+    "result_sha256": "ee381fc22bc280f67af5abe8733d830e28214c9a9d5079ef094b0cdc9a6a54f0",
+    "reward": 1.3528132945119207,
+    "excluded": false
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "train-qwen3-30a3b-grpo",
+    "attempt_id": 109,
+    "result_sha256": "d216a2a3d05abf37b2678159adf117c394a80ec56bfc654182a4afa65f916b64",
+    "reward": 1.1299572811885943,
+    "excluded": false
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "train-qwen3-30a3b-sft",
+    "attempt_id": 111,
+    "result_sha256": "f68c4de3601cdbb079307802b84fa8112836fbfe3f63a8375fef568b4c173e2e",
+    "reward": 1.6130843255579685,
+    "excluded": false
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "train-qwen3-8b-opd",
+    "attempt_id": 158,
+    "result_sha256": "e09a6cf210ebf1fde9ae8dac7154913a6d7ca0169b1df53e403adff1f47def9c",
+    "reward": null,
+    "excluded": true
+  },
+  {
+    "model": "deployed/claude-opus-5-5",
+    "task": "train-qwen3vl-4b-grpo",
+    "attempt_id": 155,
+    "result_sha256": "fe93f33ef1fe9c0173a875bae20e91f1761f660e570eaa581ad2e15e45c90d09",
+    "reward": null,
+    "excluded": true
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-deepseekv4flash-284b",
+    "attempt_id": 44,
+    "result_sha256": "a73fde97cb2bb202236e3d75700803602f5f4670435f56c449b3dbbf29f53118",
+    "reward": 2.0764692320600258,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-glm5p2-744b",
+    "attempt_id": 63,
+    "result_sha256": "dbc00d6368849a7fee16c6a711eb91bcc51aba6d3c423f2d2f2bc77da3d88b89",
+    "reward": 6.27143071933329,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-glm5p3-744b",
+    "attempt_id": 56,
+    "result_sha256": "8e99d1654b32e14bc1b5c205461f9f1db073b750d6460edcf15e3f09f7c095ae",
+    "reward": 1.8349283526620788,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-glm5p3flash-320b",
+    "attempt_id": 104,
+    "result_sha256": "4331d727e32b79958332cfc79b5b7352892019b3ab9b3992f03ce58d44add13b",
+    "reward": 0.0,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-inkling-975b",
+    "attempt_id": 30,
+    "result_sha256": "87e9b647f15c797feded35e6cc73d89c40ce355af57f9d17c41d4fbbcd8d7e0d",
+    "reward": 2.244445509033034,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-kimik3-2p8t",
+    "attempt_id": 42,
+    "result_sha256": "74def061aa1cc50000bed443eddfe98a1d03bcf3542c3a8264247cd63fa32a2c",
+    "reward": 1.1683070866141732,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-lingbotworld2p0-14b",
+    "attempt_id": 58,
+    "result_sha256": "b54bf5d847c8abb01c1d254fa025eda3a6b60a32f8901a4ef002e6cf1da75fe0",
+    "reward": 1.0202499340668632,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-llada2p1mini-16b",
+    "attempt_id": 8,
+    "result_sha256": "dd1b4db7a47b123ddc251620f4b408619077fd97fe125dd2b1e1c9baca7743f6",
+    "reward": 1.1516707594052675,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-minimaxh3-64b",
+    "attempt_id": 29,
+    "result_sha256": "2527af9694ddf5d3dde3fd1b314b9dae2ed5ae22c78ffce829e90227b22c7630",
+    "reward": 1.3679919158065623,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-museglimmer-30b",
+    "attempt_id": 9,
+    "result_sha256": "e0f6c179bd64f17155f746fb870c51b471ec702b33bf68d64767c7efd65f8386",
+    "reward": 1.0795842121470947,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-nemotron3ultra-550a55b",
+    "attempt_id": 75,
+    "result_sha256": "3ecd5131e705e9479cdfd580478ecae06815e6fcfd32656f9e1bcfb26ad7786c",
+    "reward": 10.558895156422372,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-pi0p5libero-3p3b",
+    "attempt_id": 10,
+    "result_sha256": "c0f63ed2f7a814c5e50b37ea5013f79a32f2ce7d113f6830012554b0a269acbc",
+    "reward": 3.4702157168233474,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-qwen3p8-27b",
+    "attempt_id": 17,
+    "result_sha256": "73f889b4b2eb97d3f1f1c741fbd1048e9afec7a3f66c5058f8bd47a4ada4b9ea",
+    "reward": 1.6305442712915574,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-qwen3ttsbase-1p7b",
+    "attempt_id": 7,
+    "result_sha256": "ac82d4ede86d8de049db25e1d870ff84576019785e7ff67212f3128bc2b73aba",
+    "reward": 1.0632244251956073,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-qwen3vl-32b",
+    "attempt_id": 18,
+    "result_sha256": "1b807db2633aefdbd0d0b2bac2ac55a3009047b3ca1f33e278e4db3e716c13ce",
+    "reward": 1.518056023480845,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "infer-wan2p2ti2v-5b",
+    "attempt_id": 20,
+    "result_sha256": "7a65224f84002f69d68afabb8ed6a36aad748914a0fdc9d51a5b6a68f79fdf8c",
+    "reward": 1.264673216577158,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "train-qwen3-30a3b-grpo",
+    "attempt_id": 59,
+    "result_sha256": "acaabc4e0db9f9821f22f429855d657ae1b75c28cf6112b2be2d09ce77bfd3e0",
+    "reward": 0.0,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "train-qwen3-30a3b-sft",
+    "attempt_id": 60,
+    "result_sha256": "8c677597bc90f85d6f3d612c6a90dc53cab43796a00ecbd21bc25121909c2781",
+    "reward": 1.1907665882482554,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "train-qwen3-8b-opd",
+    "attempt_id": 69,
+    "result_sha256": "ed16c7b7a1970572ac4ec041b9cbaed8c25beccf17f744ad4ff597e84418a427",
+    "reward": 1.2897712501237948,
+    "excluded": false
+  },
+  {
+    "model": "deployed/glm-5.3",
+    "task": "train-qwen3vl-4b-grpo",
+    "attempt_id": 61,
+    "result_sha256": "8c398bcda65b6ff16de371f56d9d4693a7a5d54d83c27ec3df41c3bc94c33dc8",
+    "reward": 1.0710749694505972,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-deepseekv4flash-284b",
+    "attempt_id": 32,
+    "result_sha256": "51249da11aa99ed510a7d6305da20197336bda77feb45b16bd7c32bae740449d",
+    "reward": 2.1210694131198635,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-glm5p2-744b",
+    "attempt_id": 16,
+    "result_sha256": "9d04f400871b9b43976e45b41e3ad263983f5e357ebb5002e109d53bb0beeb26",
+    "reward": 6.213093627166699,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-glm5p3-744b",
+    "attempt_id": 35,
+    "result_sha256": "9fa88d31693d186d7c535b3143641d1cff490c2c72d0bad7689c9a8ac1ae031f",
+    "reward": 0.0,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-glm5p3flash-320b",
+    "attempt_id": 105,
+    "result_sha256": "4a2a4fc097e95f6fe482003a1c59ead7253d947f70487f37e4553ee9ccdc5f26",
+    "reward": 0.0,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-inkling-975b",
+    "attempt_id": 37,
+    "result_sha256": "88f593db263e797758fdd86176247d7d218525fcfac8585c10759ad3cab3f717",
+    "reward": 3.327611169663484,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-kimik3-2p8t",
+    "attempt_id": 11,
+    "result_sha256": "fe4b2a9d2030f257e1b7cc242cedf2281c52dc62f3d68e8e722b3db373d8120d",
+    "reward": 1.341207349081365,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-lingbotworld2p0-14b",
+    "attempt_id": 38,
+    "result_sha256": "7d5121012a9aa98a51b50c4933b3e9a15d77407bd5efa8a38609ebc53ac13a43",
+    "reward": 1.000044197441756,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-llada2p1mini-16b",
+    "attempt_id": 15,
+    "result_sha256": "fe30680381840d4f6f0d5ea987bff3e46519496f03fdeb57c5d14915dd4dbcbe",
+    "reward": 2.0624284606881975,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-minimaxh3-64b",
+    "attempt_id": 34,
+    "result_sha256": "84068e4d9766ed06fae2bfeaa5277f9b57f4ed5ca353c4292a6fed8314bc096d",
+    "reward": 1.1940457212306668,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-museglimmer-30b",
+    "attempt_id": 24,
+    "result_sha256": "38ad351cad353adf11b3b99f75b2446b0f064dbfb7b95bb8d49dbd5cc9df140c",
+    "reward": 1.1435676643018589,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-nemotron3ultra-550a55b",
+    "attempt_id": 57,
+    "result_sha256": "16f7de4fb9837044116470142fa517d33d4944b127bcc35d546905b378a7fbcb",
+    "reward": 9.551714089461525,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-pi0p5libero-3p3b",
+    "attempt_id": 25,
+    "result_sha256": "47deb1674993214fa44b71bac23972de9cedc0140b91fefa5b962625b797e086",
+    "reward": 3.558362814054832,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-qwen3p8-27b",
+    "attempt_id": 26,
+    "result_sha256": "b9df0c4d79126eca692d39f1b83677ab7cc1e6b1358ecf533ea51a6e052d781e",
+    "reward": 1.5735491751649289,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-qwen3ttsbase-1p7b",
+    "attempt_id": 2,
+    "result_sha256": "7ccfa0c31f650a6d907f922494828733c6458f81329dc5efbee46fae2337e3ab",
+    "reward": 1.1029084276131802,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-qwen3vl-32b",
+    "attempt_id": 27,
+    "result_sha256": "9117a77984065aece20e0e24655231af7ead5c8ff228df31dcc08789d7e873b8",
+    "reward": 1.227450497954116,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "infer-wan2p2ti2v-5b",
+    "attempt_id": 28,
+    "result_sha256": "4555fc651f31f5a7a9637eb2e789f0391fcacb17399154dc755a4468b342eb19",
+    "reward": 1.285451985381776,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "train-qwen3-30a3b-grpo",
+    "attempt_id": 39,
+    "result_sha256": "1838d62ee7eb248a6c8fbb446b15adf5501474e01984b7021bdd7d5fdb3cfa99",
+    "reward": 1.1387004295316148,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "train-qwen3-30a3b-sft",
+    "attempt_id": 43,
+    "result_sha256": "d9bd024f263037aa3b3404a99937eba6caa650462eac144bdf7640cfdf094aa4",
+    "reward": 0.0,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "train-qwen3-8b-opd",
+    "attempt_id": 65,
+    "result_sha256": "c88b3fe4e2336697f46305efb4355593f20b338edb7407d600867b76c64b0c4b",
+    "reward": 1.0091067770496747,
+    "excluded": false
+  },
+  {
+    "model": "deployed/qwen3.8-max",
+    "task": "train-qwen3vl-4b-grpo",
+    "attempt_id": 49,
+    "result_sha256": "eae9f91838ac565caf004af9045908898236304213e44b3a25b5a47dde19f35b",
+    "reward": 1.0876154048019775,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-deepseekv4flash-284b",
+    "attempt_id": 48,
+    "result_sha256": "7c8f33370c21c6812619cc375ec2ed625508d03bc249b051ac7174a531684039",
+    "reward": 1.895641287667052,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-glm5p2-744b",
+    "attempt_id": 55,
+    "result_sha256": "83541c9c1cacca9444bfa148a7e730a3cfb42bd52423dd64d956cd900b0f8c40",
+    "reward": 4.556135489829671,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-glm5p3-744b",
+    "attempt_id": 67,
+    "result_sha256": "9fff22aae3c4a20dae3778e75c8a127e6db031ec2a9445b68232195b7b9da5d8",
+    "reward": 1.8220457867252282,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-glm5p3flash-320b",
+    "attempt_id": 163,
+    "result_sha256": "380acc60feeb8639091c83bb5b684928d0fe15d2edd7dcb66a2e2220ad1e0f68",
+    "reward": 8.037359263050154,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-inkling-975b",
+    "attempt_id": 52,
+    "result_sha256": "c7283b3bf749ba8a4c6c7240c010a7c855b2bc5056110853d6b8919748c99c4b",
+    "reward": 2.3080653231558665,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-kimik3-2p8t",
+    "attempt_id": 72,
+    "result_sha256": "6a10262fdacb9d98305ab0a38cdfeb817434c0b290062fed2f30232bc0393b8e",
+    "reward": 1.123782914232495,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-lingbotworld2p0-14b",
+    "attempt_id": 53,
+    "result_sha256": "beeac0b2dc60484010984b773c227279af7066efd461b5cc6ab6ae92165fc65f",
+    "reward": 1.0205916754207438,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-llada2p1mini-16b",
+    "attempt_id": 12,
+    "result_sha256": "3dc97f6a945ba961623e5259495ec55092fbfdc42e1e6e19ef7f511b17dea7ae",
+    "reward": 1.1011330006948834,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-minimaxh3-64b",
+    "attempt_id": 50,
+    "result_sha256": "cfb4366222054dd1ddf9306b5105ff51f76f7627dc618107386498192244fb9e",
+    "reward": 0.8697449317490132,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-museglimmer-30b",
+    "attempt_id": 13,
+    "result_sha256": "5b439b0bff9b14c9221060dc6ce7830e8c6bd1d83f37e2118042f5c95d4dfd15",
+    "reward": 1.078613885547944,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-nemotron3ultra-550a55b",
+    "attempt_id": 70,
+    "result_sha256": "b1ac6a0d61410f6344d603badb56e4ac0acbd8b92f603148f2f003bda5f763ab",
+    "reward": 4.269560601960744,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-pi0p5libero-3p3b",
+    "attempt_id": 46,
+    "result_sha256": "81e47db30b4bb8fcf9e15407d0c627599dd4ccef60e2d0646fccdb2d2996871f",
+    "reward": 2.883498682974062,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-qwen3p8-27b",
+    "attempt_id": 19,
+    "result_sha256": "304359f16c219958e1409f8a2ab2088cfa69fd2948843cafc652efbe1886ae1d",
+    "reward": 1.2876301515534032,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-qwen3ttsbase-1p7b",
+    "attempt_id": 3,
+    "result_sha256": "6d94cfa3bce72aafbaaeabb77416f12fa12a14a376b872df6ec79ec4e3b96f86",
+    "reward": 0.9932305251653141,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-qwen3vl-32b",
+    "attempt_id": 22,
+    "result_sha256": "900983f31c32c1221a56760610b3948307366bbd59a2d74f74c8efbdbf6ddee4",
+    "reward": 1.1316853627015824,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "infer-wan2p2ti2v-5b",
+    "attempt_id": 47,
+    "result_sha256": "eb24976eafc96252f849a65b955f0f0687224fac79f48a43edec5544a0965da6",
+    "reward": 1.2948069596987322,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "train-qwen3-30a3b-grpo",
+    "attempt_id": 120,
+    "result_sha256": "a0e9cd18ed8be9a69a06f0b99a3ae7b7e9c8a57dfda46bbffaa8fe1221818f19",
+    "reward": 0.7008352833038669,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "train-qwen3-30a3b-sft",
+    "attempt_id": 64,
+    "result_sha256": "5c76bc4576ef8b000423f92dbd6b44575db70782a4b3915000208cfac30e573f",
+    "reward": 1.0279206130180423,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "train-qwen3-8b-opd",
+    "attempt_id": 71,
+    "result_sha256": "d80dd57c228560c7fccd946dc5d4dea6e9f947391952a8b9366aebb2c95636ea",
+    "reward": 1.0028899610487128,
+    "excluded": false
+  },
+  {
+    "model": "deployed/kimi-k3",
+    "task": "train-qwen3vl-4b-grpo",
+    "attempt_id": 66,
+    "result_sha256": "861099b18138550e0a97e8b9fd5f577b357e720a067b88c7d9d89607fa661e44",
+    "reward": 1.0426502809067146,
+    "excluded": false
   }
 ]

@@ -8,9 +8,9 @@ test('renders the exact snapshot and interactive task explorer', async ({ page }
   await page.goto('./');
   await expect(page.getByRole('heading', { name: 'RSIBench-Infra', exact: true })).toBeVisible();
   await expect(page.locator('.lite-comparison .recharts-wrapper')).toHaveCount(1);
-  await expect(page.locator('#results tbody tr')).toHaveCount(20);
+  await expect(page.locator('#results > .table-scroll tbody tr')).toHaveCount(20);
   await expect(page.locator('.score')).toHaveCount(snapshot.rows.length * 20);
-  const scores = await page.locator('.score').allTextContents();
+  const scores = await page.locator('.speedup-value').allTextContents();
   const expected = snapshot.rows[0].tasks.flatMap((_, i) => snapshot.rows.map(m => m.tasks[i].reward === null ? '—' : `${m.tasks[i].reward!.toFixed(2)}×`));
   expect(scores).toEqual(expected);
   const ranked = [...liteSet.models].sort((a,b)=>b.mean_score-a.mean_score);
@@ -29,15 +29,15 @@ test('renders the exact snapshot and interactive task explorer', async ({ page }
   }
 
   await page.getByRole('tab', { name: 'Training · 4', exact: true }).click();
-  await expect(page.locator('#results tbody tr')).toHaveCount(4);
+  await expect(page.locator('#results > .table-scroll tbody tr')).toHaveCount(4);
   await page.getByRole('textbox', { name: 'Search tasks' }).fill('OPD');
-  await expect(page.locator('#results tbody tr')).toHaveCount(1);
+  await expect(page.locator('#results > .table-scroll tbody tr')).toHaveCount(1);
   await page.getByRole('button', { name: 'GPT-6 Astra', exact: true }).click();
   await expect(page.locator('.score')).toHaveCount(snapshot.rows.length - 1);
   await page.getByRole('button', { name: 'Reset', exact: true }).click();
   await expect(page.locator('.score')).toHaveCount(snapshot.rows.length * 20);
   await page.locator('.score').first().click();
-  await expect(page.locator('.trace-summary')).toContainText('2.107635×');
+  await expect(page.locator('.trace-summary')).toContainText(`${snapshot.rows[0].tasks[0].reward!.toFixed(6)}×`);
   await page.getByRole('button', { name: 'Close trajectory' }).click();
   await page.getByRole('textbox', { name: 'Search tasks' }).fill('not-a-real-task');
   await expect(page.getByText('No results match your selection.', { exact: false })).toBeVisible();
@@ -67,15 +67,15 @@ test('benchmark order, model identities, selected result and publication data ag
   await expect(page.getByText('Claude Opus 5', { exact: true })).toHaveCount(0);
   await expect(page.locator('#lite-set .lite-chart .model-axis-tick image')).toHaveCount(7);
   await expect(page.locator('.lite-model-legend > span')).toHaveCount(7);
-  await expect(page.locator('#leaderboard .evaluation-note')).toContainText('4 of 20 tasks');
+  await expect(page.locator('#leaderboard .evaluation-note')).toContainText('10 of 20 tasks');
   const claude = snapshot.rows.find(r => r.display_name === 'claude-opus-5-5')!;
-  expect(claude.scored).toBe(16);
-  expect(claude.faster_rate_percent).toBe(60);
-  expect(claude.median_speedup).toBeCloseTo(1.143926886320688, 12);
-  await page.getByRole('button', { name: 'Claude Opus 5.5, infer-kimik3-2p8t,', exact: false }).click();
-  await expect(page.locator('.trace-summary')).toContainText('1.180446×');
-  await expect(page.getByRole('dialog')).toContainText('271');
-  await expect(page.locator('.ant-bubble')).toHaveCount(18);
+  expect(claude.scored).toBe(10);
+  expect(claude.faster_rate_percent).toBe(40);
+  expect(claude.tasks.filter(t => t.status === "not_tested")).toHaveLength(10);
+  await page.getByRole('button', { name: 'Claude Opus 5.5, infer-llada2p1mini-16b,', exact: false }).click();
+  await expect(page.locator('.trace-summary')).toContainText('6.106245×');
+  await expect(page.getByText('SHA-256 verified.', { exact: false })).toBeVisible();
+  await expect(page.locator('.ant-bubble')).toHaveCount(20);
   await page.keyboard.press('Escape');
   const icon = await page.locator('link[rel="icon"]').getAttribute('href');
   expect((await page.request.get(icon!)).ok()).toBeTruthy();
@@ -102,8 +102,33 @@ test('requested copy, agent-only Lite scores, linked formula and selected GLM tr
   await expect(page.getByText('RAW VERIFIED SPEEDUP', { exact: true })).toHaveCount(0);
   await expect(page.getByRole('heading', { name: 'RSIBench-Infra agent trajectory explorer.', exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'GLM-5.3, infer-qwen3ttsbase-1p7b,', exact: false }).click();
-  await expect(page.locator('.trace-summary')).toContainText('Source: attempt 326');
-  await expect(page.locator('.trace-summary')).toContainText('No verified score');
+  const glm = snapshot.rows.find(r => r.display_name === 'glm-5.3')!.tasks.find(t => t.task === 'infer-qwen3ttsbase-1p7b')!;
+  await expect(page.locator('.trace-summary')).toContainText(`${glm.reward!.toFixed(6)}×`);
   await expect(page.getByText('SHA-256 verified.', { exact: false })).toBeVisible();
   await expect(page.locator('.ant-bubble')).toHaveCount(20);
+});
+
+
+test('SOL metrics use bounded scores and all-task denominators', async ({ page }) => {
+  await page.goto('./');
+  expect(await page.locator('.sol-score-value').allTextContents()).toEqual(snapshot.rows[0].tasks.flatMap((_, i) => snapshot.rows.map(m => m.tasks[i].sol_score.toFixed(3))));
+  await page.getByRole('tab', { name: 'Mean SOL score', exact: true }).click();
+  await expect(page.getByRole('tab', { name: 'Mean SOL score', exact: true })).toHaveAttribute('data-state', 'active');
+  const ranked = [...snapshot.rows].sort((a,b) => b.mean_sol_score - a.mean_sol_score);
+  expect(await page.locator('.ranking-chart .recharts-label-list text').allTextContents()).toEqual(ranked.map(r => r.mean_sol_score.toFixed(3)));
+  await expect(page.locator('.metric-footnote')).toContainText('all 20');
+  await expect(page.locator('.evaluation-note')).toContainText("API Error: 400 This request may violate the Claude model's safety policy and has been terminated early.");
+  for (const row of snapshot.rows) {
+    expect(row.mean_sol_score).toBeCloseTo(row.tasks.reduce((sum,t) => sum+t.sol_score, 0) / 20, 12);
+    for (const cell of row.tasks) {
+      expect(cell.sol_score).toBeGreaterThanOrEqual(0);
+      expect(cell.sol_score).toBeLessThanOrEqual(1);
+      if (cell.reward === null || cell.reward === 0) expect(cell.sol_score).toBe(0);
+    }
+    const lite = liteSet.models.find(r => r.model === row.model)!;
+    expect(lite.mean_score).toBeCloseTo(lite.tasks.reduce((sum,t) => sum+t.score, 0) / 5, 12);
+    for (const cell of lite.tasks) expect(cell.score).toBe(row.tasks.find(t => t.task === cell.task)!.sol_score);
+  }
+  await page.getByRole('tab', { name: 'Median speedup', exact: true }).click();
+  await expect(page.locator('.ranking-chart')).toHaveAttribute('aria-label', /median speedup/);
 });

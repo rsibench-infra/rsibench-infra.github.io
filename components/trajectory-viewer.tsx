@@ -10,7 +10,7 @@ import { loadOriginalText, loadTrajectory, rawText, type Step, type TraceEntry, 
 
 const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const pageSize = 20;
-export type TraceFocus = { model: string; modelId: string; task: string; reward: number | null; status: string };
+export type TraceFocus = { model: string; modelId: string; task: string; reward: number | null; status: string; solScore: number };
 
 function StepContent({ step }: { step: Step }) {
   const calls = step.tool_calls || [];
@@ -79,7 +79,7 @@ export default function TrajectoryViewer({ focus, onClose }: { focus: TraceFocus
     <Dialog.Overlay className="trace-overlay"/>
     <Dialog.Content className="trace-dialog" onCloseAutoFocus={event => { event.preventDefault(); trigger?.focus(); }}>
       <div className="trace-heading"><div><div className="section-kicker">AGENT TRAJECTORY</div><Dialog.Title>{focus.model}</Dialog.Title><Dialog.Description>{focus.task}</Dialog.Description></div><Dialog.Close className="trace-close" aria-label="Close trajectory"><X size={20}/></Dialog.Close></div>
-      <div className="trace-summary" role="status"><strong>{focus.reward === null ? 'No verified score' : `${focus.reward.toFixed(6)}×`}</strong><span>Score snapshot: {focus.status}</span>{entry && <span>Source: {entry.source.kind} {entry.source.id} · {entry.run_status}{(entry.source_attempt_ids?.length || 0) > 1 ? ` → Agent attempt ${entry.source_attempt_ids!.at(-1)}` : ''}</span>}</div>
+      <div className="trace-summary" role="status"><strong>{focus.reward === null ? 'No verified score' : `${focus.reward.toFixed(6)}×`}</strong><span>SOL score: {focus.solScore.toFixed(6)}</span><span>Score snapshot: {focus.status}</span>{entry && <span>Source: {entry.source.kind} {entry.source.id} · {entry.run_status}{(entry.source_attempt_ids?.length || 0) > 1 ? ` → Agent attempt ${entry.source_attempt_ids!.at(-1)}` : ''}</span>}</div>
       <ConfigProvider theme={{ token: { colorPrimary: '#5579cc', fontFamily: 'Inter, sans-serif', borderRadius: 6 } }}>
         {loading && <div className="trace-empty" role="status"><Spin/><p>Loading original trajectory…</p></div>}
         {error && <div className="trace-empty"><Alert type="error" title="Unable to load trajectory" description={error}/><button className="button" onClick={() => setRetry(n => n + 1)}>Retry</button></div>}
