@@ -9,6 +9,7 @@ const manifest: TraceManifest & { leaderboard_sha256: string } = manifestData;
 
 const labels: Record<string, string> = { 'gpt-6-astra': 'GPT-6 Astra', 'claude-opus-5-5': 'Claude Opus 5.5', 'glm-5.3': 'GLM-5.3' };
 const first = manifest.entries[0];
+const firstButton = (page: import('@playwright/test').Page) => page.getByRole('button', { name: `GPT-6 Astra, ${first.task},`, exact: false });
 const original = JSON.parse(gunzipSync(readFileSync(`public/data/trajectories/${first.file}`)).toString());
 
 test('all published cells bind to the score snapshot and intact original ATIF artifacts', () => {
@@ -41,9 +42,9 @@ test('real trajectory uses library bubbles, complete steps, tools, search, pagin
   const requests: string[] = [];
   page.on('request', r => { if (r.url().includes('/trajectories/')) requests.push(r.url()); });
   await page.goto('./');
-  await page.locator('.score').first().waitFor();
+  await firstButton(page).waitFor();
   expect(requests).toHaveLength(0);
-  await page.locator('.score').first().click();
+  await firstButton(page).click();
   const dialog = page.getByRole('dialog');
   await expect(dialog).toBeVisible();
   await expect(dialog.locator('.ant-bubble')).toHaveCount(20);
@@ -65,7 +66,7 @@ test('real trajectory uses library bubbles, complete steps, tools, search, pagin
   expect(JSON.parse(gunzipSync(await response.body()).toString())).toEqual(original);
   await page.keyboard.press('Escape');
   await expect(dialog).toHaveCount(0);
-  await expect(page.locator('.score').first()).toBeFocused();
+  await expect(firstButton(page)).toBeFocused();
   expect(errors).toEqual([]);
 });
 
@@ -84,7 +85,7 @@ test('missing artifacts are explicit and loading failures can be retried', async
     await page.keyboard.press('Escape');
   }
   await page.route('**/trajectories/*.json.gz', route => route.fulfill({ status: 503, body: 'unavailable' }));
-  await page.locator('.score').first().click();
+  await firstButton(page).click();
   await expect(page.getByText('Trajectory request failed (503).')).toBeVisible();
   await page.unroute('**/trajectories/*.json.gz');
   await page.getByRole('button', { name: 'Retry', exact: true }).click();
@@ -95,7 +96,7 @@ test('trajectory fits mobile and desktop and keeps tools collapsed initially', a
   for (const width of [390, 768, 1440]) {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto('./');
-    await page.locator('.score').first().click();
+    await firstButton(page).click();
     await expect(page.locator('.ant-bubble')).toHaveCount(20);
     expect(await page.getByRole('dialog').evaluate(el => el.scrollWidth <= el.clientWidth)).toBeTruthy();
     expect(await page.locator('.trace-messages').evaluate(el => el.scrollWidth <= el.clientWidth)).toBeTruthy();
@@ -111,7 +112,7 @@ test('a checksum mismatch is reported without displaying the wrong conversation'
     contentType: 'application/gzip', body: readFileSync(`public/data/trajectories/${other.file}`),
   }));
   await page.goto('./');
-  await page.locator('.score').first().click();
+  await firstButton(page).click();
   await expect(page.getByText('Trajectory checksum does not match the exported record.')).toBeVisible();
   await expect(page.locator('.ant-bubble')).toHaveCount(0);
 });

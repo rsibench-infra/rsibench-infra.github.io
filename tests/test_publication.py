@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-from refresh_publication import score
+from refresh_publication import score, aggregate_rows, lite_models
 
 
 def read(name):
@@ -49,4 +49,19 @@ class PublicationTest(unittest.TestCase):
         for row in lite['models']:
             for cell in row['tasks']:
                 self.assertEqual(cell['score'], next(t['sol_score'] for t in full[row['model']]['tasks'] if t['task'] == cell['task']))
-            self.assertAlmostEqual(row['mean_score'], sum(t['score'] for t in row['tasks']) / 5)
+            self.assertAlmostEqual(row['mean_score'], sum(t['score'] for t in row['tasks']) / row['aggregation_task_count'])
+
+
+    def test_partial_denominator_includes_formal_zero_but_not_missing(self):
+        rows = [dict(model='claude', display_name='claude-opus-5-5', tasks=[
+            dict(task='a', reward=2, sol_score=1, status='completed'),
+            dict(task='b', reward=0, sol_score=0, status='completed'),
+            dict(task='c', reward=None, sol_score=0, status='not_tested')])]
+        aggregate_rows(rows)
+        self.assertEqual(rows[0]['aggregation_task_count'], 2)
+        self.assertEqual(rows[0]['mean_sol_score'], 0.5)
+        self.assertEqual(rows[0]['faster_rate_percent'], 50)
+        self.assertEqual(rows[0]['median_speedup'], 1)
+        lite = lite_models(rows, ['a', 'b', 'c'])[0]
+        self.assertEqual(lite['aggregation_task_count'], 2)
+        self.assertEqual(lite['mean_score'], 0.5)

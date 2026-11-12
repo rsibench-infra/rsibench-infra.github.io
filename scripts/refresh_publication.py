@@ -41,6 +41,39 @@ def encoded(value):
     return (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode()
 
 
+AGGREGATION = 'Claude: only tasks with formal rewards; other models: full suite. Verified zero rewards are included.'
+
+
+def aggregate_rows(rows):
+    for row in rows:
+        tasks = row['tasks']
+        included = [t for t in tasks if t['reward'] is not None] if row['display_name'] == 'claude-opus-5-5' else tasks
+        count = len(included)
+        row.update(scored=sum(t['reward'] is not None for t in tasks),
+                   aggregation_task_count=count, partial_evaluation=count < len(tasks),
+                   faster_count=sum(t['reward'] is not None and t['reward'] > 1.1 for t in included),
+                   median_speedup=statistics.median(t['reward'] if t['reward'] is not None else 0 for t in included) if count else 0,
+                   mean_sol_score=statistics.mean(t['sol_score'] for t in included) if count else 0)
+        row['faster_rate_percent'] = row['faster_count'] / count * 100 if count else 0
+        for status in ('running', 'pending', 'failed'):
+            row[status] = sum(t['status'] == status for t in tasks)
+    rows.sort(key=lambda r: (-r['faster_rate_percent'], -r['median_speedup'], r['model']))
+    for rank, row in enumerate(rows, 1):
+        row['rank'] = rank
+
+
+def lite_models(rows, task_ids):
+    models = []
+    for row in rows:
+        tasks = [t for t in row['tasks'] if t['task'] in task_ids]
+        included = [t for t in tasks if t['reward'] is not None] if row['display_name'] == 'claude-opus-5-5' else tasks
+        models.append(dict(model=row['model'], display_name=row['display_name'],
+                           aggregation_task_count=len(included), partial_evaluation=len(included) < len(tasks),
+                           mean_score=statistics.mean(t['sol_score'] for t in included) if included else 0,
+                           tasks=[dict(task=t['task'], score=t['sol_score'], speedup=t['reward'], status=t['status']) for t in tasks]))
+    return models
+
+
 def refresh(api, database, evidence):
     raw = fetch(api + '/leaderboard')
     live = json.loads(raw)
@@ -109,16 +142,7 @@ def refresh(api, database, evidence):
         assert len(row['tasks']) == 20 and {t['task'] for t in row['tasks']} == set(refs)
         for cell in row['tasks']:
             cell['sol_score'] = score(cell['reward'], refs[cell['task']]['sol_baseline_ratio'])
-        rewards = [t['reward'] for t in row['tasks']]
-        row.update(scored=sum(v is not None for v in rewards), faster_count=sum(v is not None and v > 1.1 for v in rewards),
-                   median_speedup=statistics.median(v if v is not None else 0 for v in rewards),
-                   mean_sol_score=statistics.mean(t['sol_score'] for t in row['tasks']))
-        row['faster_rate_percent'] = row['faster_count'] / 20 * 100
-        for status in ('running', 'pending', 'failed'):
-            row[status] = sum(t['status'] == status for t in row['tasks'])
-    rows.sort(key=lambda r: (-r['faster_rate_percent'], -r['median_speedup'], r['model']))
-    for rank, row in enumerate(rows, 1):
-        row['rank'] = rank
+    aggregate_rows(rows)
 
     def export_trace(entry):
         endpoint = f"{api}/trajectory/attempt/{entry['source']['id']}"
@@ -148,7 +172,7 @@ def refresh(api, database, evidence):
     assert binding(live) == binding(after), 'Source changed during export'
     snapshot = dict(observed_at=datetime.now(timezone.utc).isoformat(), source='Selected experimental results',
                     source_sha256=digest(raw), suite_size=20, faster_threshold=1.1, rows=rows,
-                    sol_reference_date='2026-11-12', aggregation='All 20 tasks; missing reward contributes zero.')
+                    sol_reference_date='2026-11-12', aggregation=AGGREGATION)
     lite = json.loads((ROOT / 'data/lite-set.json').read_text())
     lite['as_of'] = '2026-11-12 Asia/Shanghai'
     lite['normalization'] = 'Runtime normalization: Oracle=0.5, SOL=1; capped at 1, missing reward=0.'
@@ -156,10 +180,8 @@ def refresh(api, database, evidence):
     for r in lite['rows']:
         ref = refs[r['task_id']]
         r.update(sol=ref['sol_baseline_ratio'], sol_throughput=ref['sol'], oracle_throughput=ref['baseline'])
-    lite['models'] = [dict(model=r['model'], display_name=r['display_name'],
-                           mean_score=statistics.mean(t['sol_score'] for t in r['tasks'] if t['task'] in lite['task_ids']),
-                           tasks=[dict(task=t['task'], score=t['sol_score'], speedup=t['reward'], status=t['status'])
-                                  for t in r['tasks'] if t['task'] in lite['task_ids']]) for r in rows]
+    lite['models'] = lite_models(rows, lite['task_ids'])
+    lite['aggregation'] = AGGREGATION
     # Deterministic table order also determines the first trajectory in browser tests.
     entries.sort(key=lambda e: (next(i for i, r in enumerate(rows) if r['model'] == e['model']), list(refs).index(e['task'])))
     manifest = dict(exported_at=snapshot['observed_at'], leaderboard_sha256=digest(encoded(snapshot)),

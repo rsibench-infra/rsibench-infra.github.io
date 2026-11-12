@@ -36,8 +36,8 @@ test('renders the exact snapshot and interactive task explorer', async ({ page }
   await expect(page.locator('.score')).toHaveCount(snapshot.rows.length - 1);
   await page.getByRole('button', { name: 'Reset', exact: true }).click();
   await expect(page.locator('.score')).toHaveCount(snapshot.rows.length * 20);
-  await page.locator('.score').first().click();
-  await expect(page.locator('.trace-summary')).toContainText(`${snapshot.rows[0].tasks[0].reward!.toFixed(6)}×`);
+  await page.getByRole('button', { name: 'GPT-6 Astra, infer-deepseekv4flash-284b,', exact: false }).click();
+  await expect(page.locator('.trace-summary')).toContainText(`${snapshot.rows.find(r => r.display_name === 'gpt-6-astra')!.tasks[0].reward!.toFixed(6)}×`);
   await page.getByRole('button', { name: 'Close trajectory' }).click();
   await page.getByRole('textbox', { name: 'Search tasks' }).fill('not-a-real-task');
   await expect(page.getByText('No results match your selection.', { exact: false })).toBeVisible();
@@ -70,7 +70,7 @@ test('benchmark order, model identities, selected result and publication data ag
   await expect(page.locator('#leaderboard .evaluation-note')).toContainText('10 of 20 tasks');
   const claude = snapshot.rows.find(r => r.display_name === 'claude-opus-5-5')!;
   expect(claude.scored).toBe(10);
-  expect(claude.faster_rate_percent).toBe(40);
+  expect(claude.faster_rate_percent).toBe(80);
   expect(claude.tasks.filter(t => t.status === "not_tested")).toHaveLength(10);
   await page.getByRole('button', { name: 'Claude Opus 5.5, infer-llada2p1mini-16b,', exact: false }).click();
   await expect(page.locator('.trace-summary')).toContainText('6.106245×');
@@ -109,7 +109,7 @@ test('requested copy, agent-only Lite scores, linked formula and selected GLM tr
 });
 
 
-test('SOL metrics use bounded scores and all-task denominators', async ({ page }) => {
+test('SOL metrics use bounded scores and explicit evaluation denominators', async ({ page }) => {
   await page.goto('./');
   expect(await page.locator('.sol-score-value').allTextContents()).toEqual(snapshot.rows[0].tasks.flatMap((_, i) => snapshot.rows.map(m => m.tasks[i].sol_score.toFixed(3))));
   await page.getByRole('tab', { name: 'Mean SOL score', exact: true }).click();
@@ -119,16 +119,40 @@ test('SOL metrics use bounded scores and all-task denominators', async ({ page }
   await expect(page.locator('.metric-footnote')).toContainText('all 20');
   await expect(page.locator('.evaluation-note')).toContainText("API Error: 400 This request may violate the Claude model's safety policy and has been terminated early.");
   for (const row of snapshot.rows) {
-    expect(row.mean_sol_score).toBeCloseTo(row.tasks.reduce((sum,t) => sum+t.sol_score, 0) / 20, 12);
+    expect(row.mean_sol_score).toBeCloseTo(row.tasks.reduce((sum,t) => sum+t.sol_score, 0) / row.aggregation_task_count, 12);
     for (const cell of row.tasks) {
       expect(cell.sol_score).toBeGreaterThanOrEqual(0);
       expect(cell.sol_score).toBeLessThanOrEqual(1);
       if (cell.reward === null || cell.reward === 0) expect(cell.sol_score).toBe(0);
     }
     const lite = liteSet.models.find(r => r.model === row.model)!;
-    expect(lite.mean_score).toBeCloseTo(lite.tasks.reduce((sum,t) => sum+t.score, 0) / 5, 12);
+    expect(lite.mean_score).toBeCloseTo(lite.tasks.reduce((sum,t) => sum+t.score, 0) / lite.aggregation_task_count, 12);
     for (const cell of lite.tasks) expect(cell.score).toBe(row.tasks.find(t => t.task === cell.task)!.sol_score);
   }
   await page.getByRole('tab', { name: 'Median speedup', exact: true }).click();
   await expect(page.locator('.ranking-chart')).toHaveAttribute('aria-label', /median speedup/);
+});
+
+
+test('Claude uses partial coverage and visibly marked faded bars in both leaderboards', async ({ page }) => {
+  const claude = snapshot.rows.find(r => r.display_name === 'claude-opus-5-5')!;
+  const lite = liteSet.models.find(r => r.display_name === 'claude-opus-5-5')!;
+  expect(claude.aggregation_task_count).toBe(10);
+  expect(lite.aggregation_task_count).toBe(3);
+  expect(claude.mean_sol_score).toBeCloseTo(0.7110164897397678, 12);
+  expect(lite.mean_score).toBeCloseTo(0.7977152621044545, 12);
+  await page.goto('./');
+  for (const selector of ['.lite-chart', '.ranking-chart']) {
+    await expect(page.locator(`${selector} .partial-evaluation-bar`)).toHaveCount(1);
+    await expect(page.locator(`${selector} .partial-bar-marker`)).toHaveText('†');
+    await expect(page.locator(`${selector} .partial-evaluation-bar path`)).toHaveAttribute('fill-opacity', '0.38');
+    await expect(page.locator(`${selector} .partial-evaluation-bar path`)).toHaveAttribute('stroke-dasharray', '3 2');
+  }
+  await expect(page.locator('#lite-set .partial-evaluation-note')).toContainText('3/5 tasks tested');
+  await expect(page.locator('#leaderboard .partial-evaluation-note')).toContainText('10/20 tasks tested');
+  await expect(page.locator('.lite-comparison .partial-bar-marker')).toHaveCount(3);
+  for (const metric of ['Median speedup', 'Mean SOL score']) {
+    await page.getByRole('tab', { name: metric, exact: true }).click();
+    await expect(page.locator('.ranking-chart .partial-bar-marker')).toHaveText('†');
+  }
 });

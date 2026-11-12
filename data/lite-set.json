@@ -51,8 +51,49 @@
   ],
   "models": [
     {
+      "model": "deployed/claude-opus-5-5",
+      "display_name": "claude-opus-5-5",
+      "aggregation_task_count": 3,
+      "partial_evaluation": true,
+      "mean_score": 0.7977152621044545,
+      "tasks": [
+        {
+          "task": "infer-llada2p1mini-16b",
+          "score": 0.9778022331630377,
+          "speedup": 6.106245085938902,
+          "status": "completed"
+        },
+        {
+          "task": "infer-museglimmer-30b",
+          "score": 0.0,
+          "speedup": null,
+          "status": "not_tested"
+        },
+        {
+          "task": "infer-qwen3p8-27b",
+          "score": 0.0,
+          "speedup": null,
+          "status": "not_tested"
+        },
+        {
+          "task": "infer-qwen3vl-32b",
+          "score": 0.6195369283234486,
+          "speedup": 1.3334666938276136,
+          "status": "completed"
+        },
+        {
+          "task": "infer-wan2p2ti2v-5b",
+          "score": 0.7958066248268774,
+          "speedup": 1.3528132945119207,
+          "status": "completed"
+        }
+      ]
+    },
+    {
       "model": "openai/gpt-6-astra",
       "display_name": "gpt-6-astra",
+      "aggregation_task_count": 5,
+      "partial_evaluation": false,
       "mean_score": 0.6413510540803704,
       "tasks": [
         {
@@ -90,6 +131,8 @@
     {
       "model": "deployed/glm-5.3",
       "display_name": "glm-5.3",
+      "aggregation_task_count": 5,
+      "partial_evaluation": false,
       "mean_score": 0.6428105277330229,
       "tasks": [
         {
@@ -127,6 +170,8 @@
     {
       "model": "deployed/qwen3.8-max",
       "display_name": "qwen3.8-max",
+      "aggregation_task_count": 5,
+      "partial_evaluation": false,
       "mean_score": 0.6697798199734218,
       "tasks": [
         {
@@ -164,6 +209,8 @@
     {
       "model": "openai/opensource/deepseek_v4_flash_0731",
       "display_name": "deepseek-v4-flash",
+      "aggregation_task_count": 5,
+      "partial_evaluation": false,
       "mean_score": 0.508184901132659,
       "tasks": [
         {
@@ -201,6 +248,8 @@
     {
       "model": "deployed/kimi-k3",
       "display_name": "kimi-k3",
+      "aggregation_task_count": 5,
+      "partial_evaluation": false,
       "mean_score": 0.5973286380009761,
       "tasks": [
         {
@@ -238,6 +287,8 @@
     {
       "model": "openai/auto_model/seed-evolving-auto",
       "display_name": "seed-evolving-auto",
+      "aggregation_task_count": 5,
+      "partial_evaluation": false,
       "mean_score": 0.6017811429130067,
       "tasks": [
         {
@@ -271,43 +322,6 @@
           "status": "completed"
         }
       ]
-    },
-    {
-      "model": "deployed/claude-opus-5-5",
-      "display_name": "claude-opus-5-5",
-      "mean_score": 0.47862915726267274,
-      "tasks": [
-        {
-          "task": "infer-llada2p1mini-16b",
-          "score": 0.9778022331630377,
-          "speedup": 6.106245085938902,
-          "status": "completed"
-        },
-        {
-          "task": "infer-museglimmer-30b",
-          "score": 0.0,
-          "speedup": null,
-          "status": "not_tested"
-        },
-        {
-          "task": "infer-qwen3p8-27b",
-          "score": 0.0,
-          "speedup": null,
-          "status": "not_tested"
-        },
-        {
-          "task": "infer-qwen3vl-32b",
-          "score": 0.6195369283234486,
-          "speedup": 1.3334666938276136,
-          "status": "completed"
-        },
-        {
-          "task": "infer-wan2p2ti2v-5b",
-          "score": 0.7958066248268774,
-          "speedup": 1.3528132945119207,
-          "status": "completed"
-        }
-      ]
     }
   ],
   "task_ids": [
@@ -316,5 +330,6 @@
     "infer-qwen3vl-32b",
     "infer-llada2p1mini-16b",
     "infer-wan2p2ti2v-5b"
-  ]
+  ],
+  "aggregation": "Claude: only tasks with formal rewards; other models: full suite. Verified zero rewards are included."
 }

@@ -21,7 +21,7 @@
 - r≥s：score=1（先截断，避免倒数公式越过奇点）。
 - 其他情况：`score = 1 / (1 + (1/r - 1/s) / (1 - 1/s))`。
 
-Oracle=0.5，SOL=1。Full 的 mean SOL score、median speedup 和 faster rate 均按全部 20 题计算；Lite mean 按全部 5 题计算，缺失贡献 0。Faster 阈值为严格大于 1.10。Full 与 Lite 使用完全相同的逐题 SOL score。
+Oracle=0.5，SOL=1。Claude 的 Full mean SOL score、median speedup 和 faster rate 仅按有正式分数的 10 题计算；Lite mean 仅按有正式分数的 3 题计算。正式零分计入分母，缺失不计入。其他模型仍按 Full 20 题、Lite 5 题计算。Claude 的柱形采用 † 标记、半透明填充及虚线边框，并标明 10/20、3/5 的覆盖范围。Faster 阈值为严格大于 1.10。Full 与 Lite 使用完全相同的逐题 SOL score。
 
 ## 刷新与验证
 
