@@ -41,6 +41,17 @@ def encoded(value):
     return (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode()
 
 
+PUBLIC_TRACE_FIELDS = {
+    'model', 'task', 'reward', 'score_status', 'available', 'reason', 'file', 'sha256',
+    'bytes', 'steps', 'schema_version', 'log_file', 'log_sha256', 'log_bytes', 'live', 'collection_warning',
+}
+
+
+def public_trace_manifest(manifest):
+    return dict(leaderboard_sha256=manifest['leaderboard_sha256'],
+                entries=[{k: v for k, v in entry.items() if k in PUBLIC_TRACE_FIELDS} for entry in manifest['entries']])
+
+
 AGGREGATION = 'Claude: only tasks with formal rewards; other models: full suite. Verified zero rewards are included.'
 
 
@@ -196,7 +207,10 @@ def refresh(api, database, evidence):
     folder = ROOT / 'public/data/trajectories'
     for name, content in staged.items():
         (folder / name).write_bytes(content)
-    (folder / 'index.json').write_bytes(encoded(manifest))
+    private_folder = ROOT / '.agents/workdir/publication-provenance'
+    private_folder.mkdir(parents=True, exist_ok=True)
+    (private_folder / (digest(encoded(manifest)) + '.json')).write_bytes(encoded(manifest))
+    (folder / 'index.json').write_bytes(encoded(public_trace_manifest(manifest)))
     print(json.dumps([dict(model=r['display_name'], scored=r['scored'], mean_sol_score=r['mean_sol_score']) for r in rows], indent=2))
     print(f"Exported {sum(e['available'] for e in entries)}/140 trajectories; {len(staged)} current artifacts")
 

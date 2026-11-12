@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-from refresh_publication import score, aggregate_rows, lite_models
+from refresh_publication import score, aggregate_rows, lite_models, PUBLIC_TRACE_FIELDS
 
 
 def read(name):
@@ -40,7 +40,7 @@ class PublicationTest(unittest.TestCase):
             cells = lambda r: [(t['task'], t['reward'], t['status']) for t in r['tasks']]
             self.assertEqual(cells(row), cells(current[row['model']]))
         for entry in history['trajectories']:
-            self.assertEqual(entry, manifest[entry['model'], entry['task']])
+            self.assertEqual({k: v for k, v in entry.items() if k in PUBLIC_TRACE_FIELDS}, manifest[entry['model'], entry['task']])
 
     def test_full_and_lite_share_latest_reference(self):
         full = {r['model']: r for r in read('data/leaderboard.json')['rows']}

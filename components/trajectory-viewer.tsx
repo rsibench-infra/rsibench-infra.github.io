@@ -38,7 +38,6 @@ export default function TrajectoryViewer({ focus, onClose }: { focus: TraceFocus
   const [entry, setEntry] = useState<TraceEntry>();
   const [trace, setTrace] = useState<Trajectory>();
   const [log, setLog] = useState('');
-  const [exportedAt, setExportedAt] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
   const [retry, setRetry] = useState(0);
@@ -56,7 +55,7 @@ export default function TrajectoryViewer({ focus, onClose }: { focus: TraceFocus
         if (!item) throw new Error('This model/task pair is not in the trajectory export.');
         if (item.reward !== focus.reward || item.score_status !== focus.status) throw new Error('The trajectory index belongs to a different score snapshot.');
         if (controller.signal.aborted) return;
-        setEntry(item); setExportedAt(manifest.exported_at);
+        setEntry(item);
         if (item.available) {
           if (!item.file || !/^[a-f0-9]{64}\.json\.gz$/.test(item.file) || !item.sha256) throw new Error('Invalid trajectory file reference.');
           const data = await loadTrajectory(`${base}/data/trajectories/${item.file}`, item.sha256, controller.signal);
@@ -79,7 +78,7 @@ export default function TrajectoryViewer({ focus, onClose }: { focus: TraceFocus
     <Dialog.Overlay className="trace-overlay"/>
     <Dialog.Content className="trace-dialog" onCloseAutoFocus={event => { event.preventDefault(); trigger?.focus(); }}>
       <div className="trace-heading"><div><div className="section-kicker">AGENT TRAJECTORY</div><Dialog.Title>{focus.model}</Dialog.Title><Dialog.Description>{focus.task}</Dialog.Description></div><Dialog.Close className="trace-close" aria-label="Close trajectory"><X size={20}/></Dialog.Close></div>
-      <div className="trace-summary" role="status"><strong>{focus.reward === null ? 'No verified score' : `${focus.reward.toFixed(6)}×`}</strong><span>SOL score: {focus.solScore.toFixed(6)}</span><span>Score snapshot: {focus.status}</span>{entry && <span>Source: {entry.source.kind} {entry.source.id} · {entry.run_status}{(entry.source_attempt_ids?.length || 0) > 1 ? ` → Agent attempt ${entry.source_attempt_ids!.at(-1)}` : ''}</span>}</div>
+      <div className="trace-summary" role="status"><strong>{focus.reward === null ? 'No verified score' : `${focus.reward.toFixed(6)}×`}</strong><span>SOL score: {focus.solScore.toFixed(6)}</span></div>
       <ConfigProvider theme={{ token: { colorPrimary: '#5579cc', fontFamily: 'Inter, sans-serif', borderRadius: 6 } }}>
         {loading && <div className="trace-empty" role="status"><Spin/><p>Loading original trajectory…</p></div>}
         {error && <div className="trace-empty"><Alert type="error" title="Unable to load trajectory" description={error}/><button className="button" onClick={() => setRetry(n => n + 1)}>Retry</button></div>}
@@ -97,7 +96,6 @@ export default function TrajectoryViewer({ focus, onClose }: { focus: TraceFocus
             }))}/> : <p className="trace-empty">{trace.steps.length ? 'No steps match your search.' : 'The saved trajectory contains no steps.'}</p>}
           </div>
           <div className="trace-pagination"><Pagination current={page} pageSize={pageSize} total={filtered.length} showSizeChanger={false} size="small" onChange={setPage}/></div>
-          <div className="trace-provenance">Exported {exportedAt.replace('T', ' ').slice(0, 19)} UTC · Original ATIF file, SHA-256 verified.<Collapse ghost size="small" destroyOnHidden items={[{ key: 'metadata', label: 'Trajectory metadata & checksum', children: <><code>{entry?.sha256}</code><pre>{rawText(Object.fromEntries(Object.entries(trace).filter(([key]) => key !== 'steps')))}</pre></> }]}/></div>
         </>}
       </ConfigProvider>
     </Dialog.Content>

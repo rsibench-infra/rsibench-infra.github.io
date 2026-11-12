@@ -1,11 +1,10 @@
 export type TraceEntry = {
-  model: string; task: string; reward: number | null; score_status: string; run_status: string;
+  model: string; task: string; reward: number | null; score_status: string;
   available: boolean; reason?: string; file?: string; sha256?: string; bytes?: number; steps?: number;
   log_file?: string; log_sha256?: string; log_bytes?: number;
-  source: { kind: string; id: number }; source_attempt_ids?: number[];
-  live?: boolean; modified_at?: number; collection_warning?: boolean;
+  live?: boolean; collection_warning?: boolean;
 };
-export type TraceManifest = { exported_at: string; score_observed_at: string; entries: TraceEntry[] };
+export type TraceManifest = { entries: TraceEntry[] };
 export type Step = {
   step_id?: number; source?: string; timestamp?: string; message?: unknown; reasoning_content?: unknown;
   tool_calls?: { tool_call_id?: string; function_name?: string; arguments?: unknown }[];

@@ -1,24 +1,13 @@
 {
-  "exported_at": "2026-11-12T14:18:40.632093+00:00",
   "leaderboard_sha256": "eddc469b9f0881e669b33260bc5021e1b1742cc3ce072241ce2dfe474496d733",
-  "score_observed_at": "2026-11-12T14:18:40.632093+00:00",
   "entries": [
     {
       "model": "openai/gpt-6-astra",
       "task": "infer-deepseekv4flash-284b",
       "reward": 2.114107294510862,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 86
-      },
       "available": true,
-      "source_attempt_ids": [
-        86
-      ],
       "live": false,
-      "modified_at": 1794231057.9800205,
       "file": "d506fb81b6e462dba4fbfed06e47cdf2cf125083a26060eab843d3cbe026868c.json.gz",
       "sha256": "d506fb81b6e462dba4fbfed06e47cdf2cf125083a26060eab843d3cbe026868c",
       "bytes": 1570668,
@@ -31,17 +20,8 @@
       "task": "infer-glm5p2-744b",
       "reward": 4.494619498679039,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 112
-      },
       "available": true,
-      "source_attempt_ids": [
-        112
-      ],
       "live": false,
-      "modified_at": 1794269844.4472623,
       "file": "7a765f24b497ed19b6754f81e014b722b27e4292adfce0abdbaf1cbd6346a0fd.json.gz",
       "sha256": "7a765f24b497ed19b6754f81e014b722b27e4292adfce0abdbaf1cbd6346a0fd",
       "bytes": 776554,
@@ -54,17 +34,8 @@
       "task": "infer-glm5p3-744b",
       "reward": 1.795751838005773,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 96
-      },
       "available": true,
-      "source_attempt_ids": [
-        96
-      ],
       "live": false,
-      "modified_at": 1794248999.0698817,
       "file": "8c5728d962386741efb582973477b605aa6521b31868a15324b8b3d4a3cc4c5a.json.gz",
       "sha256": "8c5728d962386741efb582973477b605aa6521b31868a15324b8b3d4a3cc4c5a",
       "bytes": 1570610,
@@ -77,18 +48,8 @@
       "task": "infer-glm5p3flash-320b",
       "reward": 4.509553053565336,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 106
-      },
       "available": true,
-      "source_attempt_ids": [
-        106,
-        89
-      ],
       "live": false,
-      "modified_at": 1794232145.1815703,
       "file": "111db01a5e2452b3117936a901e40d984090f39417dfbdfeebd3e2e7f7d6cb7f.json.gz",
       "sha256": "111db01a5e2452b3117936a901e40d984090f39417dfbdfeebd3e2e7f7d6cb7f",
       "bytes": 1603859,
@@ -101,17 +62,8 @@
       "task": "infer-inkling-975b",
       "reward": 2.009227321601567,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 91
-      },
       "available": true,
-      "source_attempt_ids": [
-        91
-      ],
       "live": false,
-      "modified_at": 1794239768.313576,
       "file": "e586c95af8b5b2a12195cdebc92f54408226b9bf330f4bf74eb4c584e4d25fe7.json.gz",
       "sha256": "e586c95af8b5b2a12195cdebc92f54408226b9bf330f4bf74eb4c584e4d25fe7",
       "bytes": 1156757,
@@ -124,17 +76,8 @@
       "task": "infer-kimik3-2p8t",
       "reward": 1.411766573533147,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 124
-      },
       "available": true,
-      "source_attempt_ids": [
-        124
-      ],
       "live": false,
-      "modified_at": 1794341361.2028985,
       "file": "4df88d29da16a51e5e4ae25155c85009056aed1ef505929433dd86ecff459fbf.json.gz",
       "sha256": "4df88d29da16a51e5e4ae25155c85009056aed1ef505929433dd86ecff459fbf",
       "bytes": 1289101,
@@ -147,17 +90,8 @@
       "task": "infer-lingbotworld2p0-14b",
       "reward": 1.0370157521100523,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 98
-      },
       "available": true,
-      "source_attempt_ids": [
-        98
-      ],
       "live": false,
-      "modified_at": 1794231325.3459253,
       "file": "3fc72911f6e9bdfbb1ce34d7c402e15369a531552f20cd5854b78861a11260b4.json.gz",
       "sha256": "3fc72911f6e9bdfbb1ce34d7c402e15369a531552f20cd5854b78861a11260b4",
       "bytes": 1075678,
@@ -170,17 +104,8 @@
       "task": "infer-llada2p1mini-16b",
       "reward": 3.0756856997594166,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 82
-      },
       "available": true,
-      "source_attempt_ids": [
-        82
-      ],
       "live": false,
-      "modified_at": 1794224956.7398748,
       "file": "e46f1b09b8e162a79a5e0d89f5112c7fd2deed1e58eb6877ee3f4d3327ce9319.json.gz",
       "sha256": "e46f1b09b8e162a79a5e0d89f5112c7fd2deed1e58eb6877ee3f4d3327ce9319",
       "bytes": 1374823,
@@ -193,17 +118,8 @@
       "task": "infer-minimaxh3-64b",
       "reward": 1.255220425442016,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 94
-      },
       "available": true,
-      "source_attempt_ids": [
-        94
-      ],
       "live": false,
-      "modified_at": 1794227777.4264095,
       "file": "05064befd6184e32d517794267f62c4779bdba01257bbe2fe3daea909f2cb5f9.json.gz",
       "sha256": "05064befd6184e32d517794267f62c4779bdba01257bbe2fe3daea909f2cb5f9",
       "bytes": 980797,
@@ -216,17 +132,8 @@
       "task": "infer-museglimmer-30b",
       "reward": 1.1231966160586149,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 84
-      },
       "available": true,
-      "source_attempt_ids": [
-        84
-      ],
       "live": false,
-      "modified_at": 1794230940.6294994,
       "file": "0b0e1c74c0b6a019eaae3011f8cc174babd5d9dc6498c937c0bc42a6e2255ff6.json.gz",
       "sha256": "0b0e1c74c0b6a019eaae3011f8cc174babd5d9dc6498c937c0bc42a6e2255ff6",
       "bytes": 1086921,
@@ -239,17 +146,8 @@
       "task": "infer-nemotron3ultra-550a55b",
       "reward": 2.6390525154549054,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 97
-      },
       "available": true,
-      "source_attempt_ids": [
-        97
-      ],
       "live": false,
-      "modified_at": 1794243955.0384853,
       "file": "5295879d7516f6c900dde1cd58ba64c08f6cd61f90582a09036763313e213eb2.json.gz",
       "sha256": "5295879d7516f6c900dde1cd58ba64c08f6cd61f90582a09036763313e213eb2",
       "bytes": 957383,
@@ -262,17 +160,8 @@
       "task": "infer-pi0p5libero-3p3b",
       "reward": 2.5938255029128126,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 85
-      },
       "available": true,
-      "source_attempt_ids": [
-        85
-      ],
       "live": false,
-      "modified_at": 1794221213.4721036,
       "file": "a34f09242206ec878c8dc4d12aa767367e3bcbc4cb921b5a8e87d9e3816c9078.json.gz",
       "sha256": "a34f09242206ec878c8dc4d12aa767367e3bcbc4cb921b5a8e87d9e3816c9078",
       "bytes": 1109136,
@@ -285,17 +174,8 @@
       "task": "infer-qwen3p8-27b",
       "reward": 1.6755155697342015,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 90
-      },
       "available": true,
-      "source_attempt_ids": [
-        90
-      ],
       "live": false,
-      "modified_at": 1794240831.6842566,
       "file": "014e74b2120301053d684750c82360ae92cd860854346aabd4176d622bc5d096.json.gz",
       "sha256": "014e74b2120301053d684750c82360ae92cd860854346aabd4176d622bc5d096",
       "bytes": 949811,
@@ -308,17 +188,8 @@
       "task": "infer-qwen3ttsbase-1p7b",
       "reward": 1.177183084282266,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 80
-      },
       "available": true,
-      "source_attempt_ids": [
-        80
-      ],
       "live": false,
-      "modified_at": 1794219561.6708183,
       "file": "3ba32619e79b7eb5f77376cf97b85012f5c7d91ef2d702dfb48ba608a9385e42.json.gz",
       "sha256": "3ba32619e79b7eb5f77376cf97b85012f5c7d91ef2d702dfb48ba608a9385e42",
       "bytes": 921437,
@@ -331,17 +202,8 @@
       "task": "infer-qwen3vl-32b",
       "reward": 1.1329034378843441,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 92
-      },
       "available": true,
-      "source_attempt_ids": [
-        92
-      ],
       "live": false,
-      "modified_at": 1794228297.0382783,
       "file": "6d44316c1f7eb46b2ff16092cb22f6f8b0fe173b96d133b04d8a2af2540df2f9.json.gz",
       "sha256": "6d44316c1f7eb46b2ff16092cb22f6f8b0fe173b96d133b04d8a2af2540df2f9",
       "bytes": 916248,
@@ -354,17 +216,8 @@
       "task": "infer-wan2p2ti2v-5b",
       "reward": 0.9995105225410069,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 93
-      },
       "available": true,
-      "source_attempt_ids": [
-        93
-      ],
       "live": false,
-      "modified_at": 1794223057.152604,
       "file": "69d20596d615787e092d88f16c8aebe49b747ac146fcaf135c92e0bb033621db.json.gz",
       "sha256": "69d20596d615787e092d88f16c8aebe49b747ac146fcaf135c92e0bb033621db",
       "bytes": 398517,
@@ -377,17 +230,8 @@
       "task": "train-qwen3-30a3b-grpo",
       "reward": 1.166955434504766,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 143
-      },
       "available": true,
-      "source_attempt_ids": [
-        143
-      ],
       "live": false,
-      "modified_at": 1794426095.9699776,
       "file": "bc18a8bf933f5739e19f9edb0acc5b55af02c64ec50d27418d7010ba752b680d.json.gz",
       "sha256": "bc18a8bf933f5739e19f9edb0acc5b55af02c64ec50d27418d7010ba752b680d",
       "bytes": 2007221,
@@ -400,17 +244,8 @@
       "task": "train-qwen3-30a3b-sft",
       "reward": 1.2231373072744072,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 103
-      },
       "available": true,
-      "source_attempt_ids": [
-        103
-      ],
       "live": false,
-      "modified_at": 1794240562.7083504,
       "file": "201c27b569f6f6d066cb4c53dbfb7fa00bec7fd175d1a347ddd6a7e465e6a377.json.gz",
       "sha256": "201c27b569f6f6d066cb4c53dbfb7fa00bec7fd175d1a347ddd6a7e465e6a377",
       "bytes": 915215,
@@ -423,17 +258,8 @@
       "task": "train-qwen3-8b-opd",
       "reward": 1.0381080612965388,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 110
-      },
       "available": true,
-      "source_attempt_ids": [
-        110
-      ],
       "live": false,
-      "modified_at": 1794270096.419217,
       "file": "645cd83baed3605d3d610c30127aac42d788d98f027ee2bc7a159edfa14d88e6.json.gz",
       "sha256": "645cd83baed3605d3d610c30127aac42d788d98f027ee2bc7a159edfa14d88e6",
       "bytes": 1832746,
@@ -446,17 +272,8 @@
       "task": "train-qwen3vl-4b-grpo",
       "reward": 1.0489515244604168,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 114
-      },
       "available": true,
-      "source_attempt_ids": [
-        114
-      ],
       "live": false,
-      "modified_at": 1794285123.1566346,
       "file": "083b3a44190e7a9083755c4525a26d5bec5242fdf57172d643cd778841be2627.json.gz",
       "sha256": "083b3a44190e7a9083755c4525a26d5bec5242fdf57172d643cd778841be2627",
       "bytes": 2628961,
@@ -469,17 +286,8 @@
       "task": "infer-deepseekv4flash-284b",
       "reward": 2.0764692320600258,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 44
-      },
       "available": true,
-      "source_attempt_ids": [
-        44
-      ],
       "live": false,
-      "modified_at": 1794065528.479151,
       "file": "7f2eb1e7fafb0cdb9d41e47aedb95bbc3c323d537df2e7403374f67e84b13b2f.json.gz",
       "sha256": "7f2eb1e7fafb0cdb9d41e47aedb95bbc3c323d537df2e7403374f67e84b13b2f",
       "bytes": 1515362,
@@ -492,17 +300,8 @@
       "task": "infer-glm5p2-744b",
       "reward": 6.27143071933329,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 63
-      },
       "available": true,
-      "source_attempt_ids": [
-        63
-      ],
       "live": false,
-      "modified_at": 1794140669.2685094,
       "file": "93eafd41dd40e0d5cc72c41fa1b31bab473ae3ca5a242fb5eae9d1a839e2be42.json.gz",
       "sha256": "93eafd41dd40e0d5cc72c41fa1b31bab473ae3ca5a242fb5eae9d1a839e2be42",
       "bytes": 1246816,
@@ -515,17 +314,8 @@
       "task": "infer-glm5p3-744b",
       "reward": 1.8349283526620788,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 56
-      },
       "available": true,
-      "source_attempt_ids": [
-        56
-      ],
       "live": false,
-      "modified_at": 1794112127.1974242,
       "file": "ef57463f019ee0de722a5ccb2ece96650996b6326e3480965576da1be669d97b.json.gz",
       "sha256": "ef57463f019ee0de722a5ccb2ece96650996b6326e3480965576da1be669d97b",
       "bytes": 1787945,
@@ -538,18 +328,8 @@
       "task": "infer-glm5p3flash-320b",
       "reward": 0.0,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 104
-      },
       "available": true,
-      "source_attempt_ids": [
-        104,
-        73
-      ],
       "live": false,
-      "modified_at": 1794217096.6898308,
       "file": "8436e88f20210a69d2ec531b723a645cccf30a62b3500db4fd7ad45c1c703016.json.gz",
       "sha256": "8436e88f20210a69d2ec531b723a645cccf30a62b3500db4fd7ad45c1c703016",
       "bytes": 1292970,
@@ -562,17 +342,8 @@
       "task": "infer-inkling-975b",
       "reward": 2.244445509033034,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 30
-      },
       "available": true,
-      "source_attempt_ids": [
-        30
-      ],
       "live": false,
-      "modified_at": 1793952198.6288757,
       "file": "c3e3d261df3be42a45d0f8d57154561302ed0f83d828878635093fcd89043d95.json.gz",
       "sha256": "c3e3d261df3be42a45d0f8d57154561302ed0f83d828878635093fcd89043d95",
       "bytes": 1168311,
@@ -585,17 +356,8 @@
       "task": "infer-kimik3-2p8t",
       "reward": 1.1683070866141732,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 42
-      },
       "available": true,
-      "source_attempt_ids": [
-        42
-      ],
       "live": false,
-      "modified_at": 1794071580.8592813,
       "file": "23a00aeac1f64635bd85853274f0d73c3312397c99d01507c85c5002914aade0.json.gz",
       "sha256": "23a00aeac1f64635bd85853274f0d73c3312397c99d01507c85c5002914aade0",
       "bytes": 1117214,
@@ -608,17 +370,8 @@
       "task": "infer-lingbotworld2p0-14b",
       "reward": 1.0202499340668632,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 58
-      },
       "available": true,
-      "source_attempt_ids": [
-        58
-      ],
       "live": false,
-      "modified_at": 1794101465.926966,
       "file": "b461ad3911e560964616c6cf4e15c9cc9bee59b271a349a3524468a2651238af.json.gz",
       "sha256": "b461ad3911e560964616c6cf4e15c9cc9bee59b271a349a3524468a2651238af",
       "bytes": 1877722,
@@ -631,17 +384,8 @@
       "task": "infer-llada2p1mini-16b",
       "reward": 1.1516707594052675,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 8
-      },
       "available": true,
-      "source_attempt_ids": [
-        8
-      ],
       "live": false,
-      "modified_at": 1793891510.214671,
       "file": "8d21334e9b57fc31e06a85e8a0d8c50982892d2a0cb1a251fc87a0f5bf256a6d.json.gz",
       "sha256": "8d21334e9b57fc31e06a85e8a0d8c50982892d2a0cb1a251fc87a0f5bf256a6d",
       "bytes": 2282799,
@@ -654,17 +398,8 @@
       "task": "infer-minimaxh3-64b",
       "reward": 1.3679919158065623,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 29
-      },
       "available": true,
-      "source_attempt_ids": [
-        29
-      ],
       "live": false,
-      "modified_at": 1793937628.9248946,
       "file": "61f93227b12da86d99493d47c5818225be9b60c4e36ac0ab208330d5e84bb682.json.gz",
       "sha256": "61f93227b12da86d99493d47c5818225be9b60c4e36ac0ab208330d5e84bb682",
       "bytes": 1805834,
@@ -677,17 +412,8 @@
       "task": "infer-museglimmer-30b",
       "reward": 1.0795842121470947,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 9
-      },
       "available": true,
-      "source_attempt_ids": [
-        9
-      ],
       "live": false,
-      "modified_at": 1793899214.6572173,
       "file": "e4a2cad117b0d3151b6b0309fbb39acfffe3b98a9278bb0c1514c88881bfb85d.json.gz",
       "sha256": "e4a2cad117b0d3151b6b0309fbb39acfffe3b98a9278bb0c1514c88881bfb85d",
       "bytes": 1098637,
@@ -700,17 +426,8 @@
       "task": "infer-nemotron3ultra-550a55b",
       "reward": 10.558895156422372,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 75
-      },
       "available": true,
-      "source_attempt_ids": [
-        75
-      ],
       "live": false,
-      "modified_at": 1794210863.4741137,
       "file": "29039aa7ed8997495c0e8ec2e80ead9b40a6c60884853a581e0b151d452a03af.json.gz",
       "sha256": "29039aa7ed8997495c0e8ec2e80ead9b40a6c60884853a581e0b151d452a03af",
       "bytes": 1055214,
@@ -723,17 +440,8 @@
       "task": "infer-pi0p5libero-3p3b",
       "reward": 3.4702157168233474,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 10
-      },
       "available": true,
-      "source_attempt_ids": [
-        10
-      ],
       "live": false,
-      "modified_at": 1793904080.6638966,
       "file": "f54d8d44c969dbdb65f70927a090d840fcb22d4f3c2d173091cb40d1711553a8.json.gz",
       "sha256": "f54d8d44c969dbdb65f70927a090d840fcb22d4f3c2d173091cb40d1711553a8",
       "bytes": 1632842,
@@ -746,17 +454,8 @@
       "task": "infer-qwen3p8-27b",
       "reward": 1.6305442712915574,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 17
-      },
       "available": true,
-      "source_attempt_ids": [
-        17
-      ],
       "live": false,
-      "modified_at": 1793925775.5163836,
       "file": "ccb38d2bcdc7de0722600a50da82c1e7b21792623b022de59ba57e2c115ebe0c.json.gz",
       "sha256": "ccb38d2bcdc7de0722600a50da82c1e7b21792623b022de59ba57e2c115ebe0c",
       "bytes": 981893,
@@ -769,17 +468,8 @@
       "task": "infer-qwen3ttsbase-1p7b",
       "reward": 1.0632244251956073,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 7
-      },
       "available": true,
-      "source_attempt_ids": [
-        7
-      ],
       "live": false,
-      "modified_at": 1793880291.9082794,
       "file": "05ff061b207e4030ef35d150a7b17f3f2d67e282d409d16dd4d165a2e73c83c5.json.gz",
       "sha256": "05ff061b207e4030ef35d150a7b17f3f2d67e282d409d16dd4d165a2e73c83c5",
       "bytes": 1788144,
@@ -792,17 +482,8 @@
       "task": "infer-qwen3vl-32b",
       "reward": 1.518056023480845,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 18
-      },
       "available": true,
-      "source_attempt_ids": [
-        18
-      ],
       "live": false,
-      "modified_at": 1793915359.1480544,
       "file": "4d797285e19179b65ad7a4d6a1c2290dfa5db9ade6f4b347c249d4e23e1fa4f1.json.gz",
       "sha256": "4d797285e19179b65ad7a4d6a1c2290dfa5db9ade6f4b347c249d4e23e1fa4f1",
       "bytes": 1179647,
@@ -815,17 +496,8 @@
       "task": "infer-wan2p2ti2v-5b",
       "reward": 1.264673216577158,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 20
-      },
       "available": true,
-      "source_attempt_ids": [
-        20
-      ],
       "live": false,
-      "modified_at": 1793912025.3046324,
       "file": "45ecd530697afb0f0aed635b37fe2008078ff65a89a8d3b3ae88badb357c5d5f.json.gz",
       "sha256": "45ecd530697afb0f0aed635b37fe2008078ff65a89a8d3b3ae88badb357c5d5f",
       "bytes": 1329645,
@@ -838,17 +510,8 @@
       "task": "train-qwen3-30a3b-grpo",
       "reward": 0.0,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 59
-      },
       "available": true,
-      "source_attempt_ids": [
-        59
-      ],
       "live": false,
-      "modified_at": 1794125676.8974974,
       "file": "1ba76194bdc24a0fd5cd930a344c4a8325a8fa7503c924ce4bd1bc392cdb4921.json.gz",
       "sha256": "1ba76194bdc24a0fd5cd930a344c4a8325a8fa7503c924ce4bd1bc392cdb4921",
       "bytes": 1707903,
@@ -861,17 +524,8 @@
       "task": "train-qwen3-30a3b-sft",
       "reward": 1.1907665882482554,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 60
-      },
       "available": true,
-      "source_attempt_ids": [
-        60
-      ],
       "live": false,
-      "modified_at": 1794116788.831616,
       "file": "3387970077fdb062268b5225530981b514be91b809359cfdefcd8f314a6ddcdf.json.gz",
       "sha256": "3387970077fdb062268b5225530981b514be91b809359cfdefcd8f314a6ddcdf",
       "bytes": 2128256,
@@ -884,17 +538,8 @@
       "task": "train-qwen3-8b-opd",
       "reward": 1.2897712501237948,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 69
-      },
       "available": true,
-      "source_attempt_ids": [
-        69
-      ],
       "live": false,
-      "modified_at": 1794158551.2183423,
       "file": "6f7a1360be861628b31578eafbbc884f8ea0f0d48fc8014516e27d107a66f60d.json.gz",
       "sha256": "6f7a1360be861628b31578eafbbc884f8ea0f0d48fc8014516e27d107a66f60d",
       "bytes": 1469334,
@@ -907,17 +552,8 @@
       "task": "train-qwen3vl-4b-grpo",
       "reward": 1.0710749694505972,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 61
-      },
       "available": true,
-      "source_attempt_ids": [
-        61
-      ],
       "live": false,
-      "modified_at": 1794127067.4328516,
       "file": "eddc45fb1b2f0b63512597d4482a46481b2f08bae34fe012a67fa74570636ff5.json.gz",
       "sha256": "eddc45fb1b2f0b63512597d4482a46481b2f08bae34fe012a67fa74570636ff5",
       "bytes": 1823244,
@@ -930,17 +566,8 @@
       "task": "infer-deepseekv4flash-284b",
       "reward": 2.1210694131198635,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 32
-      },
       "available": true,
-      "source_attempt_ids": [
-        32
-      ],
       "live": false,
-      "modified_at": 1793955967.1486907,
       "file": "b254108cc1cf0d6eca04916048c3372e20aa61ed3d8adaea4702203706572d66.json.gz",
       "sha256": "b254108cc1cf0d6eca04916048c3372e20aa61ed3d8adaea4702203706572d66",
       "bytes": 1411266,
@@ -953,17 +580,8 @@
       "task": "infer-glm5p2-744b",
       "reward": 6.213093627166699,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 16
-      },
       "available": true,
-      "source_attempt_ids": [
-        16
-      ],
       "live": false,
-      "modified_at": 1793921364.498433,
       "file": "ec6d8b6bdaf0678144f6ff3401ff34e5cb5d874bc9d7066a0a665c2d308a0824.json.gz",
       "sha256": "ec6d8b6bdaf0678144f6ff3401ff34e5cb5d874bc9d7066a0a665c2d308a0824",
       "bytes": 1196012,
@@ -976,17 +594,8 @@
       "task": "infer-glm5p3-744b",
       "reward": 0.0,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 35
-      },
       "available": true,
-      "source_attempt_ids": [
-        35
-      ],
       "live": false,
-      "modified_at": 1793961439.01047,
       "file": "d89d100693cf486619a773b47923606d638f770fa457c335c7ca098ef9a80385.json.gz",
       "sha256": "d89d100693cf486619a773b47923606d638f770fa457c335c7ca098ef9a80385",
       "bytes": 1043837,
@@ -999,18 +608,8 @@
       "task": "infer-glm5p3flash-320b",
       "reward": 0.0,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 105
-      },
       "available": true,
-      "source_attempt_ids": [
-        105,
-        74
-      ],
       "live": false,
-      "modified_at": 1794213778.67827,
       "file": "3c99fe74e4377644628f9a87fe69b04351e3cac0a35f5cd9293c413a787e45bd.json.gz",
       "sha256": "3c99fe74e4377644628f9a87fe69b04351e3cac0a35f5cd9293c413a787e45bd",
       "bytes": 1065363,
@@ -1023,17 +622,8 @@
       "task": "infer-inkling-975b",
       "reward": 3.327611169663484,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 37
-      },
       "available": true,
-      "source_attempt_ids": [
-        37
-      ],
       "live": false,
-      "modified_at": 1793953121.4771457,
       "file": "4db2b850444860b19d5a61f42a59138100e1d54648459e8df8eb7d62a9d68ba4.json.gz",
       "sha256": "4db2b850444860b19d5a61f42a59138100e1d54648459e8df8eb7d62a9d68ba4",
       "bytes": 830060,
@@ -1046,17 +636,8 @@
       "task": "infer-kimik3-2p8t",
       "reward": 1.341207349081365,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 11
-      },
       "available": true,
-      "source_attempt_ids": [
-        11
-      ],
       "live": false,
-      "modified_at": 1793919686.4891741,
       "file": "e901873866cccfbe8782eeb7f2808b6b58dff459d625e300d932f637bf9b48a6.json.gz",
       "sha256": "e901873866cccfbe8782eeb7f2808b6b58dff459d625e300d932f637bf9b48a6",
       "bytes": 1506358,
@@ -1069,17 +650,8 @@
       "task": "infer-lingbotworld2p0-14b",
       "reward": 1.000044197441756,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 38
-      },
       "available": true,
-      "source_attempt_ids": [
-        38
-      ],
       "live": false,
-      "modified_at": 1793966491.958009,
       "file": "d502c60e35a16703bff8b53701df154052c0ece8901358263b67fafcbb44d861.json.gz",
       "sha256": "d502c60e35a16703bff8b53701df154052c0ece8901358263b67fafcbb44d861",
       "bytes": 1368256,
@@ -1092,17 +664,8 @@
       "task": "infer-llada2p1mini-16b",
       "reward": 2.0624284606881975,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 15
-      },
       "available": true,
-      "source_attempt_ids": [
-        15
-      ],
       "live": false,
-      "modified_at": 1793922691.8980856,
       "file": "6942e602b24a5d0ae43a95dac60070ff8201d08af12dbe79cd88c59203e7fe1e.json.gz",
       "sha256": "6942e602b24a5d0ae43a95dac60070ff8201d08af12dbe79cd88c59203e7fe1e",
       "bytes": 2749855,
@@ -1115,17 +678,8 @@
       "task": "infer-minimaxh3-64b",
       "reward": 1.1940457212306668,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 34
-      },
       "available": true,
-      "source_attempt_ids": [
-        34
-      ],
       "live": false,
-      "modified_at": 1793953570.6633375,
       "file": "4966dd6f38f3d3299cebaf6e394be3bb2089fd1a24e2a7cb1175e6c6226aae79.json.gz",
       "sha256": "4966dd6f38f3d3299cebaf6e394be3bb2089fd1a24e2a7cb1175e6c6226aae79",
       "bytes": 1044702,
@@ -1138,17 +692,8 @@
       "task": "infer-museglimmer-30b",
       "reward": 1.1435676643018589,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 24
-      },
       "available": true,
-      "source_attempt_ids": [
-        24
-      ],
       "live": false,
-      "modified_at": 1793930234.7770312,
       "file": "195589c529c493d775dec9669a9c439236fda388d94be390ea2d163f7d1ae5be.json.gz",
       "sha256": "195589c529c493d775dec9669a9c439236fda388d94be390ea2d163f7d1ae5be",
       "bytes": 1294267,
@@ -1161,17 +706,8 @@
       "task": "infer-nemotron3ultra-550a55b",
       "reward": 9.551714089461525,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 57
-      },
       "available": true,
-      "source_attempt_ids": [
-        57
-      ],
       "live": false,
-      "modified_at": 1794121059.890224,
       "file": "e788e1d5321b581cc672c0110b17cd4ec6aab036419571ff3412e51bebedffd1.json.gz",
       "sha256": "e788e1d5321b581cc672c0110b17cd4ec6aab036419571ff3412e51bebedffd1",
       "bytes": 1077571,
@@ -1184,17 +720,8 @@
       "task": "infer-pi0p5libero-3p3b",
       "reward": 3.558362814054832,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 25
-      },
       "available": true,
-      "source_attempt_ids": [
-        25
-      ],
       "live": false,
-      "modified_at": 1793935399.0709515,
       "file": "b5d49dcf13f71ea4d4931b07de7fe5ac8d017b59db6ba2a2a9cf9ab7cd2236e8.json.gz",
       "sha256": "b5d49dcf13f71ea4d4931b07de7fe5ac8d017b59db6ba2a2a9cf9ab7cd2236e8",
       "bytes": 2365087,
@@ -1207,17 +734,8 @@
       "task": "infer-qwen3p8-27b",
       "reward": 1.5735491751649289,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 26
-      },
       "available": true,
-      "source_attempt_ids": [
-        26
-      ],
       "live": false,
-      "modified_at": 1793945174.8842494,
       "file": "875422e0a51ad36b1f525bdddf054eb68dc855db0afef962ecf2be1ad6587f05.json.gz",
       "sha256": "875422e0a51ad36b1f525bdddf054eb68dc855db0afef962ecf2be1ad6587f05",
       "bytes": 1373290,
@@ -1230,17 +748,8 @@
       "task": "infer-qwen3ttsbase-1p7b",
       "reward": 1.1029084276131802,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 2
-      },
       "available": true,
-      "source_attempt_ids": [
-        2
-      ],
       "live": false,
-      "modified_at": 1793871854.8934805,
       "file": "9b63f8c0617baf91647015a530feec5219d9d84f9af99abfb0c1e027c5c9a19f.json.gz",
       "sha256": "9b63f8c0617baf91647015a530feec5219d9d84f9af99abfb0c1e027c5c9a19f",
       "bytes": 921548,
@@ -1253,17 +762,8 @@
       "task": "infer-qwen3vl-32b",
       "reward": 1.227450497954116,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 27
-      },
       "available": true,
-      "source_attempt_ids": [
-        27
-      ],
       "live": false,
-      "modified_at": 1793944287.63888,
       "file": "092be14c23b163ec721e96f14eb2f351290062f1b5b88cf99ce1032ad3ede299.json.gz",
       "sha256": "092be14c23b163ec721e96f14eb2f351290062f1b5b88cf99ce1032ad3ede299",
       "bytes": 1074116,
@@ -1276,17 +776,8 @@
       "task": "infer-wan2p2ti2v-5b",
       "reward": 1.285451985381776,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 28
-      },
       "available": true,
-      "source_attempt_ids": [
-        28
-      ],
       "live": false,
-      "modified_at": 1793943385.206611,
       "file": "713b0b69936165100d29e53f8c650a9551b069bb55d860e18d257e425d47f5ef.json.gz",
       "sha256": "713b0b69936165100d29e53f8c650a9551b069bb55d860e18d257e425d47f5ef",
       "bytes": 1232625,
@@ -1299,17 +790,8 @@
       "task": "train-qwen3-30a3b-grpo",
       "reward": 1.1387004295316148,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 39
-      },
       "available": true,
-      "source_attempt_ids": [
-        39
-      ],
       "live": false,
-      "modified_at": 1793984282.9818892,
       "file": "1a617cebfaf319f833e29586e1066be099d9a07da32a1b34225b3692f6d79ffc.json.gz",
       "sha256": "1a617cebfaf319f833e29586e1066be099d9a07da32a1b34225b3692f6d79ffc",
       "bytes": 1411088,
@@ -1322,17 +804,8 @@
       "task": "train-qwen3-30a3b-sft",
       "reward": 0.0,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 43
-      },
       "available": true,
-      "source_attempt_ids": [
-        43
-      ],
       "live": false,
-      "modified_at": 1794073510.9096444,
       "file": "514ee9976ffafd290f0dd34a15482e6d8eabf674c0f0ee5aff74d43736800d10.json.gz",
       "sha256": "514ee9976ffafd290f0dd34a15482e6d8eabf674c0f0ee5aff74d43736800d10",
       "bytes": 1117850,
@@ -1345,17 +818,8 @@
       "task": "train-qwen3-8b-opd",
       "reward": 1.0091067770496747,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 65
-      },
       "available": true,
-      "source_attempt_ids": [
-        65
-      ],
       "live": false,
-      "modified_at": 1794153614.5715284,
       "file": "c441f4da76004dfb7dea439b1693ccb4cdc96e7a004e7c73c8fcb55aaccec7f4.json.gz",
       "sha256": "c441f4da76004dfb7dea439b1693ccb4cdc96e7a004e7c73c8fcb55aaccec7f4",
       "bytes": 1093528,
@@ -1368,17 +832,8 @@
       "task": "train-qwen3vl-4b-grpo",
       "reward": 1.0876154048019775,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 49
-      },
       "available": true,
-      "source_attempt_ids": [
-        49
-      ],
       "live": false,
-      "modified_at": 1794093861.692988,
       "file": "d57cee210828abb38a1d849427a3a0db92affb0c03b3f3a936e651786819d48e.json.gz",
       "sha256": "d57cee210828abb38a1d849427a3a0db92affb0c03b3f3a936e651786819d48e",
       "bytes": 1941990,
@@ -1391,15 +846,8 @@
       "task": "infer-deepseekv4flash-284b",
       "reward": 2.206989193022648,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "task",
-        "id": 1
-      },
       "available": true,
-      "source_attempt_ids": [],
       "live": false,
-      "modified_at": 1791886031.1387188,
       "file": "ab64d5252e27ce2401ce43f452738c7d3ab734558366a4cdd3da28ccbdf41379.json.gz",
       "sha256": "ab64d5252e27ce2401ce43f452738c7d3ab734558366a4cdd3da28ccbdf41379",
       "bytes": 590307,
@@ -1412,15 +860,8 @@
       "task": "infer-glm5p2-744b",
       "reward": 5.871018321627253,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "task",
-        "id": 2
-      },
       "available": true,
-      "source_attempt_ids": [],
       "live": false,
-      "modified_at": 1791853489.2652295,
       "file": "d42af8fa59163cd56c60738129865bb019c99cc45323ecdd9cec3d6f361d0b01.json.gz",
       "sha256": "d42af8fa59163cd56c60738129865bb019c99cc45323ecdd9cec3d6f361d0b01",
       "bytes": 1222048,
@@ -1433,17 +874,8 @@
       "task": "infer-glm5p3-744b",
       "reward": 2.313297050621972,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 65
-      },
       "available": true,
-      "source_attempt_ids": [
-        65
-      ],
       "live": false,
-      "modified_at": 1792046227.2562792,
       "file": "1c876b046998ce47f591973a817237e70e240ea0c33cc6101182f2466042521f.json.gz",
       "sha256": "1c876b046998ce47f591973a817237e70e240ea0c33cc6101182f2466042521f",
       "bytes": 1248425,
@@ -1456,18 +888,8 @@
       "task": "infer-glm5p3flash-320b",
       "reward": 7.605936540429888,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 98
-      },
       "available": true,
-      "source_attempt_ids": [
-        98,
-        69
-      ],
       "live": false,
-      "modified_at": 1792048618.2782068,
       "file": "dfb754ce11f7e83ab7df480ff44e340095558753f8eebf5a5867fe69fe1ebeb1.json.gz",
       "sha256": "dfb754ce11f7e83ab7df480ff44e340095558753f8eebf5a5867fe69fe1ebeb1",
       "bytes": 1637630,
@@ -1480,15 +902,8 @@
       "task": "infer-inkling-975b",
       "reward": 1.865994911266541,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "task",
-        "id": 5
-      },
       "available": true,
-      "source_attempt_ids": [],
       "live": false,
-      "modified_at": 1791852056.1219115,
       "file": "84a0d6d87bb609af32e2a740a6111a45044cf192f9e4d659779c85a66630b6da.json.gz",
       "sha256": "84a0d6d87bb609af32e2a740a6111a45044cf192f9e4d659779c85a66630b6da",
       "bytes": 660530,
@@ -1501,17 +916,8 @@
       "task": "infer-kimik3-2p8t",
       "reward": 1.082222081110829,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 67
-      },
       "available": true,
-      "source_attempt_ids": [
-        67
-      ],
       "live": false,
-      "modified_at": 1792027551.8839161,
       "file": "209dcb92798f8ba59e25c9346f6fff217427f39805dee99fed79c3316bc868a6.json.gz",
       "sha256": "209dcb92798f8ba59e25c9346f6fff217427f39805dee99fed79c3316bc868a6",
       "bytes": 1377273,
@@ -1524,15 +930,8 @@
       "task": "infer-lingbotworld2p0-14b",
       "reward": 1.0002121877522911,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "task",
-        "id": 7
-      },
       "available": true,
-      "source_attempt_ids": [],
       "live": false,
-      "modified_at": 1791850663.2994316,
       "file": "ed108eb173af5df0ecc5ab88b3ee01c106e9d4be8cf4777c10b7b12f00163a7b.json.gz",
       "sha256": "ed108eb173af5df0ecc5ab88b3ee01c106e9d4be8cf4777c10b7b12f00163a7b",
       "bytes": 1319059,
@@ -1545,15 +944,8 @@
       "task": "infer-llada2p1mini-16b",
       "reward": 2.129603425353956,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "task",
-        "id": 8
-      },
       "available": true,
-      "source_attempt_ids": [],
       "live": false,
-      "modified_at": 1791849202.1622407,
       "file": "55f1389bfc77536646125ed7bfe88e0bd0e2fccf8f520edf29ddec6a7afcc5fb.json.gz",
       "sha256": "55f1389bfc77536646125ed7bfe88e0bd0e2fccf8f520edf29ddec6a7afcc5fb",
       "bytes": 1111318,
@@ -1566,17 +958,8 @@
       "task": "infer-minimaxh3-64b",
       "reward": 1.3211571954310868,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 51
-      },
       "available": true,
-      "source_attempt_ids": [
-        51
-      ],
       "live": false,
-      "modified_at": 1792014087.0382829,
       "file": "1b5eaf96d31b322ed970b46a54c3eecd50df91cc0382487593ee5546d6f1a7ff.json.gz",
       "sha256": "1b5eaf96d31b322ed970b46a54c3eecd50df91cc0382487593ee5546d6f1a7ff",
       "bytes": 1419901,
@@ -1589,17 +972,8 @@
       "task": "infer-museglimmer-30b",
       "reward": 1.0754530611770585,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 59
-      },
       "available": true,
-      "source_attempt_ids": [
-        59
-      ],
       "live": false,
-      "modified_at": 1792030064.5646486,
       "file": "e16f13398feeb548107b1f3ae8c8dd169001cc511cfc353b69b1643b3b966362.json.gz",
       "sha256": "e16f13398feeb548107b1f3ae8c8dd169001cc511cfc353b69b1643b3b966362",
       "bytes": 892058,
@@ -1612,17 +986,8 @@
       "task": "infer-nemotron3ultra-550a55b",
       "reward": 4.888620610702912,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 55
-      },
       "available": true,
-      "source_attempt_ids": [
-        55
-      ],
       "live": false,
-      "modified_at": 1792032424.4350615,
       "file": "76b22d41c87feeebab80e82f90d402784cef1b6872ac565189cc23b5ce821da0.json.gz",
       "sha256": "76b22d41c87feeebab80e82f90d402784cef1b6872ac565189cc23b5ce821da0",
       "bytes": 1014536,
@@ -1635,17 +1000,8 @@
       "task": "infer-pi0p5libero-3p3b",
       "reward": 2.417827718481613,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 11
-      },
       "available": true,
-      "source_attempt_ids": [
-        11
-      ],
       "live": false,
-      "modified_at": 1791920383.7515104,
       "file": "e27bd9446f0c0b419ca45dd54d35fbdc991d628443b12aa067e81f8ea1fa222d.json.gz",
       "sha256": "e27bd9446f0c0b419ca45dd54d35fbdc991d628443b12aa067e81f8ea1fa222d",
       "bytes": 703010,
@@ -1658,17 +1014,8 @@
       "task": "infer-qwen3p8-27b",
       "reward": 1.6272724722611116,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 60
-      },
       "available": true,
-      "source_attempt_ids": [
-        60
-      ],
       "live": false,
-      "modified_at": 1792036719.8954546,
       "file": "351f710e1e27f272f4c5dafefc5b400df34fcb13531b441834ed30776572bd49.json.gz",
       "sha256": "351f710e1e27f272f4c5dafefc5b400df34fcb13531b441834ed30776572bd49",
       "bytes": 1121304,
@@ -1681,17 +1028,8 @@
       "task": "infer-qwen3ttsbase-1p7b",
       "reward": 0.9859431753748333,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 277
-      },
       "available": true,
-      "source_attempt_ids": [
-        277
-      ],
       "live": false,
-      "modified_at": 1792760828.3121011,
       "file": "cd8cf6f690459f82e816a55c8bdad733bb1a83164d1f9586794c7abe33f9e3ee.json.gz",
       "sha256": "cd8cf6f690459f82e816a55c8bdad733bb1a83164d1f9586794c7abe33f9e3ee",
       "bytes": 833040,
@@ -1704,17 +1042,8 @@
       "task": "infer-qwen3vl-32b",
       "reward": 1.1051835846490385,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 13
-      },
       "available": true,
-      "source_attempt_ids": [
-        13
-      ],
       "live": false,
-      "modified_at": 1791944143.914499,
       "file": "2a868705b3fabd9a0f924ec424e6379806cac3647d657a5c73193652ee3129dc.json.gz",
       "sha256": "2a868705b3fabd9a0f924ec424e6379806cac3647d657a5c73193652ee3129dc",
       "bytes": 988233,
@@ -1727,17 +1056,8 @@
       "task": "infer-wan2p2ti2v-5b",
       "reward": 0.0,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 50
-      },
       "available": true,
-      "source_attempt_ids": [
-        50
-      ],
       "live": false,
-      "modified_at": 1792017235.6587389,
       "file": "ea9aa1411ad887496b43e3c516e256fe6ce248364a1f65948c35a8bf24cbd2d8.json.gz",
       "sha256": "ea9aa1411ad887496b43e3c516e256fe6ce248364a1f65948c35a8bf24cbd2d8",
       "bytes": 1243458,
@@ -1750,17 +1070,8 @@
       "task": "train-qwen3-30a3b-grpo",
       "reward": 0.8009601173962246,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 71
-      },
       "available": true,
-      "source_attempt_ids": [
-        71
-      ],
       "live": false,
-      "modified_at": 1792015298.1464715,
       "file": "5e2efadf750501c0fedf038bd56973959bf4321e9387175e362b562e19005ae6.json.gz",
       "sha256": "5e2efadf750501c0fedf038bd56973959bf4321e9387175e362b562e19005ae6",
       "bytes": 953793,
@@ -1773,17 +1084,8 @@
       "task": "train-qwen3-30a3b-sft",
       "reward": 1.0180902825047158,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 72
-      },
       "available": true,
-      "source_attempt_ids": [
-        72
-      ],
       "live": false,
-      "modified_at": 1792020799.2853363,
       "file": "79c8f5e4254492af64f4bce6e7ce156dd88bdd7f71ab956c645c00d9f1e31fd3.json.gz",
       "sha256": "79c8f5e4254492af64f4bce6e7ce156dd88bdd7f71ab956c645c00d9f1e31fd3",
       "bytes": 1112503,
@@ -1796,17 +1098,8 @@
       "task": "train-qwen3-8b-opd",
       "reward": 1.2479535492781517,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 56
-      },
       "available": true,
-      "source_attempt_ids": [
-        56
-      ],
       "live": false,
-      "modified_at": 1792015378.7401545,
       "file": "254ac6326bf2dadd5a9c27cfef75225259861b60bde8d805fab067253084fe07.json.gz",
       "sha256": "254ac6326bf2dadd5a9c27cfef75225259861b60bde8d805fab067253084fe07",
       "bytes": 1273198,
@@ -1819,17 +1112,8 @@
       "task": "train-qwen3vl-4b-grpo",
       "reward": 0.0,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 61
-      },
       "available": true,
-      "source_attempt_ids": [
-        61
-      ],
       "live": false,
-      "modified_at": 1791990305.795796,
       "file": "c2b785cb3b9e12e1a3df26ce1390d27a047a9cf1d67278c469c128b085d7a3bd.json.gz",
       "sha256": "c2b785cb3b9e12e1a3df26ce1390d27a047a9cf1d67278c469c128b085d7a3bd",
       "bytes": 248172,
@@ -1842,17 +1126,8 @@
       "task": "infer-deepseekv4flash-284b",
       "reward": 1.895641287667052,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 48
-      },
       "available": true,
-      "source_attempt_ids": [
-        48
-      ],
       "live": false,
-      "modified_at": 1794083245.6469576,
       "file": "a0102c5accb0948f8068f1e30a7d4739fc5cd8d2178c1ab388babab1b065e522.json.gz",
       "sha256": "a0102c5accb0948f8068f1e30a7d4739fc5cd8d2178c1ab388babab1b065e522",
       "bytes": 1359907,
@@ -1865,17 +1140,8 @@
       "task": "infer-glm5p2-744b",
       "reward": 4.556135489829671,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 55
-      },
       "available": true,
-      "source_attempt_ids": [
-        55
-      ],
       "live": false,
-      "modified_at": 1794109933.7773526,
       "file": "8a8c44562249d39adc236c07141b26c498daa03a370e9c79e70bafda9000fb02.json.gz",
       "sha256": "8a8c44562249d39adc236c07141b26c498daa03a370e9c79e70bafda9000fb02",
       "bytes": 923704,
@@ -1888,17 +1154,8 @@
       "task": "infer-glm5p3-744b",
       "reward": 1.8220457867252282,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 67
-      },
       "available": true,
-      "source_attempt_ids": [
-        67
-      ],
       "live": false,
-      "modified_at": 1794157026.2515864,
       "file": "21af31eb444302f0ac7da4025d151503b2a209b2ae3f64e1b9a955206f777411.json.gz",
       "sha256": "21af31eb444302f0ac7da4025d151503b2a209b2ae3f64e1b9a955206f777411",
       "bytes": 1152963,
@@ -1911,18 +1168,8 @@
       "task": "infer-glm5p3flash-320b",
       "reward": 8.037359263050154,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 163
-      },
       "available": true,
-      "source_attempt_ids": [
-        163,
-        122
-      ],
       "live": false,
-      "modified_at": 1794345139.767811,
       "file": "83d8f934cb1eb624d035ed04b11b0dc04f8288894402c4ae27e75da678bcb2f5.json.gz",
       "sha256": "83d8f934cb1eb624d035ed04b11b0dc04f8288894402c4ae27e75da678bcb2f5",
       "bytes": 1090946,
@@ -1935,17 +1182,8 @@
       "task": "infer-inkling-975b",
       "reward": 2.3080653231558665,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 52
-      },
       "available": true,
-      "source_attempt_ids": [
-        52
-      ],
       "live": false,
-      "modified_at": 1794110714.0691695,
       "file": "060ae5100dabec3b83df1dcdf2e73750948b39895753a307595e772e377889f5.json.gz",
       "sha256": "060ae5100dabec3b83df1dcdf2e73750948b39895753a307595e772e377889f5",
       "bytes": 742846,
@@ -1958,17 +1196,8 @@
       "task": "infer-kimik3-2p8t",
       "reward": 1.123782914232495,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 72
-      },
       "available": true,
-      "source_attempt_ids": [
-        72
-      ],
       "live": false,
-      "modified_at": 1794225522.0305746,
       "file": "b8935dd37a27fcb9625d31fd3784af5a05b22b9179b93aecfc7c54bb24b84416.json.gz",
       "sha256": "b8935dd37a27fcb9625d31fd3784af5a05b22b9179b93aecfc7c54bb24b84416",
       "bytes": 1392409,
@@ -1981,17 +1210,8 @@
       "task": "infer-lingbotworld2p0-14b",
       "reward": 1.0205916754207438,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 53
-      },
       "available": true,
-      "source_attempt_ids": [
-        53
-      ],
       "live": false,
-      "modified_at": 1794094054.392206,
       "file": "f4819d6fd66029cadae27d67fafddc99e10a5cf98e55d5f51fdbab9dbf0c845c.json.gz",
       "sha256": "f4819d6fd66029cadae27d67fafddc99e10a5cf98e55d5f51fdbab9dbf0c845c",
       "bytes": 1168174,
@@ -2004,17 +1224,8 @@
       "task": "infer-llada2p1mini-16b",
       "reward": 1.1011330006948834,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 12
-      },
       "available": true,
-      "source_attempt_ids": [
-        12
-      ],
       "live": false,
-      "modified_at": 1793899248.4270685,
       "file": "37127899b8862d6ee4c96187195dfc97bfa061fbe5ebf4c7904e2484112420ba.json.gz",
       "sha256": "37127899b8862d6ee4c96187195dfc97bfa061fbe5ebf4c7904e2484112420ba",
       "bytes": 303094,
@@ -2027,17 +1238,8 @@
       "task": "infer-minimaxh3-64b",
       "reward": 0.8697449317490132,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 50
-      },
       "available": true,
-      "source_attempt_ids": [
-        50
-      ],
       "live": false,
-      "modified_at": 1794090553.1280897,
       "file": "64f30232fae2cc63e33783a6ab4b63eb353f8ea3a7685a834ab816140c8f37c8.json.gz",
       "sha256": "64f30232fae2cc63e33783a6ab4b63eb353f8ea3a7685a834ab816140c8f37c8",
       "bytes": 1149577,
@@ -2050,17 +1252,8 @@
       "task": "infer-museglimmer-30b",
       "reward": 1.078613885547944,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 13
-      },
       "available": true,
-      "source_attempt_ids": [
-        13
-      ],
       "live": false,
-      "modified_at": 1793915362.0610423,
       "file": "3c6b07c84b54914547b5fba8b7764440b6640469bd0b70c315e742921fdd3f93.json.gz",
       "sha256": "3c6b07c84b54914547b5fba8b7764440b6640469bd0b70c315e742921fdd3f93",
       "bytes": 1285547,
@@ -2073,17 +1266,8 @@
       "task": "infer-nemotron3ultra-550a55b",
       "reward": 4.269560601960744,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 70
-      },
       "available": true,
-      "source_attempt_ids": [
-        70
-      ],
       "live": false,
-      "modified_at": 1794177066.0529106,
       "file": "2758d7906f4a3938474859d59aa4828636742c9ebc5f9578e922e9afd9d33066.json.gz",
       "sha256": "2758d7906f4a3938474859d59aa4828636742c9ebc5f9578e922e9afd9d33066",
       "bytes": 695628,
@@ -2096,17 +1280,8 @@
       "task": "infer-pi0p5libero-3p3b",
       "reward": 2.883498682974062,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 46
-      },
       "available": true,
-      "source_attempt_ids": [
-        46
-      ],
       "live": false,
-      "modified_at": 1794059923.6659675,
       "file": "6d79f6e57284037b4e919e032d9a0a0232eb13bda06c9ace7c7461e5ecc3a2a8.json.gz",
       "sha256": "6d79f6e57284037b4e919e032d9a0a0232eb13bda06c9ace7c7461e5ecc3a2a8",
       "bytes": 1695877,
@@ -2119,17 +1294,8 @@
       "task": "infer-qwen3p8-27b",
       "reward": 1.2876301515534032,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 19
-      },
       "available": true,
-      "source_attempt_ids": [
-        19
-      ],
       "live": false,
-      "modified_at": 1793900572.20586,
       "file": "d147f42e9144a20a257ff37130393fc25567d05a1beb26eea047d3b324046639.json.gz",
       "sha256": "d147f42e9144a20a257ff37130393fc25567d05a1beb26eea047d3b324046639",
       "bytes": 297386,
@@ -2142,17 +1308,8 @@
       "task": "infer-qwen3ttsbase-1p7b",
       "reward": 0.9932305251653141,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 3
-      },
       "available": true,
-      "source_attempt_ids": [
-        3
-      ],
       "live": false,
-      "modified_at": 1793865190.3514795,
       "file": "13592f1c9206eb2c1e96677adaf1b89d499d51e035de259aa5e1e829eac36f30.json.gz",
       "sha256": "13592f1c9206eb2c1e96677adaf1b89d499d51e035de259aa5e1e829eac36f30",
       "bytes": 2479687,
@@ -2165,17 +1322,8 @@
       "task": "infer-qwen3vl-32b",
       "reward": 1.1316853627015824,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 22
-      },
       "available": true,
-      "source_attempt_ids": [
-        22
-      ],
       "live": false,
-      "modified_at": 1793925529.4134169,
       "file": "31428fb121131ed73b7c2223c8310babd3d6cafddede7694678b2111c6e4c26f.json.gz",
       "sha256": "31428fb121131ed73b7c2223c8310babd3d6cafddede7694678b2111c6e4c26f",
       "bytes": 1295495,
@@ -2188,17 +1336,8 @@
       "task": "infer-wan2p2ti2v-5b",
       "reward": 1.2948069596987322,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 47
-      },
       "available": true,
-      "source_attempt_ids": [
-        47
-      ],
       "live": false,
-      "modified_at": 1794078698.672425,
       "file": "60fee8ba22445b03655a56f68dda9fd5c5ac28df81fe43f5a36a7bbb4164997c.json.gz",
       "sha256": "60fee8ba22445b03655a56f68dda9fd5c5ac28df81fe43f5a36a7bbb4164997c",
       "bytes": 1249232,
@@ -2211,17 +1350,8 @@
       "task": "train-qwen3-30a3b-grpo",
       "reward": 0.7008352833038669,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 120
-      },
       "available": true,
-      "source_attempt_ids": [
-        120
-      ],
       "live": false,
-      "modified_at": 1794346035.7181413,
       "file": "14f476c814d8a41cdb787d1cecee95107bb3c0e045f6baeedf94ed400eb14358.json.gz",
       "sha256": "14f476c814d8a41cdb787d1cecee95107bb3c0e045f6baeedf94ed400eb14358",
       "bytes": 1491396,
@@ -2234,17 +1364,8 @@
       "task": "train-qwen3-30a3b-sft",
       "reward": 1.0279206130180423,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 64
-      },
       "available": true,
-      "source_attempt_ids": [
-        64
-      ],
       "live": false,
-      "modified_at": 1794140961.9543111,
       "file": "b6303e90636b29f5489b72b441c9b1a6a006d7ac3090e7be45628774682e09f8.json.gz",
       "sha256": "b6303e90636b29f5489b72b441c9b1a6a006d7ac3090e7be45628774682e09f8",
       "bytes": 2571524,
@@ -2257,17 +1378,8 @@
       "task": "train-qwen3-8b-opd",
       "reward": 1.0028899610487128,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 71
-      },
       "available": true,
-      "source_attempt_ids": [
-        71
-      ],
       "live": false,
-      "modified_at": 1794180534.5405736,
       "file": "420c7aa27912cca860490cca248164e8d2b24e24c835400d54b6f6c9771cfaa2.json.gz",
       "sha256": "420c7aa27912cca860490cca248164e8d2b24e24c835400d54b6f6c9771cfaa2",
       "bytes": 1158239,
@@ -2280,17 +1392,8 @@
       "task": "train-qwen3vl-4b-grpo",
       "reward": 1.0426502809067146,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 66
-      },
       "available": true,
-      "source_attempt_ids": [
-        66
-      ],
       "live": false,
-      "modified_at": 1794155386.364306,
       "file": "45b9e5eedc331698b9de50ea60a970e12571662b9c5812cf77fee9cb9ac9a42c.json.gz",
       "sha256": "45b9e5eedc331698b9de50ea60a970e12571662b9c5812cf77fee9cb9ac9a42c",
       "bytes": 1448171,
@@ -2303,17 +1406,8 @@
       "task": "infer-deepseekv4flash-284b",
       "reward": 2.2303717142357393,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 68
-      },
       "available": true,
-      "source_attempt_ids": [
-        68
-      ],
       "live": false,
-      "modified_at": 1792037665.5025866,
       "file": "ffdcb8e8958dace0acdec3bf4f5dc241f249611f64e17ee0bdfafc42c6f5e6b6.json.gz",
       "sha256": "ffdcb8e8958dace0acdec3bf4f5dc241f249611f64e17ee0bdfafc42c6f5e6b6",
       "bytes": 889121,
@@ -2326,17 +1420,8 @@
       "task": "infer-glm5p2-744b",
       "reward": 6.778615460618167,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 41
-      },
       "available": true,
-      "source_attempt_ids": [
-        41
-      ],
       "live": false,
-      "modified_at": 1792010152.8171427,
       "file": "e0798c88d32d21f131712ce196d2accf0b2a28e40644e2228d634971e43f6472.json.gz",
       "sha256": "e0798c88d32d21f131712ce196d2accf0b2a28e40644e2228d634971e43f6472",
       "bytes": 593312,
@@ -2349,17 +1434,8 @@
       "task": "infer-glm5p3-744b",
       "reward": 2.2692142907856114,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 43
-      },
       "available": true,
-      "source_attempt_ids": [
-        43
-      ],
       "live": false,
-      "modified_at": 1792024488.9874253,
       "file": "25e16393498aeb34f12b608a182db6c5db37f799c2ea30bbae4a12a9ddd70bda.json.gz",
       "sha256": "25e16393498aeb34f12b608a182db6c5db37f799c2ea30bbae4a12a9ddd70bda",
       "bytes": 837239,
@@ -2372,17 +1448,8 @@
       "task": "infer-glm5p3flash-320b",
       "reward": 0.0,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 239
-      },
       "available": true,
-      "source_attempt_ids": [
-        239
-      ],
       "live": false,
-      "modified_at": 1792624045.7910328,
       "file": "895d7a14ba748c6d38f7d9bdb256bd3da377840afe30ca36736a3455eeed88ae.json.gz",
       "sha256": "895d7a14ba748c6d38f7d9bdb256bd3da377840afe30ca36736a3455eeed88ae",
       "bytes": 1157826,
@@ -2395,17 +1462,8 @@
       "task": "infer-inkling-975b",
       "reward": 1.7186372201462745,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 44
-      },
       "available": true,
-      "source_attempt_ids": [
-        44
-      ],
       "live": false,
-      "modified_at": 1792008360.8134413,
       "file": "2796f00ded87c6e03ca4c83a4ba04f49da125ccc3884c67729776ef22210d4d8.json.gz",
       "sha256": "2796f00ded87c6e03ca4c83a4ba04f49da125ccc3884c67729776ef22210d4d8",
       "bytes": 554516,
@@ -2418,17 +1476,8 @@
       "task": "infer-kimik3-2p8t",
       "reward": 1.3538967911269157,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 198
-      },
       "available": true,
-      "source_attempt_ids": [
-        198
-      ],
       "live": false,
-      "modified_at": 1792483219.756628,
       "file": "beb7a2d8f1078c01180bad7fb3daf1337ade46b4674d24df6fe0d89aeca1aff2.json.gz",
       "sha256": "beb7a2d8f1078c01180bad7fb3daf1337ade46b4674d24df6fe0d89aeca1aff2",
       "bytes": 1067278,
@@ -2441,17 +1490,8 @@
       "task": "infer-lingbotworld2p0-14b",
       "reward": 1.0022881076171164,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 46
-      },
       "available": true,
-      "source_attempt_ids": [
-        46
-      ],
       "live": false,
-      "modified_at": 1792011504.5215752,
       "file": "1c03f9cdaa02d6cff4d3c07a880d80b7dad51e21babedea7f2fa8ada8d7f2b74.json.gz",
       "sha256": "1c03f9cdaa02d6cff4d3c07a880d80b7dad51e21babedea7f2fa8ada8d7f2b74",
       "bytes": 487626,
@@ -2464,17 +1504,8 @@
       "task": "infer-llada2p1mini-16b",
       "reward": 1.1058686021938788,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 36
-      },
       "available": true,
-      "source_attempt_ids": [
-        36
-      ],
       "live": false,
-      "modified_at": 1792009200.6480541,
       "file": "340203833e6a4dbb6b0d2cb65dc8fb1bfb6444d1cc5085b3621cec13ca76be3a.json.gz",
       "sha256": "340203833e6a4dbb6b0d2cb65dc8fb1bfb6444d1cc5085b3621cec13ca76be3a",
       "bytes": 796679,
@@ -2487,17 +1518,8 @@
       "task": "infer-minimaxh3-64b",
       "reward": 1.079096046490572,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 75
-      },
       "available": true,
-      "source_attempt_ids": [
-        75
-      ],
       "live": false,
-      "modified_at": 1792056803.5186677,
       "file": "fa6e2bd734d169fbbba5e55d9229aab8b274546ad784452243f1264f47a0942b.json.gz",
       "sha256": "fa6e2bd734d169fbbba5e55d9229aab8b274546ad784452243f1264f47a0942b",
       "bytes": 907722,
@@ -2510,17 +1532,8 @@
       "task": "infer-museglimmer-30b",
       "reward": 1.0749185099966883,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 37
-      },
       "available": true,
-      "source_attempt_ids": [
-        37
-      ],
       "live": false,
-      "modified_at": 1792004293.032729,
       "file": "b8dbee85bb68e94458994698477484b70d76ae5ba8ed672e62806511239d4307.json.gz",
       "sha256": "b8dbee85bb68e94458994698477484b70d76ae5ba8ed672e62806511239d4307",
       "bytes": 601899,
@@ -2533,17 +1546,8 @@
       "task": "infer-nemotron3ultra-550a55b",
       "reward": 3.5106467123202134,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 45
-      },
       "available": true,
-      "source_attempt_ids": [
-        45
-      ],
       "live": false,
-      "modified_at": 1792010708.3108454,
       "file": "f8158e115f0fbaa9b07414f4c570372e18237a377483a17d23864e624f559817.json.gz",
       "sha256": "f8158e115f0fbaa9b07414f4c570372e18237a377483a17d23864e624f559817",
       "bytes": 702431,
@@ -2556,17 +1560,8 @@
       "task": "infer-pi0p5libero-3p3b",
       "reward": 1.0807789498498699,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 38
-      },
       "available": true,
-      "source_attempt_ids": [
-        38
-      ],
       "live": false,
-      "modified_at": 1791986046.069703,
       "file": "470964c86015f586f8500d683e89e101f8fab6f1e691d7437b444ce324b04284.json.gz",
       "sha256": "470964c86015f586f8500d683e89e101f8fab6f1e691d7437b444ce324b04284",
       "bytes": 316140,
@@ -2579,17 +1574,8 @@
       "task": "infer-qwen3p8-27b",
       "reward": 1.6252757313095612,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 39
-      },
       "available": true,
-      "source_attempt_ids": [
-        39
-      ],
       "live": false,
-      "modified_at": 1792013088.1922174,
       "file": "da1d1fe95204320b60af90b424a178df190f31028e55a2cdd3e692b0ed342ffa.json.gz",
       "sha256": "da1d1fe95204320b60af90b424a178df190f31028e55a2cdd3e692b0ed342ffa",
       "bytes": 702995,
@@ -2602,17 +1588,8 @@
       "task": "infer-qwen3ttsbase-1p7b",
       "reward": 0.0,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 278
-      },
       "available": true,
-      "source_attempt_ids": [
-        278
-      ],
       "live": false,
-      "modified_at": 1792761690.5584295,
       "file": "1721b627cd8fba34a608896ba44a02f1e1b05a37554190eeb8ebbfb8416557c0.json.gz",
       "sha256": "1721b627cd8fba34a608896ba44a02f1e1b05a37554190eeb8ebbfb8416557c0",
       "bytes": 1482883,
@@ -2625,17 +1602,8 @@
       "task": "infer-qwen3vl-32b",
       "reward": 1.0288509004716855,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 40
-      },
       "available": true,
-      "source_attempt_ids": [
-        40
-      ],
       "live": false,
-      "modified_at": 1792004191.133132,
       "file": "d2664db4844ddba6a4a8b4413c8269414892318d5d6c6ba14bd69e451a3cce68.json.gz",
       "sha256": "d2664db4844ddba6a4a8b4413c8269414892318d5d6c6ba14bd69e451a3cce68",
       "bytes": 940281,
@@ -2648,17 +1616,8 @@
       "task": "infer-wan2p2ti2v-5b",
       "reward": 1.242361494271831,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 57
-      },
       "available": true,
-      "source_attempt_ids": [
-        57
-      ],
       "live": false,
-      "modified_at": 1792004004.6158686,
       "file": "e2d271e7fe6806805c45fd1ab67710856a65118921fdbec8183e60a2c7c6f04e.json.gz",
       "sha256": "e2d271e7fe6806805c45fd1ab67710856a65118921fdbec8183e60a2c7c6f04e",
       "bytes": 926136,
@@ -2671,17 +1630,8 @@
       "task": "train-qwen3-30a3b-grpo",
       "reward": 0.8135337223463467,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 48
-      },
       "available": true,
-      "source_attempt_ids": [
-        48
-      ],
       "live": false,
-      "modified_at": 1792013164.892916,
       "file": "0ce8d66f2e4d5053d42a218bdafa74c8ac6249f93d33f267a04f8c327a2717bc.json.gz",
       "sha256": "0ce8d66f2e4d5053d42a218bdafa74c8ac6249f93d33f267a04f8c327a2717bc",
       "bytes": 884995,
@@ -2694,17 +1644,8 @@
       "task": "train-qwen3-30a3b-sft",
       "reward": 1.0065904820925091,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 73
-      },
       "available": true,
-      "source_attempt_ids": [
-        73
-      ],
       "live": false,
-      "modified_at": 1791990936.9052527,
       "file": "b16746183537dbdf9de1033613681501a49c9062240f15158c34b6f6e28712fa.json.gz",
       "sha256": "b16746183537dbdf9de1033613681501a49c9062240f15158c34b6f6e28712fa",
       "bytes": 505029,
@@ -2717,17 +1658,8 @@
       "task": "train-qwen3-8b-opd",
       "reward": 1.2872775605975635,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 47
-      },
       "available": true,
-      "source_attempt_ids": [
-        47
-      ],
       "live": false,
-      "modified_at": 1792006890.6523561,
       "file": "d34c4b943e508245245918acb1fb31d6e94d6054e68edeb43a07ded3d2a36a96.json.gz",
       "sha256": "d34c4b943e508245245918acb1fb31d6e94d6054e68edeb43a07ded3d2a36a96",
       "bytes": 1165611,
@@ -2740,17 +1672,8 @@
       "task": "train-qwen3vl-4b-grpo",
       "reward": 0.9965919425430976,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 94
-      },
       "available": true,
-      "source_attempt_ids": [
-        94
-      ],
       "live": false,
-      "modified_at": 1792019545.1693711,
       "file": "20bc4a58797fdedcba5aadd09c5b016bd0c3286ab252673345d45704e646deeb.json.gz",
       "sha256": "20bc4a58797fdedcba5aadd09c5b016bd0c3286ab252673345d45704e646deeb",
       "bytes": 1180566,
@@ -2763,11 +1686,6 @@
       "task": "infer-deepseekv4flash-284b",
       "reward": null,
       "score_status": "not_tested",
-      "run_status": "unregistered",
-      "source": {
-        "kind": "task",
-        "id": 0
-      },
       "available": false,
       "reason": "Not tested. API Error: 400 This request may violate the Claude model's safety policy and has been terminated early."
     },
@@ -2776,17 +1694,8 @@
       "task": "infer-glm5p2-744b",
       "reward": null,
       "score_status": "not_tested",
-      "run_status": "failed",
-      "source": {
-        "kind": "attempt",
-        "id": 127
-      },
       "available": true,
-      "source_attempt_ids": [
-        127
-      ],
       "live": false,
-      "modified_at": 1794347671.1171541,
       "file": "8c5565be08563243d34e60cab37609a9142cbe7c4a36f84bb70775dc635cdd94.json.gz",
       "sha256": "8c5565be08563243d34e60cab37609a9142cbe7c4a36f84bb70775dc635cdd94",
       "bytes": 113137,
@@ -2799,17 +1708,8 @@
       "task": "infer-glm5p3-744b",
       "reward": null,
       "score_status": "not_tested",
-      "run_status": "failed",
-      "source": {
-        "kind": "attempt",
-        "id": 156
-      },
       "available": true,
-      "source_attempt_ids": [
-        156
-      ],
       "live": false,
-      "modified_at": 1794446270.3634806,
       "file": "e748848dcddb1a0fde4faf17705f957c0fcae1dadd39cceb7da687457c773d1e.json.gz",
       "sha256": "e748848dcddb1a0fde4faf17705f957c0fcae1dadd39cceb7da687457c773d1e",
       "bytes": 23583,
@@ -2822,11 +1722,6 @@
       "task": "infer-glm5p3flash-320b",
       "reward": null,
       "score_status": "not_tested",
-      "run_status": "unregistered",
-      "source": {
-        "kind": "task",
-        "id": 0
-      },
       "available": false,
       "reason": "Not tested. API Error: 400 This request may violate the Claude model's safety policy and has been terminated early."
     },
@@ -2835,17 +1730,8 @@
       "task": "infer-inkling-975b",
       "reward": 1.1515601545782632,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 126
-      },
       "available": true,
-      "source_attempt_ids": [
-        126
-      ],
       "live": false,
-      "modified_at": 1794333694.5649455,
       "file": "ca721d7411202296b08c104c989750b78de433a7de563cae5c84f76b25fc1512.json.gz",
       "sha256": "ca721d7411202296b08c104c989750b78de433a7de563cae5c84f76b25fc1512",
       "bytes": 289825,
@@ -2858,17 +1744,8 @@
       "task": "infer-kimik3-2p8t",
       "reward": null,
       "score_status": "not_tested",
-      "run_status": "failed",
-      "source": {
-        "kind": "attempt",
-        "id": 152
-      },
       "available": true,
-      "source_attempt_ids": [
-        152
-      ],
       "live": false,
-      "modified_at": 1794446025.4655292,
       "file": "9ded5586acbb8c72aeacfcdaa85299dc0f106f4fe1b4d1bce0aca7156049c94a.json.gz",
       "sha256": "9ded5586acbb8c72aeacfcdaa85299dc0f106f4fe1b4d1bce0aca7156049c94a",
       "bytes": 23235,
@@ -2881,17 +1758,8 @@
       "task": "infer-lingbotworld2p0-14b",
       "reward": 1.092930899642341,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 108
-      },
       "available": true,
-      "source_attempt_ids": [
-        108
-      ],
       "live": false,
-      "modified_at": 1794254788.6062949,
       "file": "f5ecb4f76dc55e7af893ca62231e21f65e3d94b7d08be8801741447c892376f0.json.gz",
       "sha256": "f5ecb4f76dc55e7af893ca62231e21f65e3d94b7d08be8801741447c892376f0",
       "bytes": 4992477,
@@ -2904,17 +1772,8 @@
       "task": "infer-llada2p1mini-16b",
       "reward": 6.106245085938902,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 134
-      },
       "available": true,
-      "source_attempt_ids": [
-        134
-      ],
       "live": false,
-      "modified_at": 1794370830.4053512,
       "file": "e43afb3937f60522a6d7186144cb25d02817a2c560ef19d06ade0b3c53e629b2.json.gz",
       "sha256": "e43afb3937f60522a6d7186144cb25d02817a2c560ef19d06ade0b3c53e629b2",
       "bytes": 2709806,
@@ -2927,17 +1786,8 @@
       "task": "infer-minimaxh3-64b",
       "reward": 0.973644358421025,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 102
-      },
       "available": true,
-      "source_attempt_ids": [
-        102
-      ],
       "live": false,
-      "modified_at": 1794234825.9076488,
       "file": "34cad40a634ccc5ca87fb34ff0c1a0cd7c5a080a2e250215bed846d82ea7184b.json.gz",
       "sha256": "34cad40a634ccc5ca87fb34ff0c1a0cd7c5a080a2e250215bed846d82ea7184b",
       "bytes": 1910093,
@@ -2950,17 +1800,8 @@
       "task": "infer-museglimmer-30b",
       "reward": null,
       "score_status": "not_tested",
-      "run_status": "failed",
-      "source": {
-        "kind": "attempt",
-        "id": 160
-      },
       "available": true,
-      "source_attempt_ids": [
-        160
-      ],
       "live": false,
-      "modified_at": 1794470749.175642,
       "file": "d1ff3b7320a07ab9772bce0329fcb4cf4e1a36cc3d5da3279297cdc448c0bba3.json.gz",
       "sha256": "d1ff3b7320a07ab9772bce0329fcb4cf4e1a36cc3d5da3279297cdc448c0bba3",
       "bytes": 23390,
@@ -2973,17 +1814,8 @@
       "task": "infer-nemotron3ultra-550a55b",
       "reward": null,
       "score_status": "not_tested",
-      "run_status": "failed",
-      "source": {
-        "kind": "attempt",
-        "id": 157
-      },
       "available": true,
-      "source_attempt_ids": [
-        157
-      ],
       "live": false,
-      "modified_at": 1794448095.4064674,
       "file": "934fff37dd2da44d4d2a99dc378a035fc57490d7cce7f5bd859a18c91c6744ea.json.gz",
       "sha256": "934fff37dd2da44d4d2a99dc378a035fc57490d7cce7f5bd859a18c91c6744ea",
       "bytes": 23413,
@@ -2996,17 +1828,8 @@
       "task": "infer-pi0p5libero-3p3b",
       "reward": 4.148404621484335,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 119
-      },
       "available": true,
-      "source_attempt_ids": [
-        119
-      ],
       "live": false,
-      "modified_at": 1794331296.4647996,
       "file": "5a32ce6dec8d138fce0834c8a1acfcb8998f402a4832c51a6755070f623e67d8.json.gz",
       "sha256": "5a32ce6dec8d138fce0834c8a1acfcb8998f402a4832c51a6755070f623e67d8",
       "bytes": 4679517,
@@ -3019,17 +1842,8 @@
       "task": "infer-qwen3p8-27b",
       "reward": null,
       "score_status": "not_tested",
-      "run_status": "failed",
-      "source": {
-        "kind": "attempt",
-        "id": 161
-      },
       "available": true,
-      "source_attempt_ids": [
-        161
-      ],
       "live": false,
-      "modified_at": 1794471285.047194,
       "file": "fe87872741e139a7d8f14266fef036d97254d126bd45a32f788425b1656de153.json.gz",
       "sha256": "fe87872741e139a7d8f14266fef036d97254d126bd45a32f788425b1656de153",
       "bytes": 23035,
@@ -3042,17 +1856,8 @@
       "task": "infer-qwen3ttsbase-1p7b",
       "reward": 1.8609410362696415,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 79
-      },
       "available": true,
-      "source_attempt_ids": [
-        79
-      ],
       "live": false,
-      "modified_at": 1794234384.1464477,
       "file": "6f6aaa73694459869ee1eed2d16846d243eb2fdf83fe3013ff1e2b1a4b35f39a.json.gz",
       "sha256": "6f6aaa73694459869ee1eed2d16846d243eb2fdf83fe3013ff1e2b1a4b35f39a",
       "bytes": 5153095,
@@ -3065,17 +1870,8 @@
       "task": "infer-qwen3vl-32b",
       "reward": 1.3334666938276136,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 147
-      },
       "available": true,
-      "source_attempt_ids": [
-        147
-      ],
       "live": false,
-      "modified_at": 1794415622.1219013,
       "file": "6550d030e0157bb7f3d8a0a1f25fe01bb88690ba61270d31d3c0c3e629599a7e.json.gz",
       "sha256": "6550d030e0157bb7f3d8a0a1f25fe01bb88690ba61270d31d3c0c3e629599a7e",
       "bytes": 3799408,
@@ -3088,17 +1884,8 @@
       "task": "infer-wan2p2ti2v-5b",
       "reward": 1.3528132945119207,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 99
-      },
       "available": true,
-      "source_attempt_ids": [
-        99
-      ],
       "live": false,
-      "modified_at": 1794245470.9452462,
       "file": "12ab81c8078b67dc7c40fdf1e78aa7392e1ff3fdb964a490bb991b10e4b6ab0b.json.gz",
       "sha256": "12ab81c8078b67dc7c40fdf1e78aa7392e1ff3fdb964a490bb991b10e4b6ab0b",
       "bytes": 6637935,
@@ -3111,17 +1898,8 @@
       "task": "train-qwen3-30a3b-grpo",
       "reward": 1.1299572811885943,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 109
-      },
       "available": true,
-      "source_attempt_ids": [
-        109
-      ],
       "live": false,
-      "modified_at": 1794276202.60808,
       "file": "a79d198b3a0c5b273d45592b8e275778412ccf9c98a579769a040e89aa02859d.json.gz",
       "sha256": "a79d198b3a0c5b273d45592b8e275778412ccf9c98a579769a040e89aa02859d",
       "bytes": 5840591,
@@ -3134,17 +1912,8 @@
       "task": "train-qwen3-30a3b-sft",
       "reward": 1.6130843255579685,
       "score_status": "completed",
-      "run_status": "completed",
-      "source": {
-        "kind": "attempt",
-        "id": 111
-      },
       "available": true,
-      "source_attempt_ids": [
-        111
-      ],
       "live": false,
-      "modified_at": 1794274586.444725,
       "file": "eef247e567131f0ec781fa95fbfdef33aa3c1686cd428865a2f70a7e2c598c5d.json.gz",
       "sha256": "eef247e567131f0ec781fa95fbfdef33aa3c1686cd428865a2f70a7e2c598c5d",
       "bytes": 5230365,
@@ -3157,17 +1926,8 @@
       "task": "train-qwen3-8b-opd",
       "reward": null,
       "score_status": "not_tested",
-      "run_status": "failed",
-      "source": {
-        "kind": "attempt",
-        "id": 158
-      },
       "available": true,
-      "source_attempt_ids": [
-        158
-      ],
       "live": false,
-      "modified_at": 1794447675.796413,
       "file": "3a0262a9741217caaa9381049c894a52ca6725b762d01daca6cf6405b3bbb771.json.gz",
       "sha256": "3a0262a9741217caaa9381049c894a52ca6725b762d01daca6cf6405b3bbb771",
       "bytes": 31571,
@@ -3180,17 +1940,8 @@
       "task": "train-qwen3vl-4b-grpo",
       "reward": null,
       "score_status": "not_tested",
-      "run_status": "failed",
-      "source": {
-        "kind": "attempt",
-        "id": 155
-      },
       "available": true,
-      "source_attempt_ids": [
-        155
-      ],
       "live": false,
-      "modified_at": 1794445497.2621686,
       "file": "2b3968ac5705dc1cdcd60e108963a553d1a6df360cea9703db7e3630cc0dfc42.json.gz",
       "sha256": "2b3968ac5705dc1cdcd60e108963a553d1a6df360cea9703db7e3630cc0dfc42",
       "bytes": 24971,

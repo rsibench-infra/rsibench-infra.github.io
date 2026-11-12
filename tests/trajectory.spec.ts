@@ -14,6 +14,10 @@ const original = JSON.parse(gunzipSync(readFileSync(`public/data/trajectories/${
 
 test('all published cells bind to the score snapshot and intact original ATIF artifacts', () => {
   expect(manifest.leaderboard_sha256).toBe(createHash('sha256').update(readFileSync('data/leaderboard.json')).digest('hex'));
+  expect(Object.keys(manifest).sort()).toEqual(['entries', 'leaderboard_sha256']);
+  for (const entry of manifest.entries) {
+    for (const key of ['source', 'source_attempt_ids', 'run_status', 'modified_at']) expect(entry).not.toHaveProperty(key);
+  }
   expect(manifest.entries).toHaveLength(snapshot.rows.length * 20);
   expect(new Set(manifest.entries.map(e => `${e.model}/${e.task}`)).size).toBe(snapshot.rows.length * 20);
   for (const row of snapshot.rows) for (const cell of row.tasks) {
@@ -49,7 +53,9 @@ test('real trajectory uses library bubbles, complete steps, tools, search, pagin
   await expect(dialog).toBeVisible();
   await expect(dialog.locator('.ant-bubble')).toHaveCount(20);
   await expect(dialog.locator('.trace-markdown').first()).toBeVisible();
-  await expect(dialog.getByText('SHA-256 verified.', { exact: false })).toBeVisible();
+  await expect(dialog.locator('.trace-provenance')).toHaveCount(0);
+  await expect(dialog.locator('.trace-summary')).not.toContainText(/Source:|attempt|Score snapshot/);
+  await expect(dialog.getByText(/Exported .* UTC|SHA-256 verified|Trajectory metadata & checksum/)).toHaveCount(0);
   await dialog.getByRole('button', { name: 'Raw step · all fields', exact: true }).first().click();
   await expect(dialog.locator('pre').filter({ hasText: 'step_id' }).first()).toBeVisible();
   await dialog.getByTitle('2', { exact: true }).click();

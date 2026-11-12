@@ -40,7 +40,7 @@ CHROMIUM_PATH=/path/to/chrome npx playwright test
 
 刷新脚本核对 API、只读 SQLite、原生 result reward 和文件 SHA，导出结束再次检查来源未变化。分数与轨迹一起刷新，禁止旧脚本独立重绑来源。`data:trajectories` 和旧 Python 导出入口均转到同一流程。不会修改实验状态、原始结果或原始轨迹。
 
-当前共 140 个单元格、138 份可用 ATIF，另两道 Claude 题目明确显示不可用。gzip 以原始内容 SHA-256 命名；浏览器按需加载、解压并验证 SHA。原始 messages / tools / reasoning 保持原格式，支持搜索、分页和字段检查，不提供下载按钮。静态网站不连接实验管理器。
+当前共 140 个单元格、138 份可用 ATIF，另两道 Claude 题目明确显示不可用。gzip 以原始内容 SHA-256 命名；浏览器按需加载、解压并验证 SHA。原始 messages / tools / reasoning 保持原格式，支持搜索、分页和字段检查，不提供下载按钮。轨迹弹窗不显示内部来源编号、运行状态、导出时间或元数据/校验面板；公开轨迹索引也不包含这些来源字段。浏览器在后台校验完整性，本地审计记录保存在 `.agents/workdir/publication-provenance/`，不随网站部署。静态网站不连接实验管理器。
 
 ## 部署
 

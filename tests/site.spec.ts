@@ -74,7 +74,7 @@ test('benchmark order, model identities, selected result and publication data ag
   expect(claude.tasks.filter(t => t.status === "not_tested")).toHaveLength(10);
   await page.getByRole('button', { name: 'Claude Opus 5.5, infer-llada2p1mini-16b,', exact: false }).click();
   await expect(page.locator('.trace-summary')).toContainText('6.106245×');
-  await expect(page.getByText('SHA-256 verified.', { exact: false })).toBeVisible();
+  await expect(page.locator('.trace-provenance')).toHaveCount(0);
   await expect(page.locator('.ant-bubble')).toHaveCount(20);
   await page.keyboard.press('Escape');
   const icon = await page.locator('link[rel="icon"]').getAttribute('href');
@@ -104,7 +104,7 @@ test('requested copy, agent-only Lite scores, linked formula and selected GLM tr
   await page.getByRole('button', { name: 'GLM-5.3, infer-qwen3ttsbase-1p7b,', exact: false }).click();
   const glm = snapshot.rows.find(r => r.display_name === 'glm-5.3')!.tasks.find(t => t.task === 'infer-qwen3ttsbase-1p7b')!;
   await expect(page.locator('.trace-summary')).toContainText(`${glm.reward!.toFixed(6)}×`);
-  await expect(page.getByText('SHA-256 verified.', { exact: false })).toBeVisible();
+  await expect(page.locator('.trace-provenance')).toHaveCount(0);
   await expect(page.locator('.ant-bubble')).toHaveCount(20);
 });
 
